@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html{
+    font-size: 16px;
+}
+
+
+body{
+    background-color: rgba(49, 64, 95, 0.718);
+}
+   
+header {
+    color: azure;
+    background-image:url("/day3/assets/Batman.jpg");
+    margin: 0px;
+    display: block;
+    padding-left: 0px;
+    padding-top: 15px;
+    height: 180px;
+    text-align: center;
+}
+h1 ,nav{
+    font-family: 'Grenze Gotisch', cursive;
+}
+
+
+nav{
+    font-size: 20px;
+}
+
+main{
+    background-color:rgba(240, 255, 255, 0.664);
+}
+
+footer{
+    color:azure;
+    background-color: rgba(15, 15, 15, 0.871);
+}
+
+
+footer span{
+
+}
+
+hr{
+    border: 1px solid black;
+}
+
+footer img{
+    border-radius: 100px;
+    border: 1px solid black;
+}
+
+div#listBox ul del li{
+    list-style-type: square;
+}
+
+div#listBox ul:nth-child(odd){
+   color: rgb(77, 122, 204);
+}
+
+div#listBox ol:nth-child(even) li:nth-child(even){
+    color: rgb(221, 55, 213);
+    border: 1px dashed black;
+    background-color: rgb(220, 213, 150);
+}
+
+ol,ul{
+    width: fit-content;
+    padding-left: 0;
+    margin-left: 10%;   
+}
+
+h2{
+    background-color: black;
+    color: azure;
+}
+
+.tags span{
+    background-color: antiquewhite;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding:2px
+}
+
+h3{
+    border-top: 1px solid grey;
+}
+
+caption{
+background-color: rgb(134, 138, 129);
+}
+
+table{
+    width: 80%;
+    text-align: center;
+    border: 3px solid rgb(134, 138, 129);
+    border-radius: 3px;
+    margin: auto 20px;
+    border-collapse: collapse;
+}
+
+td{
+    border:1px solid black;
+}
+
+i span {
+    margin-left: 95%;
+}
+
+div#listBox ol,ul{
+    display: inline-block;
+}
+
+div#listBox span:nth-child(odd){
+    color: rgb(32, 35, 41);
+ }
+

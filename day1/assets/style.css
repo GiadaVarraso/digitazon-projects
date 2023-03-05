@@ -1,0 +1,40 @@
+body{
+    background-image:linear-gradient(rgba(255, 255, 255, 0.592),
+    rgba(217, 216, 216, 0.596)),
+    url('https://images.rawpixel.com/image_png_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvcm00MjgtMDAwOC5wbmc.png?s=_JskcsPbCzLTTemxwfI--blwyCyqYa3zcuhX5OOBfVs');
+    margin:5px;
+}
+a{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h1{
+    background-color: rgba(79, 148, 167, 0.756);
+    padding: 20px;
+    color: rgb(203, 237, 240);
+}
+
+h2 {
+    color: rgb(125, 120, 180);
+}
+
+
+h3 {
+    color: rgb(169, 100, 169);
+}
+
+#tabUtenti td .daVerificare {
+    color: rgb(204, 63, 63);
+}
+
+img{
+ margin-left: 50px;
+ border: solid black 1px;
+}
+
+table img{
+    margin: 0%;
+}
+
+table{
+    background-color: rgba(152, 215, 234, 0.51);
+}
