@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap%27");
+
+html{
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background-color: antiquewhite;
+    margin:0;
+    /* padding:0; */
+}
+
+nav img:first-child{
+    width: 9rem;
+}
+
+nav img:last-child{
+    width: 2rem;
+    float:right;
+}
+
+nav a{
+    margin-left:2rem;
+    vertical-align: 50%;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+nav{
+    margin:10px;
+    border-bottom: 1px solid black;
+}
+
+.container{
+    border: 1px solid black;
+    margin: 2rem;
+}
+
+.container div:first-child{
+    background-color: rgb(255, 181, 43);
+    float:left;
+    width: 30%;
+}
+
+.container div:last-child{
+    background-color:rgb(255, 222, 58);
+    float:left;
+    width: 70%;
+}
+
+.container div:nth-child(2){
+    background-color:rgb(83, 123, 210);
+    float:left;
+    width: 70%;
+}
+
+.container::after{
+    clear: both;
+    content:"";
+    display: block;
+}
+
+#eccezione1 {
+    width: 20%;
+}
+
+#eccezione2 {
+    width: 50%;
+}
+
+h4{
+    float:left;
+    margin-left: 1rem;
+}
+
+h5{
+    float:right;
+    margin-right: 1rem;
+}
+
