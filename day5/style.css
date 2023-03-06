@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+
+html{
+margin: 10px;
+background-color:rgb(14, 99, 110) ;
+font-size: 16px;
+font-family: 'Finger Paint', cursive;
+
+}
+
+body{
+    border: 1px solid black;
+    background-color:rgba(135, 231, 255, 0.836);
+}
+
+h1{
+    text-align: center;
+    margin: 0;
+    background-image: url("https://www.aegcoop.it/wp-content/uploads/2020/11/11-dicembre.png");
+    border-bottom: 1px solid black;
+    background-size: cover;
+    background-position:center;
+    padding: 3rem;
+    font-size: 70px;
+}
+
+main{
+    margin-top: 1rem;
+    padding: 10px;
+}
+
+h2{
+    margin-left:10px;
+    background-color: rgba(137, 43, 226, 0.384);
+    padding-left: 10px;
+}
+
+.cards{
+    display: inline-block;
+    border: 1px solid black;
+    background-color: rgba(245, 245, 220, 0.555);
+    width: 25rem;
+}
+
+.cards:last-child{
+    float: right;
+}
+
+.img-cartoline{
+    width: 10rem;
+    height: 15rem;
+}
+
+p{
+    display: inline-block;
+    background-color: rgba(226, 176, 236, 0.87);
+    width: 10rem;
+    text-align: center;
+}
+
+.cards div{
+    display: inline-block;
+    background-color: rgb(183, 166, 199);
+}
+.cards section{
+    margin-left: 1rem;
+    margin-right: 2rem;
+    float: left;
+}
+
+.img-avatar{
+    width: 5rem;
+    height: 5rem;
+    display: inline-block;
+    border-radius:100px; 
+    border-style: dotted;
+}
+
+.clearRow{
+    clear: both;
+}
+
+hr{
+border:1px solid black;
+}
+
+footer{
+display: inline-block;
+margin-right: 1rem;
+float:right;
+}
+
+nav a:nth-last-child(2),nav a:nth-last-child(3){
+    background-color: aliceblue;
+    float:right;
+    margin-right: 3px;
+}
+
+nav{
+    background-color: rgba(158, 132, 201, 0.616);
+}
