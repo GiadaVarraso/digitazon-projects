@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio3</title>
+    <style>
+        ul:first-child li:first-child{
+            color:yellow;
+        }
+
+        ul:first-child li:nth-child(2){
+            color:green;
+        }
+
+        ul:first-child li:nth-child(3){
+            color:red;
+        }
+
+        ul:first-child li:nth-child(4){
+            color:blue;
+        }
+
+        ul:first-child li:nth-child(5){
+            color:violet;
+        }
+
+        ul:first-child li:nth-child(6){
+            color:brown;
+        }
+
+        ul:nth-child(2) li:nth-child(odd){
+            color:blue;
+        }
+
+        ul:nth-child(2) li:nth-child(even){
+            color:red;
+        }
+
+        div :not(.plain){
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+Link alla teoria https://css-tricks.com/pseudo-class-selectors/#aa-position-number-based-pseudo-class-selectors
+-->
+
+<!-- 
+Senza modificare l'html dato mostrare ogni li di un colore 
+diverso
+-->
+
+<ul>
+  <li>Giallo</li>
+  <li>Verde</li>
+  <li>Rosso</li>
+  <li>Blu</li>
+  <li>Viola</li>
+  <li>Marrone</li>
+</ul>
+
+<!-- 
+Mostrare i li pari in rosso, i li dispari in blu
+-->
+
+<ul>
+  <li>Pari</li>
+  <li>Dispari</li>
+  <li>Pari</li>
+  <li>Dispari</li>
+  <li>Pari</li>
+  <li>Dispari</li>
+  <li>Pari</li>
+  <li>Dispari</li>
+</ul>
+
+<!-- 
+tutti i div senza classe "plain" devono avere background rosso
+-->
+
+<div>
+  <div class="plain">plain</div>
+  <div>rosso</div>
+  <div>rosso</div>
+  <div class="plain">plain</div>
+  <div>rosso</div>
+</div>
+
+</body>
+</html>
