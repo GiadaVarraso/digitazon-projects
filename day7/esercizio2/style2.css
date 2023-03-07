@@ -1,0 +1,94 @@
+body{
+    background-color: bisque;
+    padding: 0;
+    margin: 1rem;
+
+}
+
+nav{
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+nav img:first-child{
+width: 10rem;
+}
+
+nav img:last-child{
+    width: 2rem;
+    float: right;
+}
+
+.gallery img{
+    width: 5rem;
+    height: 5rem;
+    border: 1px solid black;
+    display: block;
+    float: left;
+}
+.gallery{
+    margin: 1rem;
+}
+
+.articles{
+    margin: 1rem 0 1rem 2rem;
+}
+
+.clearRow::after{
+    clear:both;
+    content:"";
+    display: block;
+}
+
+div#containerSx{
+    width: 50%;
+    height: 50%;
+    background-color: rgb(114, 175, 125);
+}
+div#containerDx{
+    background-color: rgb(225, 255, 161);
+    display: inline-block;
+    width:max-content;
+}
+
+#containerDx{
+    border: 1px solid black;
+    float: left;
+}
+
+#containerSx{
+    border: 1px solid black;
+    float: left;
+}
+
+#containerDx .contacts{
+    border: 1px solid black;
+}
+
+#containerDx .contacts img{
+    border: 1px solid black;
+    width: 5rem;
+    height: 5rem;
+}
+
+.notizie {
+    border: 1px solid black;
+    margin:2rem;
+}
+
+#containerSx div {
+    width: 90%;
+    height: 5%;
+}
+
+.contacts{
+    display: block;
+}
+.contacts div{
+    float: left;
+}
+
+.contacts div div{
+    width: 10px;
+    margin: 3rem;
+}
