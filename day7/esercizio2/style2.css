@@ -1,8 +1,11 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
     background-color: bisque;
     padding: 0;
     margin: 1rem;
-
 }
 
 nav{
@@ -42,13 +45,14 @@ nav img:last-child{
 
 div#containerSx{
     width: 50%;
-    height: 50%;
+    height: 700px;
     background-color: rgb(114, 175, 125);
 }
 div#containerDx{
     background-color: rgb(225, 255, 161);
     display: inline-block;
-    width:max-content;
+    width:50%;
+    height: 700px;
 }
 
 #containerDx{
@@ -73,12 +77,11 @@ div#containerDx{
 
 .notizie {
     border: 1px solid black;
-    margin:2rem;
+    margin: 5px;
 }
 
 #containerSx div {
     width: 90%;
-    height: 5%;
 }
 
 .contacts{
@@ -88,7 +91,10 @@ div#containerDx{
     float: left;
 }
 
-.contacts div div{
-    width: 10px;
-    margin: 3rem;
+.contacts div:last-child{
+    margin-left: 2rem;
+}
+
+div#containerSx div h2{
+    margin: 0;
 }
