@@ -1,0 +1,39 @@
+ul.products li a[href="/the-one-ring"],
+ul.products li a[href="/the-one-ring"]:visited{
+    color:rgb(255, 0, 0);
+}
+
+ul.products li a[href="/melange"],
+ul.products li a[href="/melange"]:visited{
+    color:rgb(241, 223, 85);
+}
+
+ul.products li a[href="/"],
+ul.products li a[href="/"]:visited{
+    color:black;
+}
+
+
+div.movies-quotes span{
+   background-color: aquamarine;
+   font-style: italic;
+}
+
+div.movies-quotes span:nth-child(odd):before{
+    content: "«";
+}
+div.movies-quotes span:nth-child(even)::after{
+    content: "»";
+}
+
+div.movies-quotes span span{
+    font-weight: bolder;
+}
+
+input:checked +span:before{
+    content: "❤️";
+}
+
+button:hover {
+    visibility: hidden;
+}
