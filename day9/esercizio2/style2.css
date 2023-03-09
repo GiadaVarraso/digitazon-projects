@@ -1,0 +1,64 @@
+main{
+    display:flex;
+}
+
+.images{
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+}
+header {
+    display:flex;
+    align-items: center;
+}
+
+header div:last-child {
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+.news-detail{
+    border: 1px solid black;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+main > div:last-child{
+    padding: 1rem;
+    border-left: 1px solid rgb(101, 101, 101);
+}
+
+img{
+    width: 100px;
+    margin: 1rem;
+}
+
+.brand-details{
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+}
+
+.brand-details span{
+ font-weight: bold;
+}
+
+.description p{
+    margin: 0;
+}
+
+.brand-details  div:first-child{
+    border-right: 1px solid black;
+}
+
+.brand-details div{
+    padding: 30px 0 30px;
+}
+
+div .brand{
+    padding-right: 20px;
+}
+
+ol{
+    list-style: none;
+}
