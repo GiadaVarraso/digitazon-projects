@@ -1,0 +1,116 @@
+/* START set page */
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 13px;
+    background-color: rgb(183, 192, 205);
+}
+
+body{
+    margin:0;
+}
+/* END set page */
+
+/* START MENU nav */
+nav {
+    height: 4rem;
+    background-color: rgb(245, 251, 251);
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+nav div{
+    display: flex;
+}
+
+/* div brand */
+nav div:first-child{
+    flex-grow: 1;
+}
+
+/* div search */
+nav div:nth-child(2){
+    flex-grow: 8;
+    background-color: rgba(215, 215, 215, 0.356);
+    border-radius: 20px;
+    margin: 0 15rem;
+}
+
+nav div:nth-child(2):hover{
+    border: 1px solid blue;
+    background-color: rgb(245, 251, 251);
+}
+
+/* div bottoni + login*/
+nav div:last-child{
+    flex-grow: 1;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+/* brand img */
+nav div:first-child img{
+    width: 100px;
+}
+
+/*searchbar */
+#searchBar{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    width: 80%;
+    outline:none; /* per rimuovere il bordo del focus*/
+}
+
+nav div:nth-child(2) img{
+    opacity: 40%;
+    margin:10px;
+}
+
+nav button:hover:not(#login){
+   opacity: 35%;
+}
+
+/* bottoni nav */
+nav button { 
+    width: 100px;
+    border: 1px solid rgb(60, 91, 192);
+    border-radius: 100px;
+    font-weight: bold;
+    color:  rgb(60, 91, 192);
+}
+
+nav div:last-child button:nth-child(2){
+    background-color:rgb(60, 91, 192);
+    color: aliceblue;
+}
+
+/* bottone login */
+#login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    border:none;
+    background-color: rgb(245, 251, 251);
+}
+
+/* login button icon */
+#login span:nth-child(1) img{
+    width:30px;
+    padding:10px 1px;
+}
+
+/* freccia login */
+#login span:nth-child(2) img{
+    width:15px;
+    padding:10px 1px;
+}
+
+#login:hover {
+   border: 1px solid rgba(131, 131, 131, 0.27); 
+    border-radius: 10px;
+}
+/* END MENU nav */
