@@ -4,7 +4,7 @@
 }
 
 html{
-    font-size: 13px;
+    font-size: 16px;
     background-color: rgb(183, 192, 205);
 }
 
@@ -15,7 +15,7 @@ body{
 
 /* START MENU nav */
 nav {
-    height: 4rem;
+    height: 3rem;
     background-color: rgb(245, 251, 251);
     display: flex;
     justify-content: space-between;
@@ -110,7 +110,28 @@ nav div:last-child button:nth-child(2){
 }
 
 #login:hover {
-   border: 1px solid rgba(131, 131, 131, 0.27); 
-    border-radius: 10px;
+   border: 1px solid rgba(131, 131, 131, 0.27);
+   border-radius: 10px;
 }
 /* END MENU nav */
+
+/* START main page */
+main{
+    display: flex;
+}
+/* sezione sx */
+main div:first-child{
+   background-color: aliceblue;
+}
+main div section{
+    margin: 1rem;
+}
+a{
+    text-decoration: none;
+}
+ul{
+   list-style: none;
+   padding: 0;
+}
+/* sezione dx */
+/* END main page */
