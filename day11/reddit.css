@@ -116,11 +116,11 @@ nav div:last-child button:nth-child(2){
 /* END MENU nav */
 
 /* START main page */
-main{
+main {
     display: flex;
 }
 /* sezione sx */
-main div:first-child{
+main > div:first-child{
    background-color: aliceblue;
 }
 main div section{
@@ -134,4 +134,31 @@ ul{
    padding: 0;
 }
 /* sezione dx */
+#tendenza h5{
+    flex-wrap: wrap;
+}
+#tendenza{
+    display: flex;
+}
+#tendenza div{
+    border: 1px solid black;
+    height: 35%;
+    background-image: url("https://esports.gazzetta.it/wp-content/uploads/2022/05/14/28/Apex-Legends-Mobile.jpg");
+    background-size:cover;
+    overflow: hidden;
+    color: aliceblue;
+    font-size: medium;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+#tendenza div::first-line{
+   font-size: 35px;
+}
 /* END main page */
+
+/* FIXME REMIND
+h5 sez.dx deve andare a capo
+sezione sx deve avere piu spazio
+newsCards devono essere leggermente separate 
+e con i bordi stondati*/
