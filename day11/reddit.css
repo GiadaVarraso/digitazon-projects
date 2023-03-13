@@ -126,20 +126,24 @@ main > div:last-child{
     background-color: rgb(183, 192, 205);
     padding-left: 6rem;
     padding-right: 6rem;
- }
+}
+
 /* sezione sx div*/
 main > div:first-child{
     background-color: aliceblue;
- }
+}
+
  /* sezione sx contents*/
 main div section{
     margin: 2rem;
 }
+
 a{
     color: black;
     text-decoration: none;
     padding: 1rem;
 }
+
 ul{
    list-style: none;
    padding: 0;
@@ -150,6 +154,7 @@ ul{
     display: flex;
     justify-content:space-around;
 }
+
 #tendenza div{
     border: 1px solid rgba(0, 0, 0, 0.547);
     height: 10rem;
@@ -165,10 +170,12 @@ ul{
 h5,h3{
     padding-left: 1rem;
 }
+
 /* div postPopolari */
 #postPopolari {
     display: flex;
 }
+
 #postPopolari button{
     width: 100px;
     border: 1px solid rgb(60, 91, 192);
@@ -177,6 +184,7 @@ h5,h3{
     color:  rgb(60, 91, 192);
     border: none;
 }
+
 #postPopolari div section,#postPopolari > div:last-child{
     border: 1px solid rgba(131, 131, 131, 0.472);
     background-color: rgb(245, 251, 251);
@@ -186,47 +194,58 @@ h5,h3{
 #postPopolari div:first-child {
     height: 40px;
 }
+
 #postPopolari button{
     height: 2rem;
 }
+
 #postPopolari button:hover{
     background-color:rgba(120, 120, 120, 0.226) ;
 }
+
 #postPopolari div:first-child section:first-child{
     display: flex;
     justify-content: space-around;
 }
+
 #postPopolari button:nth-child(3),
 #postPopolari button:nth-child(4),
 #postPopolari button:nth-child(5){
     color: rgb(99, 99, 99);
 }
+
 #postPopolari div:first-child section:last-child{
     height: 170px;
     text-align: center;
     padding-left: 2rem;
 }
+
 #comunitaPop div a{
     color: rgb(63, 63, 63);
     font-size: small;
 }
+
 #comunitaPop a:hover{
     text-decoration: underline;
 }
+
 #comunitaPop div ul{
     padding: 10px;
     font-size: small;
 }
+
 #comunitaPop li{
     padding: 10px;
     border-top: 1px solid rgba(131, 131, 131, 0.313);
 }
+
 #comunitaPop h3{ 
     width: 150px;
     border-radius: 100px;
     font-weight: bold;
     color:  rgb(60, 91, 192);
 }
+
 #comunitaPop h3:hover{ 
     background-color: rgba(215, 215, 215, 0.356);
     border-radius: 100px;
@@ -238,13 +257,18 @@ h5,h3{
 main > div > section > ul > li {
     display: flex;
     justify-content: flex-start;
+    align-items: center;        /* giada */
 }
+
 main > div > section > ul > li > img:last-child {
-    margin-left: auto;
+    margin-left: auto; 
 }
-main li > img:first-child {
-    width: 40px;
-}
+
+/* main li > img:first-child {
+    width: 20px;
+} */
+/* 
 main li > img:last-child {
-    width: 30px;
-}
+    width: 10px;
+} */
+
