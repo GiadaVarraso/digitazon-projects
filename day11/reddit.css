@@ -5,7 +5,7 @@
 
 html{
     font-size: 16px;
-    background-color: rgb(183, 192, 205);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 body{
@@ -20,6 +20,7 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 5px;
+    border-bottom: 1px solid rgba(187, 187, 187, 0.442);
 }
 
 nav div{
@@ -74,7 +75,8 @@ nav button:hover:not(#login){
 }
 
 /* bottoni nav */
-nav button { 
+nav button ,
+#postPopolari button{ 
     width: 100px;
     border: 1px solid rgb(60, 91, 192);
     border-radius: 100px;
@@ -119,46 +121,88 @@ nav div:last-child button:nth-child(2){
 main {
     display: flex;
 }
-/* sezione sx */
+
+/* sezione dx div*/
+main > div:last-child{
+    background-color: rgb(183, 192, 205);
+    padding-left: 6rem;
+    padding-right: 6rem;
+ }
+/* sezione sx div*/
 main > div:first-child{
-   background-color: aliceblue;
-}
+    background-color: aliceblue;
+ }
+ /* sezione sx contents*/
 main div section{
-    margin: 1rem;
+    margin: 2rem;
 }
 a{
+    color: black;
     text-decoration: none;
+    padding: 1rem;
 }
 ul{
    list-style: none;
    padding: 0;
 }
-/* sezione dx */
-#tendenza h5{
-    flex-wrap: wrap;
-}
-#tendenza{
+
+/* sezione dx contents*/
+#tendenza {
     display: flex;
+    justify-content:space-around;
 }
 #tendenza div{
-    border: 1px solid black;
-    height: 35%;
+    border: 1px solid rgba(0, 0, 0, 0.547);
+    height: 10rem;
+    width: 16rem;
     background-image: url("https://esports.gazzetta.it/wp-content/uploads/2022/05/14/28/Apex-Legends-Mobile.jpg");
     background-size:cover;
-    overflow: hidden;
     color: aliceblue;
-    font-size: medium;
     font-weight: bold;
-    padding: 1rem;
+    border-radius: 9px;
 }
 
-#tendenza div::first-line{
-   font-size: 35px;
+h5,h3{
+    padding-left: 1rem;
+}
+/* div postPopolari */
+#postPopolari {
+    display: flex;
+}
+#postPopolari button{
+    border: none;
+}
+#postPopolari div section,#postPopolari > div:last-child{
+    border: 1px solid rgba(131, 131, 131, 0.472);
+    background-color: rgb(245, 251, 251);
+    border-radius: 5px;
+}
+
+#postPopolari div:first-child {
+    height: 40px;
+}
+#postPopolari button{
+height: 2rem;
+}
+#postPopolari div:first-child section:first-child{
+    display: flex;
+    justify-content: space-around;
+}
+#postPopolari div:first-child section:last-child{
+    height: 170px;
+    text-align: center;
+    padding-left: 2rem;
+}
+#comunitaPop div a{
+    color: rgb(113, 113, 113);
+    font-size: small;
+}
+#comunitaPop div ul{
+    padding: 10px;
+    font-size: small;
+}
+#comunitaPop div ul li{
+    padding: 10px;
+    border-top: 1px solid rgba(131, 131, 131, 0.313);
 }
 /* END main page */
-
-/* FIXME REMIND
-h5 sez.dx deve andare a capo
-sezione sx deve avere piu spazio
-newsCards devono essere leggermente separate 
-e con i bordi stondati*/
