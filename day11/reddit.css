@@ -75,8 +75,7 @@ nav button:hover:not(#login){
 }
 
 /* bottoni nav */
-nav button ,
-#postPopolari button{ 
+nav button { 
     width: 100px;
     border: 1px solid rgb(60, 91, 192);
     border-radius: 100px;
@@ -84,7 +83,7 @@ nav button ,
     color:  rgb(60, 91, 192);
 }
 
-nav div:last-child button:nth-child(2){
+nav button:nth-child(2){
     background-color:rgb(60, 91, 192);
     color: aliceblue;
 }
@@ -160,6 +159,7 @@ ul{
     color: aliceblue;
     font-weight: bold;
     border-radius: 9px;
+    /* box-shadow: 2px 1px 10px black;  ombra esterna */ 
 }
 
 h5,h3{
@@ -170,6 +170,11 @@ h5,h3{
     display: flex;
 }
 #postPopolari button{
+    width: 100px;
+    border: 1px solid rgb(60, 91, 192);
+    border-radius: 100px;
+    font-weight: bold;
+    color:  rgb(60, 91, 192);
     border: none;
 }
 #postPopolari div section,#postPopolari > div:last-child{
@@ -182,11 +187,19 @@ h5,h3{
     height: 40px;
 }
 #postPopolari button{
-height: 2rem;
+    height: 2rem;
+}
+#postPopolari button:hover{
+    background-color:rgba(120, 120, 120, 0.226) ;
 }
 #postPopolari div:first-child section:first-child{
     display: flex;
     justify-content: space-around;
+}
+#postPopolari button:nth-child(3),
+#postPopolari button:nth-child(4),
+#postPopolari button:nth-child(5){
+    color: rgb(99, 99, 99);
 }
 #postPopolari div:first-child section:last-child{
     height: 170px;
@@ -194,15 +207,28 @@ height: 2rem;
     padding-left: 2rem;
 }
 #comunitaPop div a{
-    color: rgb(113, 113, 113);
+    color: rgb(63, 63, 63);
     font-size: small;
+}
+#comunitaPop a:hover{
+    text-decoration: underline;
 }
 #comunitaPop div ul{
     padding: 10px;
     font-size: small;
 }
-#comunitaPop div ul li{
+#comunitaPop li{
     padding: 10px;
     border-top: 1px solid rgba(131, 131, 131, 0.313);
+}
+#comunitaPop h3{ 
+    width: 150px;
+    border-radius: 100px;
+    font-weight: bold;
+    color:  rgb(60, 91, 192);
+}
+#comunitaPop h3:hover{ 
+    background-color: rgba(215, 215, 215, 0.356);
+    border-radius: 100px;
 }
 /* END main page */
