@@ -21,7 +21,9 @@ nav button{
     padding: 10px;
     margin: 10px;
 }
-
+a{
+    text-decoration: none;
+}
 nav button:hover{
     background-color: rgb(250, 205, 81);
 }
@@ -50,6 +52,7 @@ header{
     display: flex;
     position: fixed;
     right: 0px;
+    top: 185px;
 }
 #carrello{
     width: 70px;
@@ -121,5 +124,32 @@ li{
 }
 
 li button:first-child{
-margin-left: auto;
+    margin-left: auto;
+}
+li button{
+margin-right: 5px;
+}
+
+main div.signin,main div.login{
+    display: flex;
+}
+
+.login form{
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    margin: 3rem;
+    padding: 1rem;
+    background-color: rgb(255, 252, 235);
+}
+
+.signin form{
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    margin: 3rem;
+    padding: 1rem;
+    background-color: rgb(255, 252, 235);
 }
