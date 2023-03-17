@@ -18,7 +18,9 @@ div button:hover,#homePage:last-child div div:hover{
 #homePage div:last-child{
     display: flex;
 }
-
+#homePage input{
+    width: 500px;
+}
 #homePage div:last-child div{
     background-color: rgb(93, 249, 79);
     margin-right: 2rem;
@@ -26,8 +28,8 @@ div button:hover,#homePage:last-child div div:hover{
     padding: 0.5rem;
     border-radius: 9px;
 }
-#search:hover{
-    border: 3px solid rgb(93, 249, 79);
+#search:hover, #search+button:hover {
+    border: 3px solid rgb(231, 252, 1);
 }
 #homePage div:last-child a{
     text-decoration: none;
@@ -51,7 +53,7 @@ div button:hover,#homePage:last-child div div:hover{
     margin-left: 50%;
     background-color: rgb(26, 26, 26);
     border-radius: 4px;
-    color: rgb(131, 249, 102); ;
+    color: rgb(131, 249, 102);
     padding: 10px;
 }
 
@@ -72,13 +74,16 @@ div button:hover,#homePage:last-child div div:hover{
     background-image: url("../assets/adele_21.webp");
     background-size: cover;
 }
-#homeMain h3,h2,h4{
+#homeMain h3,h2,h4,h5{
     margin: 0;
     padding: 20px;
 }
-#homeMain h2{
+#homeMain header h2{
     padding:0 20px;
     font-size: 100px;
+}
+h3 i{
+    color:rgb(0, 204, 255)
 }
 #homeMain footer{
     background-color: rgb(47, 47, 47);
@@ -87,3 +92,42 @@ div button:hover,#homePage:last-child div div:hover{
     align-items: center;
     color: aliceblue;
 }
+#homeMain section{
+    background:linear-gradient(rgb(121, 121, 121),rgb(5, 5, 5))
+}
+#pauseButton{
+    color: greenyellow;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+#pauseButton i{
+    font-size: 50px;
+}
+
+ul{
+    list-style: none;
+}
+ul li{
+    margin-top: 10px;
+    display: flex;
+    padding: 5px;
+}
+ul li:hover{
+    background-color: rgb(92, 91, 91);
+    border: 0,7px solid black;
+}
+ul span i:hover{
+    color:rgb(217, 124, 61)
+}
+ul li div{
+    display: flex;
+    align-items: center;
+}
+ul span:first-child,ul img{
+    margin-right: 15px;
+}
+
+ul li:nth-child(3) span:nth-child(3){
+    color:rgb(156, 252, 1);
+}
+
