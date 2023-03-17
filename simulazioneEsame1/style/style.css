@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+div button:hover,#homePage:last-child div div:hover{
+    opacity: 80%;
+}
+#homePage,#loginPage,#signinPage{
+    display: flex;
+    background-color: rgb(47, 47, 47);
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    color: aliceblue;
+    border-bottom: 1px solid rgba(132, 132, 132, 0.574);
+}
+
+#homePage div:last-child{
+    display: flex;
+}
+
+#homePage div:last-child div{
+    background-color: rgb(93, 249, 79);
+    margin-right: 2rem;
+    font-size: larger;
+    padding: 0.5rem;
+    border-radius: 9px;
+}
+#search:hover{
+    border: 3px solid rgb(93, 249, 79);
+}
+#homePage div:last-child a{
+    text-decoration: none;
+    color: black;
+}
+#loginPage a,#signinPage a{
+    color: rgb(148, 148, 148);
+}
+
+#login, #signin{
+    background-color: rgba(213, 251, 204, 0.346);
+    padding: 1rem;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 20px;
+    width: 200px;
+}
+#login button, #signin button{
+    margin-top: 20px;
+    width: 80px;
+    margin-left: 50%;
+    background-color: rgb(26, 26, 26);
+    border-radius: 4px;
+    color: rgb(131, 249, 102); ;
+    padding: 10px;
+}
+
+#homeMain{
+    display: flex;
+}
+#homeMain div:first-child{
+    flex-grow: 3;
+    color: aliceblue;
+}
+#info{
+    flex-grow: 1;
+    color: aliceblue;
+    padding: 20px;
+    background-color: black;
+}
+#homeMain header{
+    background-image: url("../assets/adele_21.webp");
+    background-size: cover;
+}
+#homeMain h3,h2,h4{
+    margin: 0;
+    padding: 20px;
+}
+#homeMain h2{
+    padding:0 20px;
+    font-size: 100px;
+}
+#homeMain footer{
+    background-color: rgb(47, 47, 47);
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    color: aliceblue;
+}

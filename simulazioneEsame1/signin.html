@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="simulazione di esame primo modulo ,riprodurre Spotify">
+    <meta name="keyword" content="simulazione esame Spotify">
+    <title>Spotify signin</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" href="./assets/logoSpotify.jpg" type="img/jpg">
+    <script src="https://kit.fontawesome.com/e8d73de70f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav id="signinPage">
+        <div>
+             <a href="index.html">
+                 <img src="assets/logoSpotify.jpg" alt="logo" width="80px">
+             </a>
+         </div>
+         <div>
+            <h1>SIGNIN page</h1>
+         </div>
+         <div>
+            <h3>Sei già registrato?<a href="login.html"> Clicca qui.</a></h3>
+         </div>
+     </nav>
+     <main>    
+        <div id="signin">          
+                <form action="https://lazys.requestcatcher.com/" method="post">
+                    <h2>Who are you?</h2>
+                    <label for="name">Il tuo nome?</label>
+                    <input type="text" name="nome" id="nome" placeholder="nome" required>
+                    <label for="cognome">Il tuo cognome?</label>
+                    <input type="text" name="cognome" id="cognome" placeholder="cognome" required>
+                    <label for="ddn">Quando sei nato?</label>
+                    <input type="date" name="ddn" id="ddn" min="1910-01-01" max="2023-01-01">
+                    <label for="email">Il tuo indirizzo email?</label>
+                    <input type="email" name="email" id="email" placeholder="email" required>
+                    <label for="username">Il tuo Username?</label>
+                    <input type="text" name="username" id="username" placeholder="username" required>
+                    <label for="password">La tua Password?</label>
+                    <input type="password" name="password" id="password" placeholder="password" required>
+                    <label for="publicity">Come hai conosciuto Spotify?</label>
+                    <select name="publicity" id="publicity">
+                        <option value="">Seleziona un opzione</option>
+                        <option value="amici">Amici</option>
+                        <option value="web">Web</option>
+                        <option value="tv">Tv</option>
+                        <option value="riviste">Riviste</option>
+                        <option value="riviste">Altro</option>
+                    </select>
+                    <button type="submit">Registrati</button>
+                </form>
+        </div>
+    </main>   
+
+</body>
+</html>

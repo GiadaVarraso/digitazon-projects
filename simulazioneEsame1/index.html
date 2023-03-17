@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="simulazione di esame primo modulo ,riprodurre Spotify">
+    <meta name="keyword" content="simulazione esame Spotify">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" href="./assets/logoSpotify.jpg" type="img/jpg">
+    <script src="https://kit.fontawesome.com/e8d73de70f.js" crossorigin="anonymous"></script>
+    <!-- Creare una versione Desktop della schermata di Spotify che trovate sotto: va adattata la
+    pagina perche’ rispetti i canoni di UX e UI che abbiamo visto a lezione.
+    Scopo dell’esercitazione e’ dimostrare di aver capito come distribuire i vari elementi sulla
+    pagina, come utilizzare i colori giusti, e come comunicare all’utente le azioni che puo’
+    effettuare sulla pagina.
+    Siete incoraggiati a prendere spunto dallo screenshot per poi proporre un vostro design
+    originale, ma non verrete valutati negativamente nel caso di una copia identica.
+
+    Per raggiungere un punteggio sufficiente verranno valutati i seguenti punti:
+    ● utilizzo di Flex consapevole per la disposizione delle varie sezioni
+    ● UX e UI che non generino domande
+    ● utilizzo semantico dei tag HTML
+    ● CSS ordinato e selettori ben dosati
+    -->
+</head>
+<body>
+    <header>
+        <nav id="homePage">
+           <div>
+                <a href="index.html">
+                    <img src="assets/logoSpotify.jpg" alt="logo" width="80px">
+                </a>
+            </div>
+            <div>
+                <form action="https://lazys.requestcatcher.com/" method="post">
+                    <input type="text" name="search" id="search" placeholder="Song, Artist, Playlist...">
+                    <button type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i> Search
+                    </button>
+                </form>
+            </div>
+            <div>
+                <div><a href="signin.html">Signin</a></div>
+                <div><a href="login.html">Login</a></div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="homeMain">
+        <div>
+            <header>
+                <div>
+                    <h3>
+                        <i class="fa-solid fa-certificate"></i>
+                        Verified Artist
+                    </h3>
+                    <h2>Adele</h2>
+                    <h4>19,465,218 monthly listeners</h4>
+                </div>
+            </header>
+            <section>
+    
+            </section>
+            <footer>
+                <h4>Someone like you</h4>
+                <h5>Adele</h5>
+            </footer>
+        </div>
+        <div id="info">
+            <i class="fa-solid fa-ellipsis"></i>
+        </div>
+    </main>
+
+
+    <!-- 
+    <i class="fa-solid fa-lines-leaning"></i>
+    <i class="fa-brands fa-gratipay"></i>
+    
+
+    <i class="fa-solid fa-square-plus"></i>
+    <i class="fa-solid fa-heart-circle-plus"></i>
+   
+    <i class="fa-regular fa-circle-play"></i>
+    <i class="fa-solid fa-repeat"></i>
+    <i class="fa-solid fa-backward-step"></i>
+    <i class="fa-solid fa-forward-step"></i>
+    <i class="fa-solid fa-shuffle"></i> -->
+</body>
+</html>

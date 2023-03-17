@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="simulazione di esame primo modulo ,riprodurre Spotify">
+    <meta name="keyword" content="simulazione esame Spotify">
+    <title>Spotify login</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" href="./assets/logoSpotify.jpg" type="img/jpg">
+    <script src="https://kit.fontawesome.com/e8d73de70f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav id="loginPage">
+        <div>
+             <a href="index.html">
+                 <img src="assets/logoSpotify.jpg" alt="logo" width="80px">
+             </a>
+         </div>
+         <div>
+            <h1>LOGIN page</h1>
+         </div>
+         <div>
+            <h3>Non sei ancora registrato? <a href="signin.html"> Clicca qui.</a></h3>
+         </div>
+     </nav>
+
+     <main> 
+        <div id="login">             
+                <form action="https://lazys.requestcatcher.com/" method="post">
+                    <h2>Who are you?</h2>
+                    <label for="username">Your Username?</label>
+                    <input type="text" name="username" id="username" placeholder="Username" required>
+                    <label for="password">Your Password?</label>
+                    <input type="password" name="password" id="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+        </div>
+    </main>
+</body>
+</html>
