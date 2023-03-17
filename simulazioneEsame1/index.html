@@ -63,8 +63,8 @@
             <section>
                 <div>
                     <button type="button" id="pauseButton"><i class="fa-solid fa-circle-pause"></i></button>
-                    <button type="button">FOLLOWING</button>
-                    <button type="button"><i class="fa-solid fa-ellipsis"></i></button>
+                    <button type="button" id="followButton">FOLLOWING</button>
+                    <button type="button" id="infoButton"><i class="fa-solid fa-ellipsis"></i></button>
                 </div>
                 <div>
                     <h2>Popular</h2>
@@ -169,8 +169,38 @@
                 </div>
             </section>
             <footer>
-                <h4>Someone Like You</h4>
-                <h5>Adele</h5>
+                <div>
+                    <!-- songs info -->
+                    <h3>Someone Like You</h3>
+                    <h5>Adele</h5>
+                </div>
+                <div>
+                    <!--  like -->
+                    <button><i class="fa-brands fa-gratipay"></i></button>
+                </div>
+                <div id="audioCommand">
+                    <!-- reproduce commands -->
+                
+                    <section>
+                        <button><i class="fa-solid fa-shuffle"></i></button>
+                        <button><i class="fa-solid fa-backward-step"></i></button>
+                        <button><i class="fa-regular fa-circle-play"></i></button>
+                        <button><i class="fa-solid fa-forward-step"></i></button>
+                        <button><i class="fa-solid fa-repeat"></i></button>
+                    </section>
+                    <section>
+                        <span>1:34</span>
+                        <input type="range" name="audioTraceBar" id="audioTraceBar">
+                        <span>4:03</span>
+                    </section>
+                </div>
+                <div>
+                    <!-- audio commands -->
+                    <button><i class="fa-solid fa-volume-low"></i></button>
+                    <button><i class="fa-solid fa-headset"></i></button>
+                    <button><i class="fa-solid fa-microphone-lines"></i></button>
+                    <button><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                </div>
             </footer>
         </div>
         <div id="info">

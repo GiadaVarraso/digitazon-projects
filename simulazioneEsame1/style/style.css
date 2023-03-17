@@ -2,6 +2,9 @@
     box-sizing: border-box;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+html{
+    background-color: rgb(28, 27, 27);
+}
 div button:hover,#homePage:last-child div div:hover{
     opacity: 80%;
 }
@@ -12,7 +15,7 @@ div button:hover,#homePage:last-child div div:hover{
     padding: 10px;
     align-items: center;
     color: aliceblue;
-    border-bottom: 1px solid rgba(132, 132, 132, 0.574);
+    border-bottom: 3px solid rgb(66, 127, 28);
 }
 
 #homePage div:last-child{
@@ -22,7 +25,7 @@ div button:hover,#homePage:last-child div div:hover{
     width: 500px;
 }
 #homePage div:last-child div{
-    background-color: rgb(93, 249, 79);
+    background-color: rgb(41, 223, 84);
     margin-right: 2rem;
     font-size: larger;
     padding: 0.5rem;
@@ -64,6 +67,9 @@ div button:hover,#homePage:last-child div div:hover{
     flex-grow: 3;
     color: aliceblue;
 }
+#homeMain header div{
+border-bottom: 1px solid rgba(255, 255, 255, 0.472);
+}
 #info{
     flex-grow: 1;
     color: aliceblue;
@@ -92,16 +98,44 @@ h3 i{
     align-items: center;
     color: aliceblue;
 }
-#homeMain section{
-    background:linear-gradient(rgb(121, 121, 121),rgb(5, 5, 5))
+
+#homeMain section > div:first-child{
+    display: flex;
+    align-items: center;
 }
+#homeMain section > div:first-child button{
+    margin: 15px 25px;
+}
+
 #pauseButton{
-    color: greenyellow;
+    color: rgb(136, 255, 0);
     border: none;
     background-color: rgba(255, 255, 255, 0);
 }
 #pauseButton i{
     font-size: 50px;
+}
+
+#followButton,#infoButton{
+    border-radius: 4px;
+    height: 2.5rem;
+    background-color: rgba(255, 255, 255, 0);
+    color: aliceblue;
+    border-color: rgba(240, 248, 255, 0.661);
+    font-weight: bold;
+}
+
+#followButton:hover{
+    background-color: rgba(113, 184, 234, 0.799);
+    color: black;
+}
+#infoButton{
+    border: none;
+    font-size: 30px;
+}
+#infoButton:hover{
+    background-color: rgb(203, 203, 203);
+    color: rgb(69, 69, 69);
 }
 
 ul{
@@ -124,10 +158,76 @@ ul li div{
     align-items: center;
 }
 ul span:first-child,ul img{
-    margin-right: 15px;
+    margin-right: 40px;
 }
 
 ul li:nth-child(3) span:nth-child(3){
     color:rgb(156, 252, 1);
+}
+
+ul li span:nth-child(){
+    color:rgb(156, 252, 1);
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+}
+
+footer h5{
+    padding-top:0;
+    font-weight: bold;
+}
+
+#homeMain footer h3{
+    padding:0;
+    font-weight: bold;
+}
+
+footer div:first-child{
+    flex-grow: 0;
+}
+
+footer div:nth-child(2){
+    flex-grow: 1;
+    font-size: 40px;
+}
+footer div:nth-child(3){
+    flex-grow: 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#audioCommand section{
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+}
+footer i{
+    margin:15px 10px
+}
+footer div:last-child{
+    flex-grow: 0;
+}
+footer div:nth-child(2) button i{
+    font-size:40px;
+    color:aliceblue
+}
+footer div:nth-child(2) button i:hover{
+    font-size:40px;
+    color:rgb(217, 124, 61)
+}
+footer button i{
+    font-size:20px;
+    color:rgb(87, 141, 188)
+}
+footer button{
+    background-color: rgba(240, 248, 255, 0);
+    border: none;
+}
+footer button:hover{
+    background-color: rgba(78, 78, 78, 0.293);
+    border: none;
 }
 
