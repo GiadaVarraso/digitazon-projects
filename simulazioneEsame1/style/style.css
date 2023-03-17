@@ -15,7 +15,7 @@ div button:hover,#homePage:last-child div div:hover{
     padding: 10px;
     align-items: center;
     color: aliceblue;
-    border-bottom: 3px solid rgb(66, 127, 28);
+    border-bottom: 1px solid rgba(143, 255, 16, 0.809);
 }
 
 #homePage div:last-child{
@@ -71,7 +71,7 @@ div button:hover,#homePage:last-child div div:hover{
 border-bottom: 1px solid rgba(255, 255, 255, 0.472);
 }
 #info{
-    flex-grow: 1;
+    flex-grow: 2;
     color: aliceblue;
     padding: 20px;
     background-color: black;
@@ -108,7 +108,7 @@ h3 i{
 }
 
 #pauseButton{
-    color: rgb(136, 255, 0);
+    color: rgba(143, 255, 16, 0.809);
     border: none;
     background-color: rgba(255, 255, 255, 0);
 }
@@ -151,7 +151,7 @@ ul li:hover{
     border: 0,7px solid black;
 }
 ul span i:hover{
-    color:rgb(217, 124, 61)
+    color :rgba(242, 186, 186, 0.77);
 }
 ul li div{
     display: flex;
@@ -184,10 +184,6 @@ footer h5{
     font-weight: bold;
 }
 
-footer div:first-child{
-    flex-grow: 0;
-}
-
 footer div:nth-child(2){
     flex-grow: 1;
     font-size: 40px;
@@ -216,7 +212,7 @@ footer div:nth-child(2) button i{
 }
 footer div:nth-child(2) button i:hover{
     font-size:40px;
-    color:rgb(217, 124, 61)
+    color :rgba(242, 186, 186, 0.77);
 }
 footer button i{
     font-size:20px;
@@ -230,4 +226,13 @@ footer button:hover{
     background-color: rgba(78, 78, 78, 0.293);
     border: none;
 }
+
+#info li{
+    color :rgba(242, 186, 186, 0.77);
+}
+
+footer div:first-child h3{
+    color: rgba(143, 255, 16, 0.809);
+}
+
 
