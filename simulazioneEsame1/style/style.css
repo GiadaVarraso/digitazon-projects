@@ -173,17 +173,14 @@ footer{
     display: flex;
     justify-content: space-around;
 }
-
 footer h5{
     padding-top:0;
     font-weight: bold;
 }
-
 #homeMain footer h3{
     padding:0;
     font-weight: bold;
 }
-
 footer div:nth-child(2){
     flex-grow: 1;
     font-size: 40px;
@@ -226,13 +223,13 @@ footer button:hover{
     background-color: rgba(78, 78, 78, 0.293);
     border: none;
 }
+footer div:first-child h3{
+    color: rgba(143, 255, 16, 0.809);
+}
 
 #info li{
     color :rgba(242, 186, 186, 0.77);
 }
 
-footer div:first-child h3{
-    color: rgba(143, 255, 16, 0.809);
-}
 
 
