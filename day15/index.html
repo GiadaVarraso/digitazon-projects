@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day15 esercizio Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/e8d73de70f.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="assets/Gmail_icon_(2020).svg.webp" >
+    <style type="text/tailwindcss"
+    >
+        @layer base{
+            i,h2{
+                @apply p-2 
+            }
+            h2{
+                @apply bg-sky-300 rounded-lg w-fit m-2
+            }
+        }
+        @layer components{
+            .green{
+                @apply bg-green-500 text-white
+            }
+            .mails li{
+                @apply border hover:border-2 hover:border-b-gray-400 flex justify-between px-2
+           }
+        }
+    </style>
+</head>
+
+<body class="p-2 bg-sky-50">
+    <nav class="px-3 flex justify-between pt-2">
+        <div class="flex gap-3 items-center">
+            <i class="fa-solid fa-bars"></i>
+            <img src="assets/Gmail_icon_(2020).svg.webp" alt="" width="20px">
+            <span>Gmail</span>
+        </div>
+        <div class="bg-sky-100 flex justify-between px-3 w-2/3 border rounded-sm bg-sky-50">
+            <div>
+                <i class="fa-solid fa-bars"></i>
+                <input class="bg-sky-100 px-2" type="text" placeholder="Cerca nella posta">
+            </div>
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="flex">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-bars"></i>
+            <img class="m-2 rounded-full border-black" src="assets/_STE4950.JPG" alt="profilo img" width="40px">
+        </div>
+    </nav>
+    <main class="flex">
+        <div class="flex flex-col gap-7 w-1/4">
+            <div>
+                <h2>Scrivi</h2>
+                <ul>
+                    <li class="bg-blue-200 rounded-lg w-fit"><i class="fa-solid fa-bars"></i><span>Posta in arrivo</span></li>
+                    <li><i class="fa-solid fa-bars"></i><span>Speciali</span></li>
+                    <li><i class="fa-solid fa-bars"></i><span>Principali</span></li>
+                    <li><i class="fa-solid fa-bars"></i><span>Inviati</span></li>
+                    <li><i class="fa-solid fa-bars"></i><span>Bozze</span></li>
+                    <li><i class="fa-solid fa-bars"></i><span>Altro</span></li>
+                </ul>
+                
+            </div>
+            <div>
+                <div class="flex justify-between">                    
+                    <h1 class="font-bold">Etichette </h1>
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <ul>
+                    <li> 
+                        <i class="fa-solid fa-bars"></i>
+                        <span>Posta in arrivo</span>
+                    </li>
+                    <li> 
+                        <i class="fa-solid fa-bars"></i>
+                        S<span>Speciali</span>
+                    </li>
+                    <li> 
+                        <i class="fa-solid fa-bars"></i>
+                        <span>Principali</span>
+                    </li>
+                    <li> 
+                        <i class="fa-solid fa-bars"></i>
+                        <span>Inviati</span>
+                    </li>
+                    <li> 
+                        <i class="fa-solid fa-bars"></i>
+                        <span>Bozze</span>
+                    </li>
+                    <li> 
+                        <i class="fa-solid fa-bars"></i>
+                        <span>Altro</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bg-white border m-2 rounded-md ">
+            <div>
+               <header class="p-3" >
+                    <div class="flex justify-between">
+                        <div>
+                            <i class="fa-solid fa-bars"></i>
+                            <i class="fa-solid fa-bars"></i>
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+                        <div>
+                            <span>1-50 di 913</span>
+                            <i class="fa-solid fa-bars"></i>
+                            <i class="fa-solid fa-bars"></i>
+                            <i class="fa-solid fa-bars"></i>
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+                    </div>
+                    <div class="flex gap-12">
+                        <div>
+                            <i class="fa-solid fa-bars"></i>
+                            <span>Principale</span>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-bars"></i>
+                            <span>Promozioni</span>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-bars"></i>
+                            <span>Social</span>
+                        </div>
+                    </div>
+               </header>
+               <section class="flex">
+                    <div class="w-4/6 overflow-y-scroll">
+                        <ul class="mails max-h-screen">
+                            <li >
+                                <div>
+                                    <input type="checkbox">
+                                    <i class="fa-solid fa-bars"></i>
+                                    <span>Google</span>
+                                </div>
+                                <div>
+                                    <span>Avviso di sicurezza account...</span>
+                                </div>
+                                <div>
+                                    <span>12:20</span>
+                                </div>
+                            </li>
+                            <li class="font-bold" >
+                                <div>
+                                    <input type="checkbox">
+                                    <i class="fa-solid fa-bars"></i>
+                                    <span>Google</span>
+                                </div>
+                                <div>
+                                    <span>Avviso di sicurezza account...</span>
+                                </div>
+                                <div>
+                                    <span>12:20</span>
+                                </div>
+                            </li>
+                            <li >
+                                <div>
+                                    <input type="checkbox">
+                                    <i class="fa-solid fa-bars"></i>
+                                    <span>Google</span>
+                                </div>
+                                <div>
+                                    <span>Avviso di sicurezza account...</span>
+                                </div>
+                                <div>
+                                    <span>12:20</span>
+                                </div>
+                            </li>
+                            <li >
+                                <div>
+                                    <input type="checkbox">
+                                    <i class="fa-solid fa-bars"></i>
+                                    <span>Google</span>
+                                </div>
+                                <div>
+                                    <span>Avviso di sicurezza account...</span>
+                                </div>
+                                <div>
+                                    <span>12:20</span>
+                                </div>
+                            </li>
+                            <li >
+                                <div>
+                                    <input type="checkbox">
+                                    <i class="fa-solid fa-bars"></i>
+                                    <span>Google</span>
+                                </div>
+                                <div>
+                                    <span>Avviso di sicurezza account...</span>
+                                </div>
+                                <div>
+                                    <span>12:20</span>
+                                </div>
+                            </li>
+                            <li class="font-bold">
+                                <div>
+                                    <input type="checkbox">
+                                    <i class="fa-solid fa-bars"></i>
+                                    <span>Google</span>
+                                </div>
+                                <div>
+                                    <span>Avviso di sicurezza account...</span>
+                                </div>
+                                <div>
+                                    <span>12:20</span>
+                                </div>
+                            </li>
+                            <li >
+                                <div>
+                                    <input type="checkbox">
+                                    <i class="fa-solid fa-bars"></i>
+                                    <span>Google</span>
+                                </div>
+                                <div>
+                                    <span>Avviso di sicurezza account...</span>
+                                </div>
+                                <div>
+                                    <span>12:20</span>
+                                </div>
+                            </li>
+                            <li class="font-bold" >
+                                <div>
+                                    <input type="checkbox">
+                                    <i class="fa-solid fa-bars"></i>
+                                    <span>Google</span>
+                                </div>
+                                <div>
+                                    <span>Avviso di sicurezza account...</span>
+                                </div>
+                                <div>
+                                    <span>12:20</span>
+                                </div>
+                            </li>
+                            <li >
+                                <div>
+                                    <input type="checkbox">
+                                    <i class="fa-solid fa-bars"></i>
+                                    <span>Google</span>
+                                </div>
+                                <div>
+                                    <span>Avviso di sicurezza account...</span>
+                                </div>
+                                <div>
+                                    <span>12:20</span>
+                                </div>
+                            </li>
+                            <li class="font-bold">
+                                <div>
+                                    <input type="checkbox">
+                                    <i class="fa-solid fa-bars"></i>
+                                    <span>Google</span>
+                                </div>
+                                <div>
+                                    <span>Avviso di sicurezza account...</span>
+                                </div>
+                                <div>
+                                    <span>12:20</span>
+                                </div>
+                            </li>
+                            <li class="font-bold">
+                                <div>
+                                    <input type="checkbox">
+                                    <i class="fa-solid fa-bars"></i>
+                                    <span>Google</span>
+                                </div>
+                                <div>
+                                    <span>Avviso di sicurezza account...</span>
+                                </div>
+                                <div>
+                                    <span>12:20</span>
+                                </div>
+                            </li>
+                            <li >
+                                <div>
+                                    <input type="checkbox">
+                                    <i class="fa-solid fa-bars"></i>
+                                    <span>Google</span>
+                                </div>
+                                <div>
+                                    <span>Avviso di sicurezza account...</span>
+                                </div>
+                                <div>
+                                    <span>12:20</span>
+                                </div>
+                            </li>
+                            <li >
+                                <div>
+                                    <input type="checkbox">
+                                    <i class="fa-solid fa-bars"></i>
+                                    <span>Google</span>
+                                </div>
+                                <div>
+                                    <span>Avviso di sicurezza account...</span>
+                                </div>
+                                <div>
+                                    <span>12:20</span>
+                                </div>
+                            </li>
+                            <li >
+                                <div>
+                                    <input type="checkbox">
+                                    <i class="fa-solid fa-bars"></i>
+                                    <span>Google</span>
+                                </div>
+                                <div>
+                                    <span>Avviso di sicurezza account...</span>
+                                </div>
+                                <div>
+                                    <span>12:20</span>
+                                </div>
+                            </li>
+                            <li >
+                                <div>
+                                    <input type="checkbox">
+                                    <i class="fa-solid fa-bars"></i>
+                                    <span>Google</span>
+                                </div>
+                                <div>
+                                    <span>Avviso di sicurezza account...</span>
+                                </div>
+                                <div>
+                                    <span>12:20</span>
+                                </div>
+                            </li>
+                            <li >
+                                <div>
+                                    <input type="checkbox">
+                                    <i class="fa-solid fa-bars"></i>
+                                    <span>Google</span>
+                                </div>
+                                <div>
+                                    <span>Avviso di sicurezza account...</span>
+                                </div>
+                                <div>
+                                    <span>12:20</span>
+                                </div>
+                            </li>
+                            <li class="font-bold">
+                                <div>
+                                    <input type="checkbox">
+                                    <i class="fa-solid fa-bars"></i>
+                                    <span>Google</span>
+                                </div>
+                                <div>
+                                    <span>Avviso di sicurezza account...</span>
+                                </div>
+                                <div>
+                                    <span>12:20</span>
+                                </div>
+                            </li>
+                            <li class="font-bold">
+                                <div>
+                                    <input type="checkbox">
+                                    <i class="fa-solid fa-bars"></i>
+                                    <span>Google</span>
+                                </div>
+                                <div>
+                                    <span>Avviso di sicurezza account...</span>
+                                </div>
+                                <div>
+                                    <span>12:20</span>
+                                </div>
+                            </li>
+                            <li >
+                                <div>
+                                    <input type="checkbox">
+                                    <i class="fa-solid fa-bars"></i>
+                                    <span>Google</span>
+                                </div>
+                                <div>
+                                    <span>Avviso di sicurezza account...</span>
+                                </div>
+                                <div>
+                                    <span>12:20</span>
+                                </div>
+                            </li>
+                            <li >
+                                <div>
+                                    <input type="checkbox">
+                                    <i class="fa-solid fa-bars"></i>
+                                    <span>Google</span>
+                                </div>
+                                <div>
+                                    <span>Avviso di sicurezza account...</span>
+                                </div>
+                                <div>
+                                    <span>12:20</span>
+                                </div>
+                            </li>
+                            <li >
+                                <div>
+                                    <input type="checkbox">
+                                    <i class="fa-solid fa-bars"></i>
+                                    <span>Google</span>
+                                </div>
+                                <div>
+                                    <span>Avviso di sicurezza account...</span>
+                                </div>
+                                <div>
+                                    <span>12:20</span>
+                                </div>
+                            </li>
+                            <li >
+                                <div>
+                                    <input type="checkbox">
+                                    <i class="fa-solid fa-bars"></i>
+                                    <span>Google</span>
+                                </div>
+                                <div>
+                                    <span>Avviso di sicurezza account...</span>
+                                </div>
+                                <div>
+                                    <span>12:20</span>
+                                </div>
+                            </li>
+                            <li >
+                                <div>
+                                    <input type="checkbox">
+                                    <i class="fa-solid fa-bars"></i>
+                                    <span>Google</span>
+                                </div>
+                                <div>
+                                    <span>Avviso di sicurezza account...</span>
+                                </div>
+                                <div>
+                                    <span>12:20</span>
+                                </div>
+                            </li>
+                            <li >
+                                <div>
+                                    <input type="checkbox">
+                                    <i class="fa-solid fa-bars"></i>
+                                    <span>Google</span>
+                                </div>
+                                <div>
+                                    <span>Avviso di sicurezza account...</span>
+                                </div>
+                                <div>
+                                    <span>12:20</span>
+                                </div>
+                            </li>
+                            <li >
+                                <div>
+                                    <input type="checkbox">
+                                    <i class="fa-solid fa-bars"></i>
+                                    <span>Google</span>
+                                </div>
+                                <div>
+                                    <span>Avviso di sicurezza account...</span>
+                                </div>
+                                <div>
+                                    <span>12:20</span>
+                                </div>
+                            </li>
+                            <li >
+                                <div>
+                                    <input type="checkbox">
+                                    <i class="fa-solid fa-bars"></i>
+                                    <span>Google</span>
+                                </div>
+                                <div>
+                                    <span>Avviso di sicurezza account...</span>
+                                </div>
+                                <div>
+                                    <span>12:20</span>
+                                </div>
+                            </li>
+                            <li >
+                                <div>
+                                    <input type="checkbox">
+                                    <i class="fa-solid fa-bars"></i>
+                                    <span>Google</span>
+                                </div>
+                                <div>
+                                    <span>Avviso di sicurezza account...</span>
+                                </div>
+                                <div>
+                                    <span>12:20</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="w-3/6 border overflow-x-scroll text-center">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita porro voluptas fugit dolores eos sit accusantium consectetur nobis consequuntur? Culpa, cupiditate quas molestias maiores vel fugit laudantium incidunt recusandae minus.</p>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+        <div class="flex flex-col pt-4 gap-10">
+            <div class="flex flex-col">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <hr>
+            <div >
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

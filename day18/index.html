@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google news</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/e8d73de70f.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="assets/Gmail_icon_(2020).svg.webp">
+    <style type="text/tailwindcss">
+        @layer base{
+            
+            nav a{
+                @apply hover:celeste hover:rounded-md
+            }
+          
+        }
+        @layer components{
+            .black{
+                @apply bg-[#256070ff] text-white
+            }
+            .celeste{
+                @apply bg-[#c0fdfbff] text-black
+            }
+            .green{
+                @apply bg-[#daffefff] text-black
+            }
+            .white{
+                @apply bg-[#fcfffdff] text-black
+            }
+            .pinegreen{
+                @apply bg-[#136f63ff] text-white
+            }
+            
+            /* .mails li{
+                @apply bg-sky-300 rounded-lg w-fit m-2 border hover:border-2 hover:border-b-gray-400 flex justify-between px-2
+           } */
+        }
+
+        
+    </style>
+</head>
+<body>
+    <nav class="pinegreen">
+        <div class="flex justify-between items-center pl-2">
+            <a href="./index.html"><img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Google_News.png" alt="logo" width="130px"></a>
+            <div class="flex w-4/6">
+                <section class="flex items-center m-4 white p-2 rounded-lg w-3/4 " >
+                    <div class="flex gap-3 items-center w-full">
+                        <i class="fas fa-magnifying-glass input-icon"></i>
+                        <input class="w-full" type="text" placeholder="Cerca argomenti, località e fonti">
+                    </div >
+                    <i class="fa-solid fa-caret-down"></i> 
+                </section>
+                <section class="flex gap-3 items-center">
+                    <i class="fa-solid fa-circle-question"></i>
+                    <img src="./assets/icons8-automatico-48.png" alt="impostazioni" width="20px">
+                </section>
+            </div>
+            <div class="flex gap-3 items-center pr-2">
+                <i class="fa-solid fa-grip-vertical"></i>
+                <img class="rounded-full" src="./assets/image.png" alt="foto profilo" width="40px">
+            </div>
+        </div>
+        <div class="flex justify-center gap-2 border-b-2 border-sky-300 pb-1">
+            <section class="flex gap-4 border-r-2 px-2 ">
+                <a href="#">HomePage</a>
+                <a href="#">Per te</a>
+                <a href="#">Stai seguendo</a>
+                <a href="#">New Showcase</a>
+            </section>
+            <section class="flex gap-4">
+                <a href="#">Italia</a>
+                <a href="#">Del Mondo</a>
+                <a href="#">Notizie locali</a>
+                <a href="#">Affari</a>
+                <a href="#">Scienza e tecnologia</a>
+                <a href="#">Intrattenimento</a>
+                <a href="#">Sport</a>
+                <a href="#">Salute</a>
+            </section>
+        </div>
+    </nav>
+
+    <main class="green">
+        <header class="flex justify-around">
+            <div class="p-2 m-4">
+                <i class="fa-solid fa-circle-question"></i>
+                <a class="underline text-green-800 visited:text-purple-600" href="#">Modalità di classificazione</a>
+                <h1 class="font-bold text-2xl mt-2">Le tue Notizie</h1>
+                <h3 class="text-l">Giovedì 23 Marzo</h3>
+            </div>
+            <div class="white flex items-center gap-4 border border-gray rounded-md p-2 m-4">
+                <i class="fa-solid fa-caret-down"></i> 
+                <img src="https://cdn-icons-png.flaticon.com/512/3208/3208756.png" alt="sun" width="70px">
+                <div>
+                    <span>Lombardia</span>
+                    <h1 class="font-bold text-2xl">19° C</h1>
+                    <a class="underline text-green-800" href="https://weather.com/">Weather.com</a>
+                </div>
+            </div>
+        </header>
+        
+        <section class="flex gap-4 justify-center flex-wrap">
+
+            <section class="colonnasx w-6/12">
+
+                <div class="border rounded-xl white p-4 mb-2 ">
+                    <h2 class="text-sky-700 font-bold my-1 text-2xl border-b pb-1">Notizie Principali</h2> 
+                    <div class=" flex border-b py-2">
+                        <div class="w-1/3 mr-5">
+                            <img src="https://rb.gy/qg8dzq" alt="img notizia" width="250px">
+                            <span><img src="https://www.motork.io/it/wp-content/uploads/sites/2/2020/02/skytg24-logo.jpg" alt="logo SkyTG24" width="40px">TG24</span>
+                            <h3 class="text-xl">Sciopero in francia contro riforma pensioni, manifestazioni e stop ai...</h3>
+                            <span class="text-xs">1h fa</span>
+                        </div>
+                        <div class="flex flex-col justify-start">
+                            <section>
+                                <span><img class="inline" src="https://www.motork.io/it/wp-content/uploads/sites/2/2020/02/skytg24-logo.jpg" alt="logo SkyTG24" width="40px">TG24</span>
+                                <h4 class="text-sm">Macron:'La Riforma delle pensioni va avanti nell'interesse della nazione'</h4>
+                                <span class="text-xs">1h fa</span>
+                            </section>
+                            <section>
+                                <span><img class="inline" src="https://www.motork.io/it/wp-content/uploads/sites/2/2020/02/skytg24-logo.jpg" alt="logo SkyTG24" width="40px">TG24</span>
+                                <h4 class="text-sm">Manifestanti bloccano Lyon</h4>
+                                <span class="text-xs">1h fa</span>
+                            </section>
+                            <section>
+                                <span><img class="inline" src="https://www.motork.io/it/wp-content/uploads/sites/2/2020/02/skytg24-logo.jpg" alt="logo SkyTG24" width="40px">TG24</span>
+                                <h4 class="text-sm">Perchè in Italia non scendiamo in piazza come in Francia?</h4>
+                                <span class="text-xs">1h fa</span>
+                            </section>
+                            
+                            <button class="black p-1 m-2 rounded-xl w-3/6" type="button">
+                                <img class="inline mr-2" src="./assets/copertura-completa.png" alt="img coperura">Copertura completa
+                            </button>
+                        </div>
+                    </div>
+                    <div class=" flex border-b py-2">
+                        <div class="w-1/3 mr-5">
+                            <img src="https://rb.gy/qg8dzq" alt="img notizia" width="250px">
+                            <span><img src="https://www.motork.io/it/wp-content/uploads/sites/2/2020/02/skytg24-logo.jpg" alt="logo SkyTG24" width="40px">TG24</span>
+                            <h3 class="text-xl">Sciopero in francia contro riforma pensioni, manifestazioni e stop ai...</h3>
+                            <span class="text-xs">1h fa</span>
+                        </div>
+                        <div class="flex flex-col justify-start">
+                            <section>
+                                <span><img class="inline" src="https://www.motork.io/it/wp-content/uploads/sites/2/2020/02/skytg24-logo.jpg" alt="logo SkyTG24" width="40px">TG24</span>
+                                <h4 class="text-sm">Macron:'La Riforma delle pensioni va avanti nell'interesse della nazione'</h4>
+                                <span class="text-xs">1h fa</span>
+                            </section>
+                            <section>
+                                <span><img class="inline" src="https://www.motork.io/it/wp-content/uploads/sites/2/2020/02/skytg24-logo.jpg" alt="logo SkyTG24" width="40px">TG24</span>
+                                <h4 class="text-sm">Manifestanti bloccano Lyon</h4>
+                                <span class="text-xs">1h fa</span>
+                            </section>
+                            <section>
+                                <span><img class="inline" src="https://www.motork.io/it/wp-content/uploads/sites/2/2020/02/skytg24-logo.jpg" alt="logo SkyTG24" width="40px">TG24</span>
+                                <h4 class="text-sm">Perchè in Italia non scendiamo in piazza come in Francia?</h4>
+                                <span class="text-xs">1h fa</span>
+                            </section>
+                            
+                            <button class="black p-1 m-2 rounded-xl w-3/6" type="button">
+                                <img class="inline mr-2" src="./assets/copertura-completa.png" alt="img coperura">Copertura completa
+                            </button>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="border rounded-xl white p-4 mb-2">
+                    <h2 class="font-bold my-1 text-2xl">Affari</h2> 
+                    <div class=" flex">
+                        <div>
+                            <img src="https://rb.gy/qg8dzq" alt="img notizia" width="250px">
+                            <span><img src="https://www.motork.io/it/wp-content/uploads/sites/2/2020/02/skytg24-logo.jpg" alt="logo SkyTG24" width="40px">TG24</span>
+                            <h3>Sciopero in francia contro riforma pensioni, manifestazioni e stop ai...</h3>
+                            <span>1h fa</span>
+                        </div>
+                        <div>
+                            <section>
+                                <span><img src="https://www.motork.io/it/wp-content/uploads/sites/2/2020/02/skytg24-logo.jpg" alt="logo SkyTG24" width="40px">TG24</span>
+                                <h4>Sciopero in francia contro riforma pensioni, manifestazioni e stop ai...</h4>
+                                <span>1h fa</span>
+                            </section>
+                            <section>
+                                <span><img src="https://www.motork.io/it/wp-content/uploads/sites/2/2020/02/skytg24-logo.jpg" alt="logo SkyTG24" width="40px">TG24</span>
+                                <h4>Sciopero in francia contro riforma pensioni, manifestazioni e stop ai...</h4>
+                                <span>1h fa</span>
+                            </section>
+                            <section>
+                                <span><img src="https://www.motork.io/it/wp-content/uploads/sites/2/2020/02/skytg24-logo.jpg" alt="logo SkyTG24" width="40px">TG24</span>
+                                <h4>Sciopero in francia contro riforma pensioni, manifestazioni e stop ai...</h4>
+                                <span>1h fa</span>
+                            </section>
+                            <button class="black p-2 rounded-xl" type="button">
+                                <img class="inline mr-2" src="./assets/copertura-completa.png" alt="img coperura">Copertura completa
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="colonnadx w-3/12">
+                
+                <div class="border rounded-xl white p-4 mb-2">
+                    <h2 class="text-rose-900 font-bold my-1 text-2xl border-b">Notizie Locali</h2> 
+                    <div class="py-2 flex flex-col border-b">
+                        <div>
+                            <div class="flex justify-between items-start">
+                                <div class="w-3/4">
+                                    <span><img class="inline" src="https://www.motork.io/it/wp-content/uploads/sites/2/2020/02/skytg24-logo.jpg" alt="logo SkyTG24" width="40px">TG24</span>
+                                    <h3 >Sciopero in francia contro riforma pensioni, manifestazioni e stop ai...</h3>
+                                </div>
+                                <img class="rounded-2xl py-2" src="https://rb.gy/qg8dzq" alt="img notizia" width="80px" height="80px">
+                            </div>
+                            <div class="flex justify-between">
+                                <span>1h fa</span>
+                                <button class="black rounded-md " type="button">
+                                    <img class="p-2" src="./assets/copertura-completa.png" alt="img coperura" width="30px">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-2 flex flex-col border-b">
+                        <div>
+                            <div class="flex justify-between items-start">
+                                <div class="w-3/4">
+                                    <span><img class="inline" src="https://www.motork.io/it/wp-content/uploads/sites/2/2020/02/skytg24-logo.jpg" alt="logo SkyTG24" width="40px">TG24</span>
+                                    <h3 >Sciopero in francia contro riforma pensioni, manifestazioni e stop ai...</h3>
+                                </div>
+                                <img class="rounded-2xl py-2" src="https://rb.gy/qg8dzq" alt="img notizia" width="80px" height="80px">
+                            </div>
+                            <div class="flex justify-between">
+                                <span>1h fa</span>
+                                <button class="black rounded-md " type="button">
+                                    <img class="p-2" src="./assets/copertura-completa.png" alt="img coperura" width="30px">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-2 flex flex-col">
+                        <div>
+                            <div class="flex justify-between items-start">
+                                <div class="w-3/4">
+                                    <span><img class="inline" src="https://www.motork.io/it/wp-content/uploads/sites/2/2020/02/skytg24-logo.jpg" alt="logo SkyTG24" width="40px">TG24</span>
+                                    <h3 >Sciopero in francia contro riforma pensioni, manifestazioni e stop ai...</h3>
+                                </div>
+                                <img class="rounded-2xl py-2" src="https://rb.gy/qg8dzq" alt="img notizia" width="80px" height="80px">
+                            </div>
+                            <div class="flex justify-between">
+                                <span>1h fa</span>
+                                <button class="black rounded-md " type="button">
+                                    <img class="p-2" src="./assets/copertura-completa.png" alt="img coperura" width="30px">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border rounded-xl white p-4 mb-2">
+                    <h2 class="font-bold my-1 text-xl border-b">Sport</h2> 
+                    <div class="py-2 flex flex-col border-b">
+                        <div>
+                            <div class="flex justify-between items-start">
+                                <div class="w-3/4">
+                                    <span><img class="inline" src="https://www.motork.io/it/wp-content/uploads/sites/2/2020/02/skytg24-logo.jpg" alt="logo SkyTG24" width="40px">TG24</span>
+                                    <h3 >Sciopero in francia contro riforma pensioni, manifestazioni e stop ai...</h3>
+                                </div>
+                                <img class="rounded-2xl py-2" src="https://rb.gy/qg8dzq" alt="img notizia" width="80px" height="80px">
+                            </div>
+                            <div class="flex justify-between">
+                                <span>1h fa</span>
+                                <button class="black rounded-md " type="button">
+                                    <img class="p-2" src="./assets/copertura-completa.png" alt="img coperura" width="30px">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-2 flex flex-col border-b">
+                        <div>
+                            <div class="flex justify-between items-start">
+                                <div class="w-3/4">
+                                    <span><img class="inline" src="https://www.motork.io/it/wp-content/uploads/sites/2/2020/02/skytg24-logo.jpg" alt="logo SkyTG24" width="40px">TG24</span>
+                                    <h3 >Sciopero in francia contro riforma pensioni, manifestazioni e stop ai...</h3>
+                                </div>
+                                <img class="rounded-2xl py-2" src="https://rb.gy/qg8dzq" alt="img notizia" width="80px" height="80px">
+                            </div>
+                            <div class="flex justify-between">
+                                <span>1h fa</span>
+                                <button class="black rounded-md " type="button">
+                                    <img class="p-2" src="./assets/copertura-completa.png" alt="img coperura" width="30px">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-2 flex flex-col">
+                        <div>
+                            <div class="flex justify-between items-start">
+                                <div class="w-3/4">
+                                    <span><img class="inline" src="https://www.motork.io/it/wp-content/uploads/sites/2/2020/02/skytg24-logo.jpg" alt="logo SkyTG24" width="40px">TG24</span>
+                                    <h3 >Sciopero in francia contro riforma pensioni, manifestazioni e stop ai...</h3>
+                                </div>
+                                <img class="rounded-2xl py-2" src="https://rb.gy/qg8dzq" alt="img notizia" width="80px" height="80px">
+                            </div>
+                            <div class="flex justify-between">
+                                <span>1h fa</span>
+                                <button class="black rounded-md " type="button">
+                                    <img class="p-2" src="./assets/copertura-completa.png" alt="img coperura" width="30px">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>   
+
+        </section>
+            
+        </main>
+    </body>
+</html>
