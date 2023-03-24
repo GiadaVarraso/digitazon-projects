@@ -79,7 +79,7 @@ body > header i{
     border: none;
 }
 
-.chat section > div{
+#searchBar{
     background-color: aliceblue;
     color: black;
     border-radius: var(--rounded);
@@ -144,7 +144,34 @@ body > header i{
     background-color: aliceblue;
     height: 80%;
     overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
+
+
+.mex .userX {
+    background-color: rgb(188, 222, 255);
+    border: 1px solid black;
+    color: black;
+    border-radius: var(--rounded);
+    width: 50%;
+    position: relative;
+    left: 10rem;
+    padding: 1px;
+}
+.mex .userY {
+    background-color: rgb(171, 253, 188);
+    border: 1px solid black;
+    color: black;
+    border-radius: var(--rounded);
+    width: 50%;
+    position: relative;
+    right: 10rem;
+    padding: 1px;
+}
+
 
 
 /* zona messaggi end */
