@@ -7,8 +7,16 @@
 html{
     background-color: rgb(28, 27, 27);
     color:aliceblue;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
+body{
+    height: 100%;
+    margin: 0;
+    padding: 1rem;
+}
 
 :root{
     --rounded: 5px;
@@ -17,6 +25,8 @@ html{
 main{
     display: flex ;
     background-color: rgb(25, 74, 95);
+    height: 100%;
+    margin: 0;
 }
 
 main section:nth-child(2){
@@ -50,6 +60,7 @@ body > header i{
     justify-content: space-between;
     width: 2rem;
     padding: 10px 0;
+    border: 1px solid black;
 }
 
 .userBar , .userBar div{
@@ -64,6 +75,7 @@ body > header i{
 .chat{
     border-radius: var(--rounded);
     display: flex;
+    overflow-y: hidden; 
 }
 
 
@@ -86,7 +98,14 @@ body > header i{
 .chat input{
     width: 80%;
     border: none;
+    background-color: #ffffff00;
 }
+
+.chat textarea:focus, input:focus{
+    outline: none;
+
+}
+
 
 #searchBar{
     background-color: aliceblue;
@@ -108,7 +127,7 @@ body > header i{
 .chat ul{
     list-style: none;
     overflow-y: scroll;
-    height: 80%;
+    height: 100%;
 }
 
 
@@ -126,6 +145,7 @@ body > header i{
 .sideBarDx{
     border: 1px solid black;
     flex-grow: 2;
+    overflow-y: hidden; 
 }
 
 .sideBarDx header{
@@ -133,6 +153,7 @@ body > header i{
     justify-content: space-between;
     background-color: rgb(45, 45, 45);
     padding: 10px;
+    height: auto;
 }
 
 .sideBarDx header span:first-child{
@@ -157,6 +178,16 @@ body > header i{
     gap: 1rem;
 }
 
+.mex div{
+    padding: 10px ;
+    display: flex;
+    flex-direction: column;
+}
+
+.mex span{
+    font-weight: bold;
+}
+
 .mex .userX {
     background-color: rgb(188, 222, 255);
     border: 1px solid black;
@@ -165,7 +196,6 @@ body > header i{
     width: 50%;
     position: relative;
     left: 10rem;
-    padding: 1px;
 }
 .mex .userY {
     background-color: rgb(253, 252, 165);
@@ -175,7 +205,6 @@ body > header i{
     width: 50%;
     position: relative;
     right: 10rem;
-    padding: 1px;
 }
 
 /* zona messaggi end */
@@ -183,10 +212,10 @@ body > header i{
 /* zona scrivi messaggio start */
 .writeBar{
     background-color: rgb(46, 56, 65);
-    /* height: 10%; */
     display: flex;
     justify-content: space-between;
     padding: 1rem;
+    height: auto;
 }
 
 .writeBar > div:first-child{
