@@ -9,13 +9,18 @@ html{
     color:aliceblue;
 }
 
+
 :root{
     --rounded: 5px;
 }
 
 main{
     display: flex ;
-    max-height: 100%;
+    background-color: rgb(25, 74, 95);
+}
+
+main section:nth-child(2){
+    flex-grow: 9;  
 }
 
 body header , header div:first-child{
@@ -32,6 +37,11 @@ body > header i{
     background-color: rgb(123, 123, 123);
     border-radius: var(--rounded);
 }
+
+.fullRadius{    
+    border-radius: 100%;
+}
+
 /* general end */
 
 /* colonna utente start */
@@ -54,11 +64,10 @@ body > header i{
 .chat{
     border-radius: var(--rounded);
     display: flex;
-    width: 90%;
 }
 
+
 .sideBarSx{
-    width: 20%;
     background-color: rgb(45, 45, 45);
     border: 1px solid black;
     padding: 10px;
@@ -99,11 +108,9 @@ body > header i{
 .chat ul{
     list-style: none;
     overflow-y: scroll;
+    height: 80%;
 }
 
-.fullRadius{    
-    border-radius: 100%;
-}
 
 .chat li{    
     display: flex;
@@ -117,8 +124,8 @@ body > header i{
 
 /* colonna dx start */
 .sideBarDx{
-    width: 70%;
     border: 1px solid black;
+    flex-grow: 2;
 }
 
 .sideBarDx header{
@@ -141,15 +148,14 @@ body > header i{
 
 /* zona messaggi start */
 .mex{
-    background-color: aliceblue;
-    height: 80%;
+    background-image: url(./assets/ZWbv3h.jpg);
+    height: 85%;
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
 }
-
 
 .mex .userX {
     background-color: rgb(188, 222, 255);
@@ -162,7 +168,7 @@ body > header i{
     padding: 1px;
 }
 .mex .userY {
-    background-color: rgb(171, 253, 188);
+    background-color: rgb(253, 252, 165);
     border: 1px solid black;
     color: black;
     border-radius: var(--rounded);
@@ -172,14 +178,12 @@ body > header i{
     padding: 1px;
 }
 
-
-
 /* zona messaggi end */
 
 /* zona scrivi messaggio start */
 .writeBar{
     background-color: rgb(46, 56, 65);
-    height: 10%;
+    /* height: 10%; */
     display: flex;
     justify-content: space-between;
     padding: 1rem;
@@ -199,6 +203,10 @@ body > header i{
     display: flex;
     justify-content: flex-end;
     flex-grow: 1;
+}
+
+.writeBar input{
+    border-radius: var(--rounded);
 }
 /* zona scrivi messaggio end */
 
