@@ -1,3 +1,8 @@
+/* DEBUG */
+.DEBUG{
+    border: 1px solid black;
+}
+
 /* general start */
 *{
     box-sizing: border-box;
@@ -24,7 +29,6 @@ body{
 
 main{
     display: flex ;
-    background-color: rgb(25, 74, 95);
     height: 100%;
     margin: 0;
 }
@@ -57,6 +61,15 @@ button{
     background-color: #e2e2e200;
     color: #e2e2e2;
 }
+
+.hide{
+    visibility: hidden;
+}
+
+.display{
+    display: none;
+}
+
 /* general end */
 
 /* colonna utente start */
@@ -103,11 +116,11 @@ button{
     width: 80%;
     border: none;
     background-color: #ffffff00;
+    color: #e2e2e2;
 }
 
 .chat textarea:focus, input:focus{
     outline: none;
-
 }
 
 #searchBar{
@@ -136,30 +149,28 @@ button{
 .chat li{    
     display: flex;
     align-items: center;
-    /* gap: 20px; */
     position: relative;
     right: 40px;
     padding: 5px;
     flex-wrap: wrap;
+    gap: 1rem;
 }
 
-.chat li span{    
-    font-size: small;
-}
-
-.chat li div span:first-child{    
+.chat li  span:first-child{    
     font-size:medium;
     font-weight: bolder;
 }
 
-.chat li div span{    
-    display: block;
-    margin: 10px ;
+.chat li div:last-of-type span:first-child{    
+    text-align: end;
+    font-size:x-small;
 }
 
-.chat li div span:last-child::before{    
-    content: "✅";
+.chat li div span:nth-child(1){    
+    display: block;
+
 }
+
 
 /* colonna sx end*/
 
@@ -192,6 +203,7 @@ button{
 /* zona messaggi start */
 .mex{
     background-image: url(./assets/ZWbv3h.jpg);
+    background-color: rgb(25, 74, 95);
     height: 85%;
     overflow-y: scroll;
     display: flex;

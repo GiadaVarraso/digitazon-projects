@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log('-------- es 1 a ---------')
+        // crea una variabile stringa con valore a piacere e stampa 
+        // il suo primo carattere, unito al simbolo '_' e al suo ultimo
+        // carattere
+        {
+            let s='supercalifragilistichespiralidoso'
+            let res = s.charAt(0) + '-' +s.charAt(s.length-1)
+            console.log(res);
+        }
+        console.log('-------- es 1 b ---------')
+        
+        // - i nomi delle variabili possono, se non espressamente indicato, essere scelti a piacere.
+        // - passare dall'algoritmo al codice, non subito codice
+
+        // Ex 1:
+        // creare una variabile che contenga il seguente array
+        // [ 40, 50, 60, 70 ]
+        // crea l'algoritmo necessario per stampare in output:
+        // 70
+        // 60
+        // 50
+        // 40 
+        {
+            let numeri= [ 40, 50, 60, 70 ]
+            let res
+            
+            for(let i=numeri.length-1; i>=0; i--){
+                res=numeri[i]
+                console.log(res); 
+            }
+        }
+
+        console.log('-------- es 2 ---------')
+        
+        // Ex 2:
+        // creare una variabile che contenga il seguente array
+        // [ 'mario', 'luigi', 'peach', 'daisy' ]
+        // stampare in output tutti i valori dell'array che NON terminano con la lettera 'o'
+        {
+            let nomi=[ 'mario', 'luigi', 'peach', 'daisy' , 'luigino']
+            let res
+            let nome
+
+            for( let i=0 ; i <= nomi.length-1 ; i++){
+                
+                nome=nomi[i]
+                if(nome.charAt(nome.length-1) !='o'){
+                    res=nomi[i]
+                    console.log(res); 
+                }                
+            }
+
+        }
+
+        console.log('-------- es 3 ---------')
+
+        // Ex 3:
+        // creare una variabile che contenga il seguente array
+        // [ 'mario', 'luigi', 'peach', 'daisy' ]
+        // stampare in output:
+        // DY
+        // PH
+        // LI
+        // MO
+        // (la prima e l'ultima lettera di ogni valore dell'array in senso invertito)
+        {
+            let nomi=[ 'mario', 'luigi', 'peach', 'daisy' ]
+            
+            for (let i = nomi.length-1; i >= 0; i--) {
+                let el = nomi[i];
+                let res= (el.charAt(0) + el.charAt(nomi[i].length-1)).toUpperCase()
+                console.log(res)
+            }
+
+        }
+        console.log('-------- es 4 ---------')
+        
+        // Ex 4:
+        // creare una variabile che contenga il seguente array
+        // [ 'mario', 'stefania', 'luca', lee' ]
+        // stampare in output SOLO il nome più lungo tra quelli presenti nell'array 
+        // (se i valori dell'array cambiano, anche il risultato cambia
+        //  senza alterare l'algoritmo)
+        {
+            let names = [ 'mario', 'stefania', 'luca', 'lee' ]
+            
+            let max = 0;
+            let bigN = "";
+            // names.push('oooooooooooooo') // aggiungo un valore all array names
+                        
+            for (let i = 0; i < names.length; i++) {
+                if (max < names[i].length) {
+                max = names[i].length;
+                bigN = names[i];
+            }
+            
+            }
+            // console.log(max); 
+            console.log(bigN);
+        
+        
+        }
+        
+
+        console.log('-------- es 5 ---------')
+        // Ex 5:
+        // creare una variabile che contenga il seguente array
+        // [17, 5, 87, 14]
+        // stampa in output la somma totale di tutti i numeri contenuti nell'array
+        //  nella modalità più modulare.
+        {
+            let numeri=[17, 5, 87, 14]
+            let res=0
+            for (let i = 0; i < numeri.length; i++) {
+                res += numeri[i]
+            }
+            console.log(res)
+        }
+        
+    </script>
+</body>
+
+</html>
