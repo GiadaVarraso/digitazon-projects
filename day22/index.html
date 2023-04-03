@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// Ex 1
+// creare una funzione 'ope' che prende in ingresso una stringa e due numeri.
+// controlla il valore della stringa.
+// Se è '+' restituisci la somma dei due numeri
+// Se è '-' restituisci la differenza dei due numeri
+// Se è '*' o 'x' restituisci la moltiplicazione dei due numeri
+// Se è '/' restituisci la divisione dei due numeri
+// altrimenti restituisci 0
+
+// Chiama la funzione ope 4 volte variando ogni volta i valori utilizzati e stampa in console i risultati
+
+console.log('--------es1');
+{
+    function ope (s,x,y){
+        let res=0
+        // console.log('operazione con '+ s )
+        if(s == '+'){
+            res= x+y
+            // console.log('addizione')
+        }else if(s == '-'){
+            res= x-y
+            // console.log('sottrazione')
+        }else if(s == '*' || s == 'x' ){
+            res= x*y
+            // console.log('moltiplicazione ')
+        }else if(s == '/'){
+            res= x/y
+            // console.log('divisione')
+        }else{
+            return 'operazio non valida'
+        }
+        return x + " " + s + " " + y + " = " + res
+    }
+    
+    let x=3 
+    let y=2
+    
+    console.log(ope('/',x,y))
+    console.log(ope('+',x,y))
+    console.log(ope('-',x,y))
+    console.log(ope('*',x,y))
+}
+
+// Ex 2
+// creare una funzione 'invertString' che prende in ingresso una stringa e la restituisce invertita.
+// Chiamare la funzione con i seguenti valori e stampare i risulati in console:
+// - javascript
+// - console
+// - anna
+// - 100
+// Nota: se il valore non è una stringa, ma un numero, stampa il numero moltiplicato per 10.
+// Se il valore non è una stringa ne un numero, stampa 'errore'
+console.log('--------es2');
+{
+    function invertString(s){
+        let invert=""
+        if (typeof s != "string" && typeof s == "number" ){
+            return s*10
+        }
+        for (let i = s.length-1; i >= 0 ; i--) {
+            const el = s[i];
+            invert+=el
+        }
+        return invert  
+    }
+    
+    let s ="javascript"
+    let t ="console"
+    let r ="anna"
+    let i =100
+    console.log(invertString(s))
+    console.log(invertString(t))
+    console.log(invertString(r))
+    console.log(invertString(i))
+}
+// Ex 3
+// crea una funzione 'xRayArray' che prende in ingresso un array e mi stampa:
+// - la lunghezza dell'array
+// - se l'array contiene SOLO numeri o meno
+//  se l'array è vuoto
+//  se è un array oppure un altro tipo di dato
+//  La funzione NON restituisce nessun valore.
+//  Chiamare la funzione con i seguenti valori:
+//  [10, 20, 30]
+//  []
+//  ['ciao', 100]
+//  'ciao'
+console.log('--------es3');
+{
+    function xRayArray(a){
+        let result=""
+        // la lunghezza dell'array
+        let al=a.length
+        
+        let onlyNum=false
+        let aEmpty=false
+        let isArray=false
+        
+        // controllo se è un array oppure un altro tipo di dato
+        if(Array.isArray(a)) {
+            isArray=true;
+ 
+            // solo se è un array controllo se è vuoto
+            if (al == 0) {
+                aEmpty =true
+            }else{
+                // solo se l'array non è vuoto controllo se contiene SOLO numeri o meno
+                let count=0
+                for(let i=0; i< al; i++) {
+                    let el= a[i]
+                    if(typeof el == 'number'){
+                        count++
+                    }
+                    
+                    if(count == al){
+                        onlyNum=true
+                    }
+                }   
+            }
+            result= "is an array = "          + isArray + "  |  " +
+                    "length = "               + al      + "  |  " +
+                    "contains only number = " + onlyNum + "  |  " +
+                    "is empty = "             + aEmpty  
+        }else {
+            result="is Array? "+ isArray +" | data type ? " + (typeof a)
+        }
+
+        console.log(result)
+    }
+    
+
+    let a=[]
+    let b='ciao'
+    let c=[10, 20, 30]
+    let d=['ciao', 100]
+    // xRayArray(a);
+    // xRayArray(b);
+    // xRayArray(c);
+    xRayArray(d);
+}
+// Ex 4
+// crea una funzione 'isPalindrome' che prende una stringa in ingresso e mi dice se è palindroma.
+// Chiamare la funzione con i seguenti valori:
+// - anna
+// - itopinonavevanonipoti
+// - ugo
+// NON copiare algoritmi dal web (me ne accorgo 😉 )
+console.log('--------es4');
+{
+    function isPalindrome ( a ) {
+        let b = ''
+        let c = ''
+        
+        // questo ciclo è per la metà sx
+        console.log(' parte da 0 e finisce a ' + a.length/2)
+        for( let i = 0; i < a.length / 2; i++ ) { 
+            console.log(i)
+            b = b + a[i]
+        }
+        // questo ciclo è per la metà dx
+        console.log('parte da ' + (a.length - 1) + ' e finisce a '+ ((a.length / 2)- 1))
+        for( let i = a.length - 1; i > (a.length / 2) - 1; i-- ) {
+            console.log(i)
+            c = c + a[i]
+        }
+        
+        console.log(b + " " + c)
+        if( b == c ) {
+            console.log( 'la parola ' + a + ' è palindroma' )
+    } else {
+        console.log( 'la parola ' + a + ' non è palindroma' )
+    }
+    }
+    isPalindrome( 'anna' )
+    isPalindrome( 'itopinonavevanonipoti' )
+    isPalindrome( 'ugo' )
+}
+// Ex 5
+// creare una funzione 'evenInMatrix' che mi restituisce un contatore che tiene traccia di tutti i numeri pari presenti in una matrice passata in ingresso (controllare tutti gli array di un array).
+// Chiamare la funzione con i seguenti valori:
+// - 
+// [
+//   [1, 3, 3],
+//   [2, 3, 3],
+//   [4, 9, 8]
+// ]
+// - 
+// [
+//   [2, 1, 6],
+//   [3, 4, -10],
+//   [9, 9, 240]
+// ]
+{
+    let a = [[1, 3, 3],[2, 3, 3],[4, 9, 8]] 
+    let b = [[2, 1, 6],[3, 4, -10],[9, 9, 240]] 
+    
+    function evenCount(a) {
+    var countEven=""
+    
+    for (let i = 0; i < a.length; i++) {
+        let el = a[i];
+        
+        for (let j = 0; j < el.length; j++) {
+            let elem = el[j];
+            if((elem%2)==0){
+                countEven+= elem + " "
+            }
+        }
+        
+    }
+    console.log(countEven)
+    }
+       
+    evenCount(a)
+    evenCount(b)
+}
+
+    </script>
+</body>
+</html>
