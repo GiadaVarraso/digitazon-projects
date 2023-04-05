@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*   NOTA: creare un file per ogni esercizio
+Ex 1
+creare la funzione selector, che accetta una stringa in ingresso è in grado di stabilire se è un selettore CSS valido (selettore semplice, senza annidamenti), tra:
+- selettore di id
+- selettore di classe
+- selettore di un elemento tra div, span e img
+Se lo è, restituisce true, altrimenti false.
+In fase di chiamata, stampare un apposito messaggio in ouput, per ognuna delle seguenti chiamate:
+selector('#myDiv')  -> è un selettore valido, di id
+selector('.myDiv')  -> è un selettore valido, di classe
+selector('div')          -> è un selettore valido, di elemento div
+selector('paperino')  -> non è un selettore valido
+selector('ul')               -> non è un selettore valido (non è div, span o img)
+*/
+
+/*Ex 1
+                creare la funzione selector, che accetta una stringa in ingresso è in grado di stabilire se è un selettore CSS valido (selettore semplice, senza annidamenti), tra:
+                - selettore di id
+                - selettore di classe
+                - selettore di un elemento tra div, span e img
+                Se lo è, restituisce true, altrimenti false.
+                In fase di chiamata, stampare un apposito messaggio in ouput, per ognuna delle seguenti chiamate:
+                selector('#myDiv')  -> è un selettore valido, di id
+                selector('.myDiv')  -> è un selettore valido, di classe
+                selector('div')          -> è un selettore valido, di elemento div
+                selector('paperino')  -> non è un selettore valido
+                selector('ul')               -> non è un selettore valido (non è div, span o img)*/
+
+const validTags = ['div', 'span', 'img']
+
+function selector(selettoreCss){
+    // console.log(selettoreCss);
+    if(selettoreCss.charAt(0)== '#'){
+        console.log('è un selettore valido, di id')
+        return true
+    }else if(selettoreCss.charAt(0)== '.'){
+        console.log('è un selettore valido di classe')
+        return true
+    }else{
+        for(let i = 0; i < validTags.length; i++) {
+            if( selettoreCss == validTags[i] ) {
+                console.log('è un selettore valido, di un elemento ' + validTags[i]);
+                return true
+            }
+        }
+        console.log('non è un selettore valido')
+        return false
+    }
+}
+
+selector ('#myDiv')
+selector ('.myDiv')
+selector('div')
+selector('paperino')
+selector('ul')
+                
+/*
+----------------
+Ex 2
+creare una funzione checkArray che prende in ingresso un array di N numeri e stampa:
+- quanti sono pari
+- quanti sono dispari
+- se contiene il numero 10
+- se è un array o meno
+chiamare con:
+checkArray([90, 78, 45, 34])
+checkArray([0, 0, 0])
+checkArray([10])
+checkArray(10)
+*/
+
+function checkArray(a){
+    let pariCount=0
+    let ten =false
+    let arr=false
+    
+    if (Array.isArray(a)){
+        arr=true
+        for (let i = 0; i < a.length; i++){
+        const el = a[i];
+        if(el % 2 == 0){
+            pariCount++
+            if (el == 10){
+            ten=true
+            }
+        }
+    }
+    }
+    // - quanti sono i pari
+    console.log('pari = '+ pariCount);
+    // - quanti sono dispari
+    console.log('dispari = '+ (a.length - pariCount));
+    // - se contiene il numero 10
+    console.log('contiene 10 = '+ (ten?'yes':'no'));
+    // - se è un array o meno
+    console.log('è un array? '+ (arr?'yes':'no'));    
+}
+
+checkArray([90, 78, 45, 34])
+// checkArray([0, 0, 0])
+// checkArray([10])
+// checkArray(10)
+
+/*
+----------------
+Ex 3
+creare una funzione makeElement, che prende in ingresso una stringa che identifica il tipo di elemento HTML da generare, una stringa che identifica il suo id, una stringa che identifica il suo contenuto, e un booleano che indica se chiudere o meno il tag (false indica un tag a chiusura implicita, true a chiusura esplicita)
+La funzione restituisce la stringa formattata correttamente che rappresenta un elemento HTML. In fase di chiamata, stamparla in console.
+Usare i seguenti valori:
+
+makeElement('input', 'myInput', '', false)  ->  <input id="myInput">
+makeElement('div', 'box', 'javascript', true)  -> <div id="box">javascript</div>
+
+*/
+
+function makeElement(el,id,content,closeTag){
+    let res='<'+el+' id="'+id+'">'
+    if(content!= ""){
+        res+=content
+    }
+    if (closeTag){
+        res+='</'+el+">"
+    }
+    return res
+}
+
+console.log(makeElement('input', 'myInput', '', false));  
+console.log(makeElement('div', 'box', 'javascript', true)); 
+
+/*
+----------------
+Ex 4
+creare una funzione treeStr che prende in ingresso una stringa che deve avere una lunghezza superiore pari e superiore a 4 e stampa la seguente formattazione in output:
+
+treeStr('javascript') 
+            s
+           s c
+        a s c r
+     v a s c r i
+  a v a s c r i p
+j a v a s c r i p t
+
+*/
+
+function treeStr(s){
+    let space=' '
+    let meta= s.length/2
+    let parola=[]
+    let piramid=[]
+    
+    if(s.length>=4){ /* la stringa ha 4 o piu caratteri */
+        for (let i = 0; i < s.length; i++) {
+            const el = s[i];
+            parola.push(el)
+        }
+        piramid.push(parola)
+
+        console.log(parola)
+        
+        for (let i = 0; i < meta-1; i++) {
+            parola[i]= ' '
+            let iend=(parola.length)-(i+1)
+            parola[iend]= ' '
+            // console.log(parola)
+            let x=parola
+            console.log(x)
+            
+            piramid.push(x)
+            // if( i == (meta-2)){
+                //     iend--
+                //     parola[iend]= ' '
+                //     piramid.push(parola)
+                // }
+        }
+        console.log(piramid)
+        
+        // console.log(piramid.reverse());
+    }else{/* se la stringa non ha 4 o piu caratteri */
+        console.log('la stringa non è formata da 4 o piu caratteri') 
+    }
+}
+
+treeStr('javascript');
+
+console.log('******************************************************');
+/*
+----------------
+Ex 5
+Creare una funzione makeMatrix, che prende in ingresso un array di 10 numeri a piacere compresi tra 1 e 10, e restituisce una matrice composta da due array, uno in cui ci sono tutti i numeri pari o superiori a 6, uno in cui ci sono tutti i numeri inferiori a 6.
+Con la matrice restituita, stampare la media dei numeri pari o superiori a 6 del primo array e la media dei numeri inferiori a 6 del secondo array.
+*/
+
+function makeMatrix(a){
+    let maggiori=[]
+    let minori=[]
+    let res=[]
+    for (let i = 0; i < a.length; i++) {
+        const el = a[i];
+        if(el>=6){
+            maggiori.push(el)
+        }else{
+            minori.push(el)
+        }          
+    }
+    res.push(maggiori)
+    res.push(minori)
+    return res
+}
+
+function media(somma, length){
+    return somma/length
+}
+
+let array=[1,2,3,4,5,6,7,8,9,10]
+let matrice=makeMatrix(array)
+console.log(matrice)
+
+let mediaMaggiori=0
+
+let res=0
+
+for (let i = 0; i < matrice.length; i++) {
+    const array = matrice[i];
+    res=0
+    for (let j = 0; j < array.length; j++) {
+        const element = array[j];
+        // console.log(element)
+        res+=element
+        console.log(res)
+    }
+    console.log('la media è '+ media(res,array.length))
+    console.log('---------')
+}
+
+// let mediaMinori=0
+
+
+    </script>
+</body>
+</html>

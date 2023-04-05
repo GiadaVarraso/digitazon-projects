@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // Ex 1
+    // creare una funzione compareMap che accetta in ingresso due mappe.
+    // La funzione restituisce true SE le due mappe sono mappe, SE hanno lo stesso numero di elementi e per le stesse chiavi, gli stessi valori. 
+    // Testare il funzionamento di compareMap passando due mappe diverse nella prima chiamata, e due mappe uguali nella seconda chiamata
+    // -----------------------------------------------------------
+    
+{
+    function compareMap(map1,map2){
+        let test='ok'
+
+        if(map1 instanceof Map && map2 instanceof Map){
+            if (map1.size == map2.size){
+                // console.log(map1.forEach(compareKeyValue));
+
+                function compareKeyValue(v,k){
+                    if(!map2.has(k)){
+                        test='noKey'
+                        return
+                    }else if(map2.has(k) && map2.get(k) != v){
+                        test='noVal'
+                        return
+                    }
+                }   
+                map1.forEach(compareKeyValue)
+
+                if(test=='ok'){
+                    return true
+                }else if (test=='noKey'){
+                    return 'le mappe non hanno le stesse chiavi'
+                }else if (test=='noVal'){
+                    return 'le mappe non hanno gli stessi valori per le stesse chiavi'
+                }
+            }else{
+                return 'le mappe non hanno lo stesso numero di elementi';
+            }
+        }else{
+            return 'i dati non sono entrambi mappe';
+        }  
+    }
+    
+    let map1=new Map([['Luigi','Verdi'],['Mario','Rossi'],['Ciccio','Pasticcio']])
+    let map2=new Map([['Luigi','Verdi'],['Mario','Rossi'],['Ciccio','Pasticcio']])
+    let map3=new Map([['Luigi','Verdi'],['Mario','Rossi']])
+    let map4=new Map([['Luigi','Verdi'],['Mario','Rossi'],['Pietro','Pasticcio']])
+    let map5=new Map([['Luigi','Verdi'],['Mario','Rossi'],['Ciccio','Pistacchio']])
+    console.log(compareMap(map1,map5))
+}
+
+console.log(Number.MAX_VALUE)
+    // Ex 2
+    // creare una funzione compareSet che accetta in ingresso due set.
+    // La funzione restituisce true SE i due set sono set, SE hanno lo stesso numero di elementi e  gli stessi valori. 
+    // Testare il funzionamento di compareSet passando due set diversi nella prima chiamata, e due set uguali nella seconda chiamata
+    // -----------------------------------------------------------
+  
+    {
+    function compareSet(set1,set2){
+        let test='ok'
+
+        if(set1 instanceof Set && set2 instanceof Set){
+            if (set1.size == set2.size){
+                
+                // console.log(map1.forEach(compareKeyValue));
+
+                function compareSVal(v){ 
+                    if(!set2.has(v)){
+                        test='noVal'
+                        return
+                    }
+                }   
+                set1.forEach(compareSVal)
+
+                if(test=='ok'){
+                    return true
+                }else if (test=='noVal'){
+                    return 'i set non hanno gli stessi valori '
+                }
+            }else{
+                return 'i Set non hanno lo stesso numero di elementi';
+            }
+        }else{
+            return 'i dati non sono entrambi Set';
+        }  
+    }
+    
+    let wrongSet='sono una stringa'
+    let set1=new Set(['Luigi','Mario','Ciccio'])
+    let set2=new Set(['Luigi','Mario','Ciccio'])
+    let set3=new Set(['Luigi','Mario'])
+    let set4=new Set(['Luigi','Mario','Pistacchio'])
+
+    console.log(compareSet(set1,set2))
+}   
+
+    // Ex 3
+    // realizzare la funzione uniqueArray che prende in ingresso un array e rimuove tutti gli elementi duplicati, restituendo un nuovo array privo quindi di valori duplicati.
+    // Chiamare la funzione con il valore [10, 'ciao', 20, 'ciao', 'javascript', 10] e stampare in output il nuovo valore
+    // -----------------------------------------------------------
+    function uniqueArray(array){
+        let noDuplic=new Set()
+        let resArray=[]
+
+        for (let i = 0; i < array.length; i++) {
+            const el = array[i];
+            noDuplic.add(el)
+        }
+        function createNewArray(v){
+            resArray.push(v)
+        }
+        noDuplic.forEach(createNewArray)
+        console.log(noDuplic)
+        return resArray
+    }
+    let ar=[10, 'ciao', 20, 'ciao', 'javascript', 10]
+    console.log(uniqueArray(ar))
+
+    // Ex 4
+    // realizzare due istanze di Map che rappresentano due studenti che abbiano la seguente struttura:
+    // - name, lastname, rates 
+    // dove name e lastname sono stringhe e rates è un array di 5 numeri
+    // assegnare valori a piacere per ogni chiave, es mario rossi 4, 5, 6, 4, 3 e luigi verdi 8, 7, 4, 9, 9
+    // creare la funzione bestStudent, che prende in ingresso due mappe che rappresentano uno studente, e restituisce il nome e il cognome dello studente che ha la media voto migliore tra i due.
+    // Richiamare questa funzione passando le due mappe create precedentemente
+    // -----------------------------------------------------------
+    let student1=new Map()
+    let student2=new Map()
+    student1.set('name','Mario')
+    student1.set('lastname','Rossi')
+    student1.set('rates',[5,7,8,6,7])
+    student2.set('name','Luigi')
+    student2.set('lastname','Verdi')
+    student2.set('rates',[8,9,8,7,10])
+    console.log(student1);
+    console.log(student2);
+
+    function bestStudent(st1,st2){
+        let bestStudent=''
+        let maxMedia=0
+        function media(st){
+            let sommaVoti=0
+            let mediaS=0
+            for (let i = 0; i < st.size; i++) {
+                const el = st.get('rates');
+                sommaVoti+=el[i]
+            }
+            mediaS=sommaVoti/st.size
+            if(mediaS>maxMedia){
+                bestStudent=st.get('name') + ' ' +st.get('lastname')+' ha la media migliore'
+                maxMedia=mediaS
+            }
+        }
+        
+        media(st1)
+        media(st2)
+       return bestStudent
+    }
+    console.log(bestStudent(student1,student2))
+
+
+
+
+    </script>
+</body>
+</html>
