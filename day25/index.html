@@ -65,11 +65,7 @@ function countVowels(string){
     
     for (let i = 0; i < string.length; i++) {
         const el = string[i];   
-        if(map.has(el)){
-            let value=map.get(el)
-            value++
-            map.set(el,value)
-            }
+        if(map.has(el)) map.set(el,map.get(el)+1)
     }
     return map
 }
@@ -135,6 +131,7 @@ function cmpArr(a1,a2){
 let arr1=[1,2,3,2]
 let arr2=[1,2,3,4]
 console.log(cmpArr(arr1,arr2))
+
 
 </script>
 </body>
