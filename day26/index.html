@@ -229,10 +229,11 @@ let array=[
     }
 ]
 function checkString(string){
+    const letteraCheck='x'
     for (let j = 0; j < string.length; j++) {
             const lettera = string[j];
-            console.log(string);
-            if(lettera == 'x'){
+            // console.log(string);
+            if(lettera == letteraCheck ){
                return true
             }
         }
@@ -250,7 +251,9 @@ function parseStrings(ar){
     return res
 }
 
-console.log(parseStrings(array));
+console.log(parseStrings(array))
+
+console.log(Math.random())
 
     </script>
 </body>

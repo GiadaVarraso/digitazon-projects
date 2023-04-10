@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// {
+//     function formatDate(y, m, d) {
+
+//         let months = new Map([
+//             ['gennaio', 00],
+//             ['febbraio', 01],
+//             ['marzo', 02],
+//             ['aprile', 03],
+//             ['maggio', 04],
+//             ['giugno', 05],
+//             ['luglio', 06],
+//             ['agosto', 07],
+//             ['settembre', 08],
+//             ['ottobre', 09],
+//             ['novembre', 10],
+//             ['dicembre', 11]
+//         ])
+
+//         if (months.has(m)) {
+//             let mese = months.get(m);
+//             let getMonth 
+//             console.log(mese);
+//             const data = new Date(y, mese, d)
+
+//             if (data.getMonth() < 10)getMonth = '0' + data.getMonth();
+
+//             console.log(data.getDate() + '-' + getMonth + '-' + data.getFullYear());
+//             return 0
+//         }
+
+//     }
+
+//     let year = 2023
+//     let mesi = 'maggio'
+//     let day = 17
+
+//     console.log(formatDate(year, mesi, day));
+// }
+
+// Ex 1
+// --------------------------------------------------------------------
+// creare una funzione formatDate che, presi in ingresso un numero, una stringa e un numero, stampi una data formattata.
+// Il primo numero rappresenta l'anno, la stringa il nome del mese e il secondo numero il giorno.
+// es: formatDate(2023, 'maggio', 17)   stampa "17-05-2023"
+{
+    function formatDate(y,m,d){ // i parametri sono rispettivamente anno, mese, giorno
+    let res='' // creo una variabile che mi servirà per assemblare la data
+    let months=new Map([ // mi creo una mappa per tradurre il mese in numerico
+        ['gennaio','0'], // parto da 0 perchè nelle date gennaio è 0 , dicembre 11
+        ['febbraio','1'],
+        ['marzo','2'],
+        ['aprile','3'],
+        ['maggio','4'],
+        ['giugno','5'],
+        ['luglio','6'],
+        ['agosto','7'],
+        ['settembre','8'],
+        ['ottobre','9'],
+        ['novembre','10'],
+        ['dicembre','11']
+    ])
+    
+    if(months.has(m.toLowerCase())){ //controllo la variabile m ha un valore che corrisponde ad una chiave della mappa
+        let month=months.get(m) // mi prendo il valore corrispondente nella mappa
+        let date=new Date(y,month,d) //creo una data e gli passo il mese sotto forma di numero
+        formatMonth= date.getMonth()+1 // prendo il mese , ma aggiungo 1 perche nelle date gennaio è 0 
+        //ma io voglio che da qui in poi il conteggio dei mesi parta da 1
+        if(month<10){ formatMonth= '0'+ formatMonth} // controllo se il mese è di una sola cifra, nel caso aggiungo 0
+        res=date.getDate()+'-'+ formatMonth +'-'+date.getFullYear();// assemblo la data
+    }
+    return res // restituisco la stringa come valore della funzione 
+    }
+
+    let year=2024        // - queste variabili possono cambiare di valore
+    let month='dicembre' // - ma la FORMATTAZIONE della mia funzione non dovrebbe variare.
+    let day=17           // - la funzione restituisce sempre i valori corrispondenti in maniera modulare
+
+    console.log(formatDate(year,month,day)) //richiamo la funzione e gli passo rispettivamente anno, mese e giorno come argomenti
+}
+
+// Ex 2
+// --------------------------------------------------------------------
+// creare una funzione cmpDate che prende in ingresso 2 stringhe che rappresentano 2 date formattate nel formato americano visto a lezione.
+// La funzione estrapola l'anno da entrambe le date e restituisce 1 se il primo anno è maggiore del secondo, -1 viceversa e 0 se sono pari.
+// Chiamare la funzione 3 volte con valori a piacere.
+{
+    function cmpDate(d1,d2){
+        let date1=new Date(d1)
+        let date2=new Date(d2)
+        let anno1=date1.getFullYear()
+        let anno2=date2.getFullYear()
+        if(anno1==anno2) return 0  
+        return anno1>anno2?1:-1
+    }
+    let date1='2022-04-25'
+    let date2='2023-08-11'
+    let date3='2021-08-11'
+    let date4='2019-08-11'
+    let date5='2019-08-11'
+    console.log(cmpDate(date1,date2));
+    console.log(cmpDate(date1,date3));
+    console.log(cmpDate(date4,date5));
+}
+// Ex 3
+// --------------------------------------------------------------------
+// creare una funzione getDateDay che prende in ingresso una data formattata nel formato americano visto a lezione e restituisce il giorno della settimana relativo, in parola.
+// Chiamare la funzione con 3 date a piacere.
+// es: getDateDay('2023-05-17')  -> 'mercoledì'
+
+{
+    function getDate(d1){
+        let dayOfW=new Map([
+            ['0','dom'],
+            ['1','lun'],
+            ['2','mar'],
+            ['3','mer'],
+            ['4','gio'],
+            ['5','ven'],
+            ['6','sab']
+        ])
+        let d=new Date(d1)
+        console.log(d.getDay());
+        return dayOfW.get(d.getDay()+'');
+    }
+    // let date1='2023-05-17'
+    // let date2='2023-04-07'
+    let date3='2023-04-08'
+    // console.log(getDate(date1))
+    // console.log(getDate(date2))
+    console.log(getDate(date3))
+}
+
+// Ex 4
+// --------------------------------------------------------------------
+// dato il seguente JSON:
+let string=`
+[
+    {   "name": "mario",
+        "active": true,
+        "feat":{
+             "role": "protagonist"
+         }
+     },
+     {
+         "name": "luigi",
+         "active": true,
+         "feat": {
+             "role": "protagonist"
+         }
+     },
+     {
+        "name": "wario",
+        "active": false,
+        "feat": {
+             "role": "antagonist"
+         }
+     },
+     {
+         "name": "yoshi",
+         "active": false,
+         "feat": {
+             "role": "protagonist"
+         }
+     }
+]
+`
+// creare una funzione getInfo che, preso in ingresso l'array di oggetti ottenuto dal JSON, mi dice:
+// - quanti protagonisti ci sono nell'array
+// - quanti protagonisti attivi ci sono nell'array
+// - quanti antagonisti ci sono nell'array
+
+function getInfo(obj){
+let res=""
+let proActive =0
+let protagonist=0
+let antagonist=0
+
+     for(let i=0;i<obj.length;i++){
+         if(obj[i].feat.role=="protagonist"){
+             protagonist++
+             if(obj[i].active)proActive++
+         }else{
+             antagonist++
+         }
+     }
+     res=`i protagonisti sono ${protagonist}, di cui ${proActive } sono protagonisti attivi. gli antagonisti sono ${antagonist}.`
+     return res 
+}
+
+let obj=JSON.parse(string)
+console.log(getInfo(obj))
+// Ex 5
+// --------------------------------------------
+// creare uno script a piacere in cui si dimostra l'uso di:
+
+{
+    // - array di array
+    //ipotizzo di avere 3 estrazioni , ciascuna da 5 numeri
+    let estrazione=[[1,2,3,4,5],[6,6,8,9,10],[11,12,13,14,15]]
+
+    // - array di oggetti
+    // i giocatori decidono di partecipare a tutte e 3 giocando sempre gli stessi 5 numeri
+    let players=[
+        {
+            nome:'Mario',
+            numeri:[4,20,60,40,15],
+            age:18,
+            
+            maggiorenne: function(){
+                // - this
+                return this.age>=18
+            }
+        },
+        {
+        nome:'Luigi',
+            numeri:[6,22,8,30,15],
+            age:20,
+            
+            maggiorenne: function(){
+                // - this
+                return this.age>=18
+            }
+        },
+        {
+        nome:'Wario',
+            numeri:[4,8,12,11,15],
+            age:17,
+            
+            maggiorenne: function(){
+                // - this
+                return this.age>=18
+            }
+        }
+    ]
+    
+    //un partecipante si aggiunge all ultimo momento...
+    players.push({
+        nome:'Peach',
+        numeri:[1,2,3,4,5],
+        age:19,
+        
+        maggiorenne: function(){
+            return this.age>=18
+        }
+    })
+    
+    console.log(players);
+    
+    // - set
+    // utilizzo il set per controllare che estrazione avvenga 
+    // secondo il criterio di non ripetizione dei numeri
+    function checkEstrazione(ar){
+        let set=new Set()
+        for (let i = 0; i < ar.length; i++) {
+            const num = ar[i];
+            set.add(num)
+        }
+        //controllo che ci siano 5 numeri e che non siano ripetuti
+        if(set.size==5){
+            return true
+        }
+        return false
+    }
+
+    function gioco(estrazione,player,giocata,playerMagg,classifica){
+        let res=`${player} :`
+        let punteggioClassifica=0
+        if(playerMagg){
+            for(let i =0;i<estrazione.length;i++){
+                let count=0
+                let cinquinaNumeri=estrazione[i]
+    
+                if (checkEstrazione(cinquinaNumeri)){
+                    for (let j = 0; j < cinquinaNumeri.length; j++) {
+                        const numero= cinquinaNumeri[j];
+                        if(estratto(giocata,numero)){
+                            count++
+                        }
+                    }
+                    punteggioClassifica+=count
+                    res+=` nell estrazione numero ${i+1} ha azzeccato ${count} num - `
+                }else {
+                    res+=` l estrazione numero ${i+1} non è valida - `
+                }
+            }
+        }else{
+            res+=' non ha abbastanza anni per poter giocare'
+        }
+        classifica.set(player,punteggioClassifica)
+        
+        return res
+    }
+    
+    function estratto(giocata,numero){
+        for (let i = 0; i < giocata.length; i++) {
+            const numeroGiocato = giocata[i];
+            if(numeroGiocato==numero)return true   
+        }
+        return false
+    }
+    
+    // - mappe
+    let classifica=new Map()
+    
+    for (let i = 0; i < players.length; i++) {
+        const player = players[i];
+        // - funzione che accetta una funzione
+        console.log(gioco(estrazione,player.nome,player.numeri,player.maggiorenne(),classifica));  
+    }
+
+    console.log(classifica);
+    // qual è il player che ha azzeccato piu numeri nelle varie estrazioni?
+    let valoreMax=0
+    let vincitore='Nessun Vincitore'
+    function cercaVincitore(v,k){
+        if(v>valoreMax){
+            valoreMax=v
+            vincitore=k
+        }
+    }
+    classifica.forEach(cercaVincitore)
+    console.log(vincitore);
+    
+}
+
+    </script>
+</body>
+</html>
