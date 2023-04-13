@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // contare le occorrenze delle singole lettere all interno di una stringa
+    function countLetter(parola){
+    let map=new Map()
+    for (let i = 0; i < parola.length; i++) {
+        const lettera = parola[i];
+        if(map.has(lettera)){
+        let count =map.get(lettera)
+        map.set(lettera,count+1)
+        }else{
+        map.set(lettera,1)
+        }
+    }
+    return map
+    }
+
+    console.log(countLetter('abbacchio'))
+
+    // scrivere una funzione che data in ingresso una stringa rimuove tutti i caratteri duplicati
+
+    function removeDupChar(stringa){
+        let resString=''
+        let setLetter=new Set()
+        for (let i = 0; i < stringa.length; i++) {
+            const letter = stringa[i];
+                setLetter.add(letter)
+        }
+        setLetter.forEach((v,k)=>{resString+=v})
+        return resString
+    }
+    console.log(removeDupChar('abbraccio'));
+
+    </script>
+</body>
+</html>

@@ -286,32 +286,6 @@ sum([1,2,4,5,6,7,8,3,2,1,2])
 
 console.log('--------------------');
 
-
-
-
-
-
-
-function countLetter(parola){
-  let map=new Map()
-  for (let i = 0; i < parola.length; i++) {
-    const lettera = parola[i];
-    if(map.has(lettera)){
-      let count =map.get(lettera)
-      map.set(lettera,count+1)
-    }else{
-      map.set(lettera,1)
-    }
-  }
-  return map
-}
-
-console.log(countLetter('abbacchio'))
-
-
-
-
-
     </script>
 </body>
 </html>
