@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// scrivere una funzione chiamata between che 
+// dati due numeri a e b in ingresso
+// ritorni un array che contiene tutti i numeri compresi tra a e b, estremi esclusi
+function between(a, b) {
+  let arr=[]
+  for(let i=a+1; i<b; i++){
+    arr.push(i)
+  }
+  return arr
+}
+
+between(1,10)
+
+console.log('--------------------');
+
+// scrivere una funzione chiamata biggerString che 
+// date due stringhe in ingresso
+// ritorni la piu' lunga
+
+function biggerString(a, b) {
+  if (a.length>b.length){
+    return a
+  }
+  return b
+}
+
+biggerString('ciao', 'adios')
+
+console.log('--------------------');
+
+// scrivere una funzione chiamata countNoSpaces che 
+// data una stringa come parametro
+// ritorni un intero n che rappresenti i caratteri presenti nella
+// string passata, senza contare gli spazi
+
+// prima idea
+function countNoSpaces(string) {
+  return string.replaceAll(' ','').length
+}
+
+// seconda idea
+// function countNoSpaces(string) {
+//   let count=0
+//   for(let i=0; i<string.length;i++){
+//     if (string[i] !=' ') count++
+//   }
+//   return count
+// }
+
+countNoSpaces('string e String e altreString')
+
+console.log('--------------------');
+
+// scrivere una funzione chiamata countUndefinedKeys che 
+// dato un oggetto come parametro
+// ritorni un intero che rappresenti il numero di chiavi, presenti
+// nell'oggetto, che hanno valore undefined o null
+
+// let map= new Map()
+// map.set('pippo')
+// map.set('ciccio', null)
+// map.set('mario',94)
+// map.set('gigio')
+
+// prima idea
+// scrivere una funzione chiamata countUndefinedKeys che 
+// function countUndefinedKeys(ob) {
+//   // ritorni un intero 
+//   let count=0
+//   // che rappresenti il numero di chiavi presenti nell'oggetto, 
+//   ob.forEach(function (v,k){
+//   // che hanno valore undefined o null
+//     if( v === undefined || v === null ){
+//       count++
+//     }
+//   })
+//   return count
+// }
+// // dato un oggetto come parametro
+// countUndefinedKeys(map)
+
+// //seconda idea
+// function countUndefinedKeys(obj) {
+//   // ritorni un intero 
+//   let count=0
+//   // che rappresenti il numero di chiavi presenti nell'oggetto, 
+//   for(const[key,val] of obj){
+//   // che hanno valore undefined o null
+//     if( val === undefined || val === null ){
+//       count++
+//     }
+//   }
+//   return count
+// }
+// // dato un oggetto come parametro
+// countUndefinedKeys(map)
+
+
+// // terza idea 
+let oggetto={
+  proprieta1:null,
+  proprieta2:undefined,
+  proprieta3:null,
+  proprieta4:' ok ',
+  proprieta4:1,
+  proprieta4:undefined
+}
+
+// scrivere una funzione chiamata countUndefinedKeys che 
+function countUndefinedKeys(obj) {
+  // ritorni un intero 
+  let count=0
+  // che rappresenti il numero di chiavi presenti nell'oggetto, 
+    let arrProprieta=Object.values(obj)
+  // che hanno valore undefined o null
+  for (let i = 0; i < arrProprieta.length; i++) {
+    let el= arrProprieta[i];
+    if(el === null || el === undefined ){
+      count++
+    }
+  }
+  return count
+}
+countUndefinedKeys(oggetto)
+
+console.log('--------------------');
+
+// scrivere una funzione chiamata countVowels che 
+// data una stringa in ingresso
+// ritorni il numero di vocali presenti nella stringa
+
+
+function countVowels(string) {
+    let count=0
+    let vocals=['a','e','i','o','u']
+    for(let i=0;i<string.length;i++){
+        let el=string[i]
+        if(vocals.includes(el.toLowerCase())){count++}
+    }
+    return count
+}
+
+countVowels('ciaooO')
+
+console.log('--------------------');
+
+// scrivere una funzione chiamata createArray che 
+// dato un numero n in ingresso
+// ritorni un array lungo n che contiene tutti n
+
+// ad esempio per 3 ritorna [3, 3, 3]
+// ad esempio per 5 ritorna [5, 5, 5, 5, 5]
+// ad esempio per 0 ritorna []
+// ad esempio per -1 ritorna []
+
+function createArray(n) {
+  let arr=[]
+  for(let i=0;i<n;i++){
+    arr.push(n)
+  }
+  return arr
+}
+
+createArray(9)
+
+console.log('--------------------');
+
+// scrivere una funzione chiamata even che 
+// dato un array di numeri in ingresso
+// ritorni un array che contiene solo i numeri pari
+
+let numeri=[2,5,7,13,53,75,135,537,69,90,45,95,96,29]
+
+function even(arr) {
+  let res=[]
+  for(let i=0; i<arr.length;i++){
+    if(arr[i] %2==0){
+      res.push(arr[i])
+    }
+  }
+  return res
+}
+even(numeri)
+
+console.log('--------------------');
+
+// scrivere una funzione chiamata isDivisible che 
+// dato un numero a e un numero b
+// ritorni true se a e' divisibile per b, false altrimenti
+
+function isDivisible(a, b) {
+  return a%b==0?true:false
+}
+isDivisible(6,2)
+
+console.log('--------------------');
+
+// scrivere una funzione chiamata isInArray che 
+// dato un array di numeri e un numero in ingresso
+// ritorna true se il numero e' presente nell'array
+// false altrimenti
+
+function isInArray(n, ns) {
+  return ns.includes(n)?true:false
+}
+
+isInArray(1,[1,2,3,4,5,6,7,8,9])
+
+console.log('--------------------');
+
+// scrivere una funzione chiamata isInString che 
+// date due stringhe in ingresso
+// ritorna true se la seconda stringa e' contenuta nella prima
+// false altrimenti
+
+function isInString(s, t) {
+  return s.includes(t)?true:false
+}
+
+isInString('motorino', 'torino')
+
+console.log('--------------------');
+
+// scrivere una funzione chiamata larger che 
+// dati due numeri a e b che ritorna il maggiore
+
+function larger(a, b) {
+  if(a>b){return a}
+  return b
+}
+larger(1,3)
+
+console.log('--------------------');
+
+// scrivere una funzione chiamata lessThan che 
+// dati due numeri a e b che ritorna true se a e' minore di b
+// false altrimenti
+
+function lessThan(a, b) {
+  return a<b?true:false
+}
+lessThan(2,4)
+
+console.log('--------------------');
+
+// scrivere una funzione chiamata stringConcat che 
+// date due stringhe 
+// ritorni una stringa risultato della concatenazione 
+// delle due, con in mezzo il simbolo #
+
+// ad esempio per "link" e "query" ritorna "link#query"
+
+function stringConcat(a, b) {
+  return a+'#'+b
+}
+
+stringConcat('Pablo', 'Escobar')
+
+console.log('--------------------');
+
+// scrivere una funzione chiamata sum che 
+// dato un array di numeri in ingresso
+// ritorni la somma dei numeri contenuti nell'array
+
+function sum(arr) {
+  let somma=0
+  for(let i =0;i<arr.length;i++){
+    const el=arr[i]
+    somma+=el
+  }
+  return somma
+}
+
+sum([1,2,4,5,6,7,8,3,2,1,2])
+
+console.log('--------------------');
+
+
+
+
+
+
+
+function countLetter(parola){
+  let map=new Map()
+  for (let i = 0; i < parola.length; i++) {
+    const lettera = parola[i];
+    if(map.has(lettera)){
+      let count =map.get(lettera)
+      map.set(lettera,count+1)
+    }else{
+      map.set(lettera,1)
+    }
+  }
+  return map
+}
+
+console.log(countLetter('abbacchio'))
+
+
+
+
+
+    </script>
+</body>
+</html>
