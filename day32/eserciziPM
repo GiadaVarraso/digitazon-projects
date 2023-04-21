@@ -1,0 +1,100 @@
+// ESERCIZIO 2
+// Data una stringa che contiene solo parentesi tonde aperte e parentesi tonde chiuse, scrvere una funzione che ritorna true se tutte le parentesi sono bilanciate, false altrimenti
+// ((()))()
+// ()
+// ()()()
+// ()(()))  //questo no
+// console.log(isValid("((()))"))
+// console.log(isValid("((())))")) // false
+// console.log(isValid("((()))(())"))
+// console.log(isValid("((()))()"))
+// console.log(isValid("(()(()))"))
+// console.log(isValid("(()")) // false
+
+/* ------- pseudocodice --------
+1.creo una funzione che accetta in ingresso una stringa S
+2.la richiamo
+3.mi deve restituire un booleano
+4.controllo che S non sia una stringa vuota altrimenti ritorno true
+5.devo ciclare su S partendo dal secondo elemento fino alla lunghezza di S(non compresa)
+    6.controllo che il carattere esaminato sia ) 
+        6a.se lo è
+            7.controllo che quello prima sia una parentesi (
+                7a.se lo è elimino da S sia il carattere ) che il precedente (
+                    S avrà due posizioni in meno al prossimo giro e devo portare il cursore di iterazione indietro di 2 di conseguenza per bilanciare il numero di controlli
+                7b.se non lo è return false
+        6b.se non lo è continuerà con la prossima iterazione
+*/
+
+function balance(S){
+    for (let i = 1; i < S.length; i++) {
+        if(S[i]==')'){
+            if(S[i-1]=='('){
+                S=S.replace('()','')
+                i=i-2
+            }else{
+                return false
+            }
+        }
+    }
+    return S==''?true:false
+}
+
+// console.log(balance('((()))()'))
+// console.log(balance('()'))
+// console.log(balance('()()()')) 
+// console.log(balance('()(()))' )) //questo no
+// console.log(balance(')()(())' )) //questo no
+// console.log(balance('))()(())' )) //questo no
+// console.log(balance("((()))"))
+// console.log(balance("((())))")) // false
+// console.log(balance("((()))(())"))
+// console.log(balance("((()))()"))
+// console.log(balance("(()(()))"))
+// console.log(balance("(()")) // false
+
+
+// versione Alberto 
+// function x(p) {
+//     let a = []
+//     for (let i = 0; i < p.length; i++) {
+//         if (p[i] == '(') {
+//             a.unshift('(') // inserisce l'elemento specificato in testa all'array
+//             continue // continua l'esecuzione del for, va alla riga 3 quindi
+//         }
+
+//         if (p[i] == ')' && a[0] == '(') {
+//             a.shift() // toglie il primo elemento dalla testa dell'array
+//         } else {
+//             return false
+//         }
+//     }
+//     return a.length == 0
+// }
+// console.log(x('((()))()'))
+// console.log(x('()'))
+// console.log(x('()()()')) 
+// console.log(x('()(()))' )) //questo no
+// console.log(x(')()(())' )) //questo no
+// console.log(x('))()(())' )) //questo no
+// console.log(x("((()))"))
+// console.log(x("((())))")) // false
+// console.log(x("((()))(())"))
+// console.log(x("((()))()"))
+// console.log(x("(()(()))"))
+// console.log(x("(()")) // false
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
