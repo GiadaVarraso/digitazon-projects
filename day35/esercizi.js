@@ -203,20 +203,3 @@ function solution(string) {
 }
 
 // solution("JavaScript")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

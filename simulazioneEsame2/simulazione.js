@@ -38,24 +38,24 @@ La funzione deve ritornare la nuova stringa aggiornata.
     */
 
     function findAndReplace(text,wordToFind,replaceWord){
-        // let parole=text.split(' ') 
-        let parole=[]
+        let parole=text.split(' ') 
+        // let parole=[]
         let parola=''
         let resText=''
         /* la versione con .split(' ') avrebbe omesso
            il codice dalla riga 48 alla riga 58
         */
-        for (let i = 0; i < text.length; i++) {
-            if (text[i]==' '){
-                parole.push(parola)
-                parola=''
-            }else if (i==text.length-1){
-                parola+=text[i];
-                parole.push(parola)
-            }else{
-                parola+=text[i];
-            }            
-        }
+        // for (let i = 0; i < text.length; i++) {
+        //     if (text[i]==' '){
+        //         parole.push(parola)
+        //         parola=''
+        //     }else if (i==text.length-1){
+        //         parola+=text[i];
+        //         parole.push(parola)
+        //     }else{
+        //         parola+=text[i];
+        //     }            
+        // }
         for (let i = 0; i < parole.length; i++) {
             //posso per via dello shadowing 
             let parola = parole[i]; 
@@ -205,3 +205,5 @@ let arrayOfObjects=[
 
 console.log(findAndUpdate(arrayOfObjects))
 
+
+/* vedi MDN node per il terzo esercizio della simulazione */

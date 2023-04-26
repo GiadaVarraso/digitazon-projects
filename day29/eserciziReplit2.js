@@ -43,9 +43,8 @@ function addUpFromNumber(n) {
       }
       return resultString.trimEnd()
   }
-  alfabetoStrambo('funziona solo con vocali alla fine')
+  console.log(alfabetoStrambo('funziona solo con vocali alla fine'))
   
-  module.exports = alfabetoStrambo
   
   console.log('********************************************');
   
@@ -57,8 +56,20 @@ function addUpFromNumber(n) {
   // ad esempio: con [1, 2, 3, 4] ritornerebbe 3 - 6 = -3
   
   function algebra(arr) {
-    
+    let par=1
+    let dis=0
+    for (let i = 0; i < arr.length; i++) {
+        if(i%2==0){
+            par*=arr[i]
+        }else {
+            dis+=arr[i]
+        }
+    }
+    return par-dis
   }
+
+  let ar=[1,2,3,4]
+  console.log(algebra(ar))
   
   console.log('********************************************');
   
@@ -73,8 +84,23 @@ function addUpFromNumber(n) {
   // essere scambiato con niente siccome l'array e' terminato
   
   function arraySwap(arr) {
+    let aRes=[]
+        for (let i = 0; i < arr.length; i=i+2) {
+            let secondo=arr[i+1]
+            let primo=arr[i]
+            if(secondo == undefined){
+                aRes.push(primo)
+                return aRes
+            }
+            aRes.push(secondo)
+            aRes.push(primo)
+        }
+    return aRes
   }
-  
+//   let numInt=[5, 6] 
+//   let numInt=[1, 2, 3, 4]
+  let numInt=[7, 8, 9]
+  console.log(arraySwap(numInt)); 
   
   console.log('********************************************');
   
@@ -86,11 +112,38 @@ function addUpFromNumber(n) {
   // ad esempio: con [1] [2] [3] ritornerebbe [1,2,3]
   // ad esempio: con [1, 2, 3, 4] ritornerebbe [1, 2, 3, 4]
   // ad esempio: con [1, 2, 3] [1, 2] [3] ritornerebbe [1, 2, 3, 1, 2, 3]
-  
+  console.log('CONCATALL');
+
   function concatAll(...arrs) {
+    let aRes=[]
+    for (let i = 0; i < arrs.length; i++) {
+        for(let j = 0; j < arrs[i].length; j++){
+            aRes.push(arrs[i][j])
+        }
+    }
+    return aRes
   }
-  
-  
+//  versione Emanuele mod
+  // function concatAll2(...arrs) {
+  //   let matrix=[]
+  // matrix += arrs; //comportamento oscuro di js ... non basarsi su questo
+  //   console.log(arrs)
+  //   return matrix.split(',')
+  // }
+
+//   console.log(concatAll([4, 6], [7], [2, 8]));
+//   console.log(concatAll([7], [4, 6, 9, 10], [8888]));
+
+  let a1=[1,2,3]
+  let a2=[4,5,6]
+  let a3=[7,8,9]
+  let a4=[10,11,12,13]
+  let start = new Date().getTime()
+  console.log(concatAll(a1,a2,a3,a4))
+  console.log("PRIMA", new Date().getTime() - start)
+  start = new Date().getTime()
+  console.log(concatAll2(a1,a2,a3,a4))
+  console.log("SECONDA", new Date().getTime() - start)
   
   console.log('********************************************');
   
@@ -109,10 +162,41 @@ function addUpFromNumber(n) {
   
   
   function createRandomSortedArray(n) {
+    let ar=[]
+    // return ar.sort((a,b)=>a-b)  // v1 
+
+    // v2 START
+    let arSort=[]
+    // riempo ar con i numeri randomici
+    for (let i = 0; i < n; i++) {
+        ar.push(Math.random())
+    }
+    console.log(ar)
+    // li pusho in ordine in arSort
+    while(arSort.length!=n){
+        for (let i = 0; i < ar.length; i++) {
+            let count=0
+            for (let j = 0; j < ar.length; j++) {
+                if(ar[i]<ar[j]){
+                    count++
+                }else{
+                    continue
+                }
+            }
+            if (count==ar.length-1){
+                arSort.push(ar[i])
+                ar.splice(ar.indexOf(ar[i]),1)
+            }
+        }
+    }
+    return arSort
+    // v2 END
   }
+  let numero=7
+  console.log(createRandomSortedArray(numero));
   
   
-  
+
   console.log('********************************************');
   
   // scrivere una funzione chiamata firstMatrix che 
@@ -124,9 +208,20 @@ function addUpFromNumber(n) {
   // ad esempio con [1,2,3,4] e 0 ritorna []
   
   function firstMatrix(arr, n) {
+    let matrix=[]
+    for (let i = 0; i < n; i++) {
+        matrix.push(arr)
+    }
+    return matrix
   }
-  
-  
+    
+   let ar1=[1,2,3]
+// let ar1=[1,2]
+// let ar1=[1,2,3,4]
+    let num=3
+// let num=1
+// let num=0
+  console.log(firstMatrix(ar1,num))
   
   console.log('********************************************');
   
@@ -138,9 +233,23 @@ function addUpFromNumber(n) {
   // ad esempio con [1,2] e [2,3] ritorna [2]
   
   
-  function intersection(a, b) {
-  }
-  
+    function intersection(a, b) {
+        let aRes=[]
+        for (let i = 0; i < a.length; i++) {
+            const elA = a[i];
+            if(b.includes(elA)){
+                aRes.push(elA)
+            }
+        }
+        return aRes
+    }
+//  let aInt1=[1,2,3]
+//  let aInt1=[1,2]
+ let aInt1=[1,2,3,4]
+//  let aInt2= [4,5,6]
+//  let aInt2= [2,3]
+ let aInt2= [2,3,4,5,6]
+    console.log(intersection(aInt1,aInt2));
   
   console.log('********************************************');
   
@@ -150,7 +259,17 @@ function addUpFromNumber(n) {
   // o false altrimenti
   
   function isHomogeneous(arr) {
+    let firstType=typeof arr[0]
+    for (let i = 1; i < arr.length; i++) {
+        if(typeof arr[i] != firstType){
+            return false
+        }
+    }
+    return true
   }
+//   let ar2=[1,'ciao',2,3,4]
+  let ar2=[1,2,3,4]
+  console.log(isHomogeneous(ar2));
   
   console.log('********************************************');
   
@@ -164,10 +283,26 @@ function addUpFromNumber(n) {
   // ad esempio per 43 deve ritornare true perche' 34 sarebbe minore
   
   function largestSwap(n) {
-  }
+        let string = n.toString()
+        let numeroInvert = ''
+        console.log(string);
+
+        for (let i = string.length -1; i >=0; i--) {
+          numeroInvert+= string[i]
+        }
+
+        if (numeroInvert > n) {
+          return false
+        } else if (numeroInvert == n){
+          return 'i numeri della cifra sono uguali'
+        }
+          return true
+      }
+      console.log(largestSwap(67));
+      console.log(largestSwap(76));
+      console.log(largestSwap(77));
   
-  
-  console.log('********************************************');
+    console.log('********************************************');
   
   // scrivere una funzione chiamata mapsUnion che 
   // date due mappe (in JS chiamate anche oggetti) in ingresso
@@ -179,7 +314,13 @@ function addUpFromNumber(n) {
   // e' una funzione che volendo si puo' scrivere in una riga sola
   
   function mapsUnion(m1, m2) {
+    m1.forEach( (v,k) => { if (!m2.has(k)) m2.set(k,v) })
+    return m2
   }
+
+  let mapy = new Map ([['name','tony'],['surname', 'bis'],['age',23]])
+  let mapet = new Map ([['name','giga'],['nickname', 'biggy'],['bornY',1995]])
+  console.log(mapsUnion(mapy,mapet))
   
   console.log('********************************************');
   
@@ -226,7 +367,7 @@ function addUpFromNumber(n) {
       return res
   }
   
-  reverse('ciao')
+  console.log(reverse('ciao'))
   
   console.log('********************************************');
   
@@ -243,18 +384,4 @@ function addUpFromNumber(n) {
     return arr1
   }
   
-  union([1,2,3],[1,2,4,5,6,7])
-  
-
-
-
-
-// ESERCIZIO 1
-// La funzione accetta in ingresso la stringa e un numero di righe, in questo caso e' stata invocata cosi: converti("PAYPALISHIRING", 3)
-function zigzag(parola,rows){
-    let zigzag=''
-    
-    return zigzag
-}
-
-console.log(zigzag("PAYPALISHIRING", 3));
+  console.log(union([1,2,3],[1,2,4,5,6,7]))
