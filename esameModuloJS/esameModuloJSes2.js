@@ -15,7 +15,8 @@ function checkSoggetto(str){
     let arSogg=['Lui', 'Lei', 'Egli', 'Ella']
     for (let i = 0; i < arSogg.length; i++) {
         const el = arSogg[i];
-        if (str.includes(el)){
+        // if (str.includes(el)){
+        if (str.toLowerCase().includes(el.toLowerCase())){  // FIXATO post consegna
             return true
         }       
     }
@@ -30,25 +31,24 @@ function termina(str){
     return false
 }
 
+
 function terminaConiugato(str){
     let arrParole=str.split(' ')
     let ultimaParola=arrParole[arrParole.length-1]
-    if ((ultimaParola[ultimaParola.length-1]==e&&
-        ultimaParola[ultimaParola.length-2]==r&&
-        ultimaParola[ultimaParola.length-3]==i
+    return ((ultimaParola[ultimaParola.length-1]=='e' && // FIXATO post consegna
+        ultimaParola[ultimaParola.length-2]=='r' &&  // FIXATO post consegna
+        ultimaParola[ultimaParola.length-3]=='i'     // FIXATO post consegna
         ) || 
-        (ultimaParola[ultimaParola.length-1]==e&&
-        ultimaParola[ultimaParola.length-2]==r&&
-        ultimaParola[ultimaParola.length-3]==e
+        (ultimaParola[ultimaParola.length-1]=='e' && // FIXATO post consegna
+        ultimaParola[ultimaParola.length-2]=='r' &&  // FIXATO post consegna
+        ultimaParola[ultimaParola.length-3]=='e'     // FIXATO post consegna
         ) ||
-        (ultimaParola[ultimaParola.length-1]==e&&
-        ultimaParola[ultimaParola.length-2]==r&&
-        ultimaParola[ultimaParola.length-3]==a
-        )){
-            return true
-        }
-    return false
-}
+        (ultimaParola[ultimaParola.length-1]=='e' && // FIXATO post consegna
+        ultimaParola[ultimaParola.length-2]=='r' &&  // FIXATO post consegna
+        ultimaParola[ultimaParola.length-3]=='a'     // FIXATO post consegna
+        ))
+    }
+            
 
 function iniziaPunteggiato(frase){
     let punteg=[',','.','!','?',':',';','-','~']
@@ -63,21 +63,26 @@ function iniziaPunteggiato(frase){
 function isStrPazza(frase){
     let res=false
 
-    if(!(frase.includes('Church')||frase.includes('mare'))){
+    // if(!(frase.includes('Church') || frase.includes('mare'))){ 
+    if(!frase.includes('Church') || frase.includes('mare')){ // FIXATO post consegna
      
         if(!checkSoggetto(frase)){
             return true
         }
-        if(!termina(frase)){
+        // if(!termina(frase)){
+        if(termina(frase)){ // FIXATO post consegna 
             return true
         }
-        if(!frase.includes('Cthulhu')){
+        // if(!frase.includes('Cthulhu')){
+        if(frase.includes('Cthulhu')){ // FIXATO post consegna
             return true
         }
-        if(!terminaConiugato(frase)){
+        // if(!terminaConiugato(frase)){
+        if(terminaConiugato(frase)){ // FIXATO post consegna
             return true
         }
-        if(!iniziaPunteggiato(frase)){
+        // if(!iniziaPunteggiato(frase)){
+        if(iniziaPunteggiato(frase)){ // FIXATO post consegna
             return true
         }
     }
@@ -87,12 +92,13 @@ function isStrPazza(frase){
 let pazzaTest1='.Quando guardi a lungo nell’abisso, l’abisso ti guarda dentro.'
 let pazzaTest2='Andare a rimirare'
 let noPTest1='Lui e’ pazzo.'
-let noPTest2='Pensava sempre al mare come a la mar, come lo chiamano in spagnolo quando lo amano ~'
+let noPTest2='~ Pensava sempre al mare come a la mar, come lo chiamano in spagnolo quando lo amano ~ '
 let noPTest3='~ Papa’, come sta Church? ~'
 
-console.log(isStrPazza(pazzaTest1))
-console.log(isStrPazza(pazzaTest2))
-console.log(isStrPazza(noPTest1))
-console.log(isStrPazza(noPTest2))
-console.log(isStrPazza(noPTest3))
+console.log(isStrPazza(pazzaTest1))//true
+console.log(isStrPazza(pazzaTest2))//true
+console.log(isStrPazza(noPTest1)) //false
+console.log(isStrPazza(noPTest2)) //false  ...non dovrebbe essere true?
+console.log(isStrPazza(noPTest3)) //false
+console.log(isStrPazza('Cthulhu')) //true
 
