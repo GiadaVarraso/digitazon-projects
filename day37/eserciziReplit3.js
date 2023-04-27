@@ -70,6 +70,32 @@ function chessboard(l) {
 
   console.log('\n\n________ ESERCIZIO 3 __________')
 
+  function findLongestSubstring(s){
+    let parola=''
+    let res=''
+    for (let i = 0; i < s.length; i++) {
+        const lettera = s[i];
+        if(parola.includes(lettera)){
+            if(parola.length>res.length){
+                res=parola
+            }
+            parola=parola.substring(parola.indexOf(lettera)+1)+lettera
+        }else{
+            parola+=lettera
+        }
+    }
+    if(parola.length>res.length){
+        res=parola
+    }
+    return res
+}
+console.log(findLongestSubstring('stringaaacciu')); //stringa
+console.log(findLongestSubstring('abcabcbb'));      // abc
+console.log(findLongestSubstring('casessssroma')); // sroma
+console.log(findLongestSubstring('pwwkew')); // wke o kew
+console.log(findLongestSubstring('abcabicbb')); //cabi
+console.log(findLongestSubstring('abcdecfghil')); //decfghil
+
   console.log('\n\n________ ESERCIZIO 4 __________')
   console.log('\n\n________ ESERCIZIO 5 __________')
   console.log('\n\n________ ESERCIZIO 6 __________')
