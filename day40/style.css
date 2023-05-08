@@ -1,0 +1,23 @@
+main{
+    background-color: rgb(10, 61, 28);
+    color:beige
+}
+.chat{
+    display: flex;
+    flex-direction: column;
+}
+.makeMessage{
+    background-color: rgb(155, 255, 124);
+    display: flex;
+    gap:3px;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.messageHistory{
+    display: flex;
+    flex-direction: column;
+}
+.sendedMessage{
+    display: flex;
+    gap:10px
+}
