@@ -10,6 +10,7 @@ dobbiamo circondare il nostro codice attraverso useEffect (che accetta come para
 */ 
 export function Fetch() {
     const [products,setProducts]= useState([])
+    
     useEffect(()=> {
         async function fetchProducts(){
         let res=await fetch("https://fakestoreapi.com/products")

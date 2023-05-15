@@ -36,3 +36,119 @@
     transform: rotate(360deg);
   }
 }
+
+/*  ---- chat START ----
+.App {
+  font-family: sans-serif;
+}
+
+main {
+  color: beige;
+  margin: auto;
+  width: 90%;
+}
+.chat {
+  display: flex;
+  flex-direction: column;
+}
+.makeMessage {
+  border-radius: 10px;
+  background-color: rgb(155, 255, 124);
+  display: flex;
+  gap: 3px;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.messageHistory {
+  background-color: rgb(10, 61, 28);
+  border-radius: 10px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+.sendedMessage {
+  display: flex;
+  gap: 10px;
+} 
+ ---- chat END ----
+*/
+
+
+/* 
+---- redInput START ----
+.red:focus{
+  outline: 2px solid red;
+}
+.green{
+  outline: 2px solid rgb(86, 234, 0);
+}
+---- redInput END ----
+*/
+
+
+/* ---- TODO START ---- */
+/* body{
+  background-color: #282c34;
+  color: wheat;
+}
+.lista{
+  margin: 1rem auto;
+  width: 50%;
+  border: 1px solid black;
+  background-color: rgb(243, 255, 71);
+  padding:1rem ;
+  border-radius: 15px;
+}
+h1{
+  border-bottom: 1px solid black;
+}
+ul{
+  display: flex;
+  flex-direction:column ;
+  list-style:none
+}
+li:hover{
+  background-color:  rgb(219, 130, 168);
+}
+li{
+  width: 70%;
+  margin: auto;
+  border-radius: 10px;
+  border:1px solid #090b0e;
+  background-color:  rgb(33, 204, 107);
+}
+.done{
+  order: 1;
+  background-color:  rgb(38, 134, 79);
+  color: rgb(23, 33, 45);
+  opacity: 0.30;
+} */
+
+/* ---- TODO END ---- */
+body{
+  background-color: #282c34;
+  color: wheat;
+}
+h1{
+  border-bottom: 1px solid black;
+}
+
+li:hover{
+  background-color:  rgb(130, 215, 219);
+  color: #090b0e;
+}
+li{
+  width: 70%;
+  margin: auto;
+  border-radius: 10px;
+  border:1px solid #090b0e;
+  background-color:  rgba(18, 78, 163, 0.975);
+  list-style:none;
+}
+.flex{
+  display: flex;
+}
+.columnFlex{
+  display: flex;
+  flex-direction: column;
+}
