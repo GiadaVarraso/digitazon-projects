@@ -8,6 +8,8 @@ import RedImput from './components/RedInput'
 import Todo from './components/TodoList2'
 import AbstractFetch from './components/AbstractFetch'
 import ColumnStore from './components/ColumnStore'
+import RuotaDellaFortuna from './components/RuotaDellaFortuna' 
+
 function App() {
   return (
     <div className="App">
@@ -30,9 +32,10 @@ function App() {
       {/* <ImputUseEffect/> */}
       {/* <Chat/> */}
       {/* <RedImput /> */}
-      <Todo/>
+      {/* <Todo/> */}
       {/* <AbstractFetch/> */}
       {/* <ColumnStore/> */}
+      <RuotaDellaFortuna/>
     </div>
   );
 }

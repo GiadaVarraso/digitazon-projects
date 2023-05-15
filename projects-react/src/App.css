@@ -86,7 +86,7 @@ main {
 */
 
 
-/* ---- TODO START ---- */
+/* ---- TODO START ---- 
  body{
   background-color: #282c34;
 }
@@ -124,7 +124,8 @@ li{
   opacity: 0.30;
 } 
 
-/* ---- TODO END ---- */
+ ---- TODO END ---- */
+
 /* ------ COLUMN STORE START ------- 
 body{
   background-color: #282c34;
@@ -154,3 +155,33 @@ li{
   flex-direction: column;
 }
  ------ COLUMN STORE END ------- */
+
+ /*------ ruota della fortuna start ------- */
+body {
+  background-color: #282c34;
+  color: #ececec;
+}
+
+ul{
+  list-style: none;
+  background-color: rgb(172, 52, 12);
+  width: fit-content;
+  margin: auto;
+  padding: 1.5rem;
+}
+li{
+  background-color: #ffb81f;
+  width: 5rem;
+  border-bottom: 1px solid #282c34;
+  margin: 10px auto;
+}
+.focus{
+  background-color: #5bb2cd;
+  color: #000;
+}
+.magicNumber{
+  color: #ffb81f;
+  font-size:4rem;
+}
+
+ /*------ ruota della fortuna end ------- */

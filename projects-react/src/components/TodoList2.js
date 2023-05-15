@@ -93,28 +93,3 @@ export default function Todo() {
         </div>
     )
 }
-
-
-
-// ----------------------------------------
-// es 3
-// todo list (lezione)
-
-// ----------------------------------------
-// es 4
-// tic tac toe ( vedi documentazione,fermarsi a adding travel?)
-
-// ----------------------------------------
-// es 5
-// ping pong
-
-// ----------------------------------------
-// ruota
-// Secondo esercizio: Scrivere una applicazione che
-// si avvicini piu' possibile al concetto di "ruota della fortuna",
-// quindi deve esserci una "ruota" (che puo' anche non avere
-// l'aspetto di una ruota, basta che si vedano diversi valori
-// selezionati di volta in volta... per arrivare ad uno solo finale),
-//  e deve esserci uno storico dei valori usciti.
-
-

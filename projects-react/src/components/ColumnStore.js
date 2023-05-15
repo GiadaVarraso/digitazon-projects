@@ -52,7 +52,6 @@ export default function ColumnStore(){
         fetchContents(urlCategory,setCategory)
         fetchContents(urlAll,setAllProducts)
     },[])
-
     
     useEffect(()=>{
         let columnTitle=category.map((cat,i)=> 
