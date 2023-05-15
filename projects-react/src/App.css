@@ -87,7 +87,7 @@ main {
 
 
 /* ---- TODO START ---- */
-/* body{
+ body{
   background-color: #282c34;
   color: wheat;
 }
@@ -122,9 +122,10 @@ li{
   background-color:  rgb(38, 134, 79);
   color: rgb(23, 33, 45);
   opacity: 0.30;
-} */
+} 
 
 /* ---- TODO END ---- */
+/* ------ COLUMN STORE START ------- 
 body{
   background-color: #282c34;
   color: wheat;
@@ -152,3 +153,4 @@ li{
   display: flex;
   flex-direction: column;
 }
+ ------ COLUMN STORE END ------- */

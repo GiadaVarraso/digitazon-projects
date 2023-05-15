@@ -16,11 +16,10 @@ import { useEffect, useState } from 'react'
 
 function Elements({ objList }) {
     const [classe,setClasse]=useState('') //la classe che poi deve diventare .done
-    const [checks,setChecks]=useState([objList.map((ob)=>ob.completed)]) //un array di booleani che corrispondono al booleano dell ob con lo stesso indice
+    const [obj,setObj]=useState(...objList) //un array di booleani che corrispondono al booleano dell ob con lo stesso indice
     //devo caricare checks al primo render del componente
     useEffect(()=>{
        
-        console.log(checks);
     },[])
 
     console.log(objList[0])
@@ -33,11 +32,11 @@ function Elements({ objList }) {
             {objList.map((ob,i)=> {
                 return(<li
                     key={i}
-                    className={classe} //FIXME perchè quando fa onchange li cambia tutti!!!
+                    className={ob.completed?'done':''} //FIXME perchè quando fa onchange li cambia tutti!!!
                     >
                         <input 
                         type='checkbox'
-                        checked={checks[i]}
+                        checked={ob.completed}
                         onChange={()=>done(i,ob.completed)} 
                         />
                         <span>

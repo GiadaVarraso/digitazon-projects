@@ -30,9 +30,9 @@ function App() {
       {/* <ImputUseEffect/> */}
       {/* <Chat/> */}
       {/* <RedImput /> */}
-      {/* <Todo/> */}
+      <Todo/>
       {/* <AbstractFetch/> */}
-      <ColumnStore/>
+      {/* <ColumnStore/> */}
     </div>
   );
 }
