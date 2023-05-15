@@ -89,7 +89,6 @@ main {
 /* ---- TODO START ---- */
  body{
   background-color: #282c34;
-  color: wheat;
 }
 .lista{
   margin: 1rem auto;
@@ -100,6 +99,7 @@ main {
   border-radius: 15px;
 }
 h1{
+  color: #352b5b;
   border-bottom: 1px solid black;
 }
 ul{

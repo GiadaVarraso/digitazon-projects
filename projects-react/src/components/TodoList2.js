@@ -15,39 +15,39 @@
 import { useEffect, useState } from 'react'
 
 function Elements({ objList }) {
-    const [classe,setClasse]=useState('') //la classe che poi deve diventare .done
-    const [obj,setObj]=useState(...objList) //un array di booleani che corrispondono al booleano dell ob con lo stesso indice
-    //devo caricare checks al primo render del componente
-    useEffect(()=>{
-       
-    },[])
-
-    console.log(objList[0])
-    function done(i,val){
-        // setClasse(!val)
+    const [objs, setObjs] = useState([]); //mi serve uno state per gestire il rendering della lista
+  
+    useEffect(() => { //uso lo useEffect per impostare i valori iniziali nello state objs
+      setObjs(objList);
+    }, [objList]); //metto tra le dipendenze objlist perchè questi task 
+    // potrebbero cambiare e voglio che lo useEffect venga fatto solo in questo caso
+  
+    function done(i) { // questa è la funzione che viene fatta quando qualcosa cambia nell' input
+      setObjs((prevObjs) => { //usa il set nella versione con il prev value
+        const newObjs = [...prevObjs]; //clona l array di oggetti un nuovo array temporaneo 
+        newObjs[i] = { ...newObjs[i], completed: !newObjs[i].completed }; // crea un oggetto clonato
+        // e modifica la proprietà completed al valore opposto , poi sostituisce l oggetto vecchio all indice specificato con questo
+        return newObjs; // ritorna il nuovo array che serve al setObjs 
+      });
     }
-    
+  
     return (
-        <>
-            {objList.map((ob,i)=> {
-                return(<li
-                    key={i}
-                    className={ob.completed?'done':''} //FIXME perchè quando fa onchange li cambia tutti!!!
-                    >
-                        <input 
-                        type='checkbox'
-                        checked={ob.completed}
-                        onChange={()=>done(i,ob.completed)} 
-                        />
-                        <span>
-                        {ob.id} - {ob.completed?' fatto ':' da fare '}
-                        </span>
-                    </li>)
-                
-            })}
-        </>
-    )
-}
+      <>
+        {objs.map((ob, i) => (
+          <li key={i} className={ob.completed ? "done" : ""}>
+            <input
+              type="checkbox"
+              checked={ob.completed}
+              onChange={() => done(i)}
+            />
+            <span>
+              {ob.id} - {ob.title}
+            </span>
+          </li>
+        ))}
+      </>
+    );
+  }
 
 
 export default function Todo() {
