@@ -193,7 +193,7 @@ body {
   
 }
 h1{
-  color:rgb(252, 161, 145)
+  color: #f9a1ff;
 }
 .flex{
   color: black;
@@ -234,18 +234,17 @@ li{
 }
 
 li:hover{
-  background-color: #6b777848;
-  font-weight: 600;
+  background-color: #8e72fef2;
 }
 
 h2{
   border: 1px solid black;
-  background-color: #6b7778cd;
+  background-color: #8a84a1f2;
 }
 
 .body {
   border: 1px solid #000000;
-  background-color: #fafbfdde;
+  background-color: #bcacfdf2;
   font-size:larger;
   padding: 1.5rem;
 }
@@ -277,6 +276,6 @@ h2{
 }
 
 .selected{
-  background-color: #1ec0cec3;
+  background-color: #bcacfdf2;
 }
  /* ------- Forum end -------------- */

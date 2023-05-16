@@ -5,31 +5,59 @@ function fetchContents(setContent,url,i,comment){
     // https://jsonplaceholder.typicode.com/posts, la parte centrale con una query GET a
     // https://jsonplaceholder.typicode.com/posts/1 ed i commenti sotto il post con una query GET
     // a https://jsonplaceholder.typicode.com/posts/1/comments.
-        if(i && !comment){
-            // chiamata get per uno specifico post
-            url=url+'/'+i   
-        }else if(i && comment){
-            // chiamata get per i commenti di uno specifico post
-            url=url+'/'+i+'/'+comment    
+
+    //controllo se la funzione è stata chiamata SOLO con i parametri setContent e url o meno 
+        if(i!=undefined && comment==undefined){ //se il parametro i è definito ma comment no
+            // vuol dire che la funzione è stata chiamata per ottenere il get di uno specifico post
+            url=url+'/'+i //quindi modifico la stringa dell url come segue
+        }else if(i && comment){//se il parametro i è definito ED ANCHE comment
+            // vuol dire che la funzione è stata chiamata per ottenere il get dei commenti di uno specifico post
+            url=url+'/'+i+'/'+comment // quindi modifico la stringa dell url come segue
         }
-        
-         async function fetchPostsInfo(){
-            let res=await fetch(url)
-            let json=await res.json()
-            setContent(json)
+        //a questo punto , abbiamo l' url completo in base ai parametri ricevuti 
+         async function fetchPostsInfo(){ //creo una funzione asincrona 
+            let res=await fetch(url) //faccio la fetch dell url e uso il comando await per attendere che finisca prima di riempire la variabile
+            let json=await res.json() //parso il risultato ottenuto dalla fetch
+            setContent(json) //uso la funzione setContent passata come parametro per valorizzare gli state corrispondenti
         }
-        fetchPostsInfo()
+        fetchPostsInfo() //richiamo la funzione asincrona appena creata
 }
 
-function ListPost({posts,setIndex}){
+function ListPost({posts,setIndex}){ // componente che renderizza la galleria dei posts
+    let [postsObjs,setPostsObjs]=useState([]) //
+
+    useEffect(()=>{
+        let newArr=[...posts]
+        for (let i = 0; i < newArr.length; i++) {
+            newArr[i]={...posts[i],classe:'firstUp'}
+        }
+        setPostsObjs(newArr)
+    },[posts])
+
+    function handleClick(id){ //funzione chiamata al click sopra uno dei posts listati in gallery
+        setIndex(id) // imposto l'indice del postInEvidenza
+        setPostsObjs((prev)=>{ // per evidenziare in css quello selezionato al click modifico l array dei posts
+            let newArr=[...prev] //copio il valore precedente in un array clone
+            for (let i = 0; i < newArr.length; i++) { //ciclo su tutti i suoi elementi
+                if(i==(id-1)){ //se l elemento attuale ha indice corrispondente a id-1 (i post.id partono da 1 non da 0)
+                    newArr[i].classe='firstUp selected'//aggiungo la classe selected alla proprietà .classe dell oggetto attuale
+                }else{ //altrimenti...
+                    newArr[i].classe='firstUp' //devo cancellare i selected (eventuali) precedentemente messi nella proprietà .classe dell oggetto attuale
+                }
+            }
+            //una volta ottenuto l array clone modificato posso restituirlo per fare il set dei nuovi posts
+            return newArr
+        })
+    }
+
     return(
         <ul>
-            {posts.map((post,i)=>{
+            {postsObjs.map((post,i)=>{
                     return( 
                     <li 
                     key={i}
-                    className="firstUp"
-                    onClick={()=>{setIndex(post.id)}}>
+                    className={post.classe}
+                    onClick={()=>{handleClick(post.id)}}>
                         {post.title}
                     </li> 
                     )
@@ -105,8 +133,8 @@ export default function Forum(){
         <>
         <h1>Il mio forum</h1>
         <div className="flex">
-        <PostsGallery posts={posts} setIndex={setPostIndex}/>
-        <PostInEvidenza postEvidenza={postEvidenza} comments={comments} index={postIndex}/>
+        <PostsGallery posts={posts} setIndex={setPostIndex} index={postIndex}/>
+        <PostInEvidenza postEvidenza={postEvidenza} comments={comments} />
         </div>
         </>
     )
