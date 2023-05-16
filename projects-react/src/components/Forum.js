@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react"
 
 function fetchContents(setContent,url,i,comment){
-    // la colonna di sinistra e’ stata ottenuta con una query GET a
-    // https://jsonplaceholder.typicode.com/posts, la parte centrale con una query GET a
-    // https://jsonplaceholder.typicode.com/posts/1 ed i commenti sotto il post con una query GET
-    // a https://jsonplaceholder.typicode.com/posts/1/comments.
+    // la colonna di sinistra si ottiene con una query GET a
+    // https://jsonplaceholder.typicode.com/posts, la parte centrale con una query GET a es.:
+    // https://jsonplaceholder.typicode.com/posts/1 ed i commenti sotto il post con una query GET a es.:
+    // https://jsonplaceholder.typicode.com/posts/1/comments.
 
     //controllo se la funzione è stata chiamata SOLO con i parametri setContent e url o meno 
         if(i!=undefined && comment==undefined){ //se il parametro i è definito ma comment no
@@ -24,15 +24,15 @@ function fetchContents(setContent,url,i,comment){
 }
 
 function ListPost({posts,setIndex}){ // componente che renderizza la galleria dei posts
-    let [postsObjs,setPostsObjs]=useState([]) //
+    let [postsObjs,setPostsObjs]=useState([]) //lo stato dei posts (che sono degli oggetti , a cui aggiungo la proprietà classe)
 
-    useEffect(()=>{
-        let newArr=[...posts]
-        for (let i = 0; i < newArr.length; i++) {
-            newArr[i]={...posts[i],classe:'firstUp'}
+    useEffect(()=>{ //questo useEffect filla lo state postsObjs
+        let newArr=[...posts] //clono in un array temporaneo il valore dell array di oggetti del parametro (i posts)
+        for (let i = 0; i < newArr.length; i++) { //itero sull array temporaneo 
+            newArr[i]={...posts[i],classe:'firstUp'} //clono l oggetto che stava alla stessa posizione in posts e aggiungo la proprietà classe impostandola a 'firstUp' ,perchè voglio che tutti gli oggetti di base abbiano questa classe
         }
-        setPostsObjs(newArr)
-    },[posts])
+        setPostsObjs(newArr) //aggiorno lo stato dei posts con il risultato memorizzato nell array temporaneo
+    },[posts]) //questo useEffect viene fatto solo se cambia posts (in teoria solo all inizio)
 
     function handleClick(id){ //funzione chiamata al click sopra uno dei posts listati in gallery
         setIndex(id) // imposto l'indice del postInEvidenza
@@ -49,33 +49,34 @@ function ListPost({posts,setIndex}){ // componente che renderizza la galleria de
             return newArr
         })
     }
-
+    //creo la lista html
     return(
-        <ul>
-            {postsObjs.map((post,i)=>{
+        <ul> 
+            {postsObjs.map((post,i)=>{ //mappo sui posts
                     return( 
-                    <li 
+                    <li  //creo i list items
                     key={i}
-                    className={post.classe}
-                    onClick={()=>{handleClick(post.id)}}>
+                    className={post.classe} //valorizzo la classe (sempre aggiornata vedi righe precedenti)
+                    onClick={()=>{handleClick(post.id)}}>  {/*funzione richiamata al click a cui passo id*/}
                         {post.title}
                     </li> 
                     )
                 })} 
         </ul>
-    )
-}
+    )}
 
-function PostsGallery({posts,setIndex}){
+//FIXME FORSE QUESTO COMPONENT NON è COSI UTILE , POSSO FARE MARGE CON ListPost?
+function PostsGallery({posts,setIndex}){ //componente Galleria posts  
+    // aggiungo il componente lista dei post
     return(
         <div>
             <h2>Gallery of posts</h2>
-            <ListPost posts={posts} setIndex={setIndex}/>
+            <ListPost posts={posts} setIndex={setIndex}/> 
         </div>
     )
 }
 
-function Comment({comment}){
+function Comment({comment}){ //questo è il componente che renderizza ogni singolo commento
     return(
         <>
         <div
@@ -92,8 +93,8 @@ function Comment({comment}){
     )
 }
 
-function PostInEvidenza({postEvidenza,comments}){
-    
+function PostInEvidenza({postEvidenza,comments}){ //componente principale della sezione dx
+    //con il post selezionato e le sue corrispettive informazioni
     return(
         <div className="postEvidenza">
             <h2 className="firstUp">{postEvidenza.title}</h2>
@@ -101,7 +102,7 @@ function PostInEvidenza({postEvidenza,comments}){
             <div className="commentSection">
                 <h2>Comments</h2>
                 <div className="commentsList">
-                {comments.map((comment)=>{
+                {comments.map((comment)=>{// mappo sui commenti e per ogni comment renderizzo il component
                     return( 
                         <Comment key={comment.id} comment={comment}/>
                     )
@@ -113,26 +114,28 @@ function PostInEvidenza({postEvidenza,comments}){
     )
 }
 
-export default function Forum(){
-    let [posts,setPosts]=useState([])
-    let [postEvidenza,setPostEvidenza]=useState([])
-    let [comments,setComments]=useState([])
-    let url='https://jsonplaceholder.typicode.com/posts'
-    let [postIndex,setPostIndex]=useState(1)
+export default function Forum(){ //il componente principale di default 
+    let [posts,setPosts]=useState([]) // state per l array di tutti i posts
+    let [postEvidenza,setPostEvidenza]=useState({}) // state per il singolo post selezionato
+    let [comments,setComments]=useState([]) //state dell array di commenti del post in questione
+    let url='https://jsonplaceholder.typicode.com/posts' //l url generico che mi permette di ricavare tutti i post e con l aggiunta di indice e stringa 'comments' anche il singolo post ed i relativi commenti 
+    let [postIndex,setPostIndex]=useState(1) //indice del post che vogliamo visualizzare
     
-    useEffect(()=>{
-        fetchContents(setPosts,url)
-    },[])
+    useEffect(()=>{ //questa useEffect viene fatta per ricavare tutti i post 
+        fetchContents(setPosts,url) //richiama la funzione che fa la fetch dei dati e gli passa il setPost (per aggiornare lo state di tutti i posts) 
+    },[])//viene effettuata una sola volta
 
-    useEffect(()=>{
-        fetchContents(setPostEvidenza,url,postIndex)
-        fetchContents(setComments,url,postIndex,'comments')
-    },[postIndex])
+    useEffect(()=>{//questa useEffect viene fatta per ricavare un singolo post ed i suoi commenti
+        fetchContents(setPostEvidenza,url,postIndex) //richiama la funzione che fa la fetch e gli passa il setPost ma anche l indice, per costruire l URL che recupera un singolo post
+        fetchContents(setComments,url,postIndex,'comments')//richiama la funzione che fa la fetch e gli passa il setPost ma anche l indice e la stringa 'comments' , per costruire l URL che recupera i commenti di un singolo post
+    },[postIndex]) //viene fatta ogni volta che index cambia
             
+    //renderizzo i componenti e gli passo le proprietà di cui hanno bisogno.
+    //lato css mi occupo anche di flexare i due components attraverso la classe flex
     return(
         <>
         <h1>Il mio forum</h1>
-        <div className="flex">
+        <div className="flex"> 
         <PostsGallery posts={posts} setIndex={setPostIndex} index={postIndex}/>
         <PostInEvidenza postEvidenza={postEvidenza} comments={comments} />
         </div>
