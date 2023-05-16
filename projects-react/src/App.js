@@ -9,6 +9,7 @@ import Todo from './components/TodoList2'
 import AbstractFetch from './components/AbstractFetch'
 import ColumnStore from './components/ColumnStore'
 import RuotaDellaFortuna from './components/RuotaDellaFortuna' 
+import Forum from './components/Forum' 
 
 function App() {
   return (
@@ -35,7 +36,8 @@ function App() {
       {/* <Todo/> */}
       {/* <AbstractFetch/> */}
       {/* <ColumnStore/> */}
-      <RuotaDellaFortuna/>
+      {/* <RuotaDellaFortuna/> */}
+      <Forum/>
     </div>
   );
 }
