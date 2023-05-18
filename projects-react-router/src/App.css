@@ -1,0 +1,134 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+body {
+  background-color: #282c34;
+  color: #ececec;
+}
+h1{
+  color: #f9a1ff;
+  text-align: center;
+}
+.flex{
+  color: black;
+  display: flex;
+  justify-content: space-around;
+  height: 85vh;
+}
+.flex >div{
+  background-color: #c6fafe;
+  border-radius: 20px;
+  border:2px solid #000000;
+  background-image: url('https://img.freepik.com/free-vector/larkspur-by-william-morris_53876-58889.jpg');
+}
+
+.flex >div:first-child {
+  width: 25%; 
+  margin: 0 2rem;
+}
+
+.flex >div:last-child {
+  width: 70%; 
+  padding: 1rem;
+}
+ul{
+  list-style: none;
+  padding: 0;
+  border: 1px solid black;
+  background-color: #fafbfdc4;
+  overflow-y: scroll;
+  height: 80%;
+}
+li{
+  padding: 1rem;
+  border:1px solid #000000;
+}
+
+.firstUp::first-letter{
+  text-transform: uppercase;
+}
+
+li:hover{
+  background-color: #8e72fef2;
+}
+
+h2{
+  border: 1px solid black;
+  background-color: #8a84a1f2;
+}
+
+.body {
+  border: 1px solid #000000;
+  background-color: #bcacfdf2;
+  height: 110px;
+  overflow-y: scroll;
+  padding: 1.5rem;
+}
+
+.commentSection{
+  height: 55%;
+}
+
+.commentsList{
+  overflow-y: scroll;
+  height: 270px; /* Altezza fissa desiderata */
+  background-color: #f3c8c8d4;
+  border:1px solid #000000;
+}
+
+.commentsList >div{
+  background-color: #b7cdfad3;
+  margin: 1rem 0 1rem auto;
+  border: 1px solid #000000;
+  width: 60%;
+  border-radius:20px;
+}
+.userComment{
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+.userComment img{
+  border-radius: 50%;
+}
+
+/* .selected{
+  background-color: #bcacfdf2;
+} */

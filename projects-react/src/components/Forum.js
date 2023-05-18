@@ -7,7 +7,7 @@ function fetchContents(setContent,url,i,comment){
     // https://jsonplaceholder.typicode.com/posts/1/comments.
 
     //controllo se la funzione è stata chiamata SOLO con i parametri setContent e url o meno 
-        if(i!=undefined && comment==undefined){ //se il parametro i è definito ma comment no
+        if(i!==undefined && comment===undefined){ //se il parametro i è definito ma comment no
             // vuol dire che la funzione è stata chiamata per ottenere il get di uno specifico post
             url=url+'/'+i //quindi modifico la stringa dell url come segue
         }else if(i && comment){//se il parametro i è definito ED ANCHE comment
@@ -89,7 +89,6 @@ function Comment({comment}){ //questo è il componente che renderizza ogni singo
             </div>
         </div>
         </>
-       
     )
 }
 
@@ -136,7 +135,7 @@ export default function Forum(){ //il componente principale di default
         <>
         <h1>Il mio forum</h1>
         <div className="flex"> 
-        <PostsGallery posts={posts} setIndex={setPostIndex} index={postIndex}/>
+        <PostsGallery posts={posts} setIndex={setPostIndex} />
         <PostInEvidenza postEvidenza={postEvidenza} comments={comments} />
         </div>
         </>
