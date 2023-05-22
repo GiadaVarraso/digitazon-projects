@@ -49,8 +49,8 @@ const Layout = () => {
             </nav>
 
             <div className="all">
-                <Outlet />
                 <Prodotto product={product}></Prodotto>
+                <Outlet />
 
             </div>
         </>
