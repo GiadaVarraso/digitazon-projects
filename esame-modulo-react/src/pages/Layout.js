@@ -10,7 +10,7 @@ const Layout = () => {
         <>
             <nav>
                 <header className='headerSerchSection flex white'>
-                    <div><img className='hover logo' src='https://www.pngplay.com/wp-content/uploads/3/White-Amazon-Logo-PNG-HD-Quality.png'></img></div>
+                    <div><a href="http://localhost:3000/"><img className='hover logo' src='https://www.pngplay.com/wp-content/uploads/3/White-Amazon-Logo-PNG-HD-Quality.png'></img></a></div>
                     <div className='hover flex directColumn '>
                         <span>ciao</span>
                         <span>Scegli il tuo indirizzo</span>

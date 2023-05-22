@@ -5,7 +5,6 @@ export default function Home() {
         <>
             <div className='body'>
 
-
                 <div className='bodySection flex'>
                     <button className='hover'><img src='https://cdn-icons-png.flaticon.com/512/271/271220.png' width='90px'></img></button>
                     <div className='flex directColumn'>
