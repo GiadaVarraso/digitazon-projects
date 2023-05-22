@@ -135,20 +135,22 @@ ul li:hover {
   width: 200px;
 }
 
-.searchedProducts ul{
-  gap:2rem;
+.searchedProducts ul {
+  gap: 2rem;
   padding: 1rem;
   flex-wrap: wrap;
 }
-.searchedProducts li{
+
+.searchedProducts li {
   flex-basis: 100%;
   border-radius: 10px;
 }
-.searchedProducts li div{
+
+.searchedProducts li div {
   margin-left: 1rem;
 }
 
-.all{
+.all {
   background: linear-gradient(0.25turn, #8355df, #e66465);
   height: 100vh;
 }

@@ -50,7 +50,7 @@ export default function ChatGPT() {
       throw error;
     }
   }
-
+  
   async function findVideo(artista) {
     try {
       const question = `Suggest a YouTube video URL embed for ${artista}, only the URL in your answer, no other words`;
