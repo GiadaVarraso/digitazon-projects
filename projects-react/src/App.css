@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,7 +35,7 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
 /*  ---- chat START ----
 .App {
@@ -70,7 +70,7 @@ main {
   display: flex;
   gap: 10px;
 } 
- ---- chat END ----
+---- chat END ----
 */
 
 
@@ -87,7 +87,7 @@ main {
 
 
 /* ---- TODO START ---- 
- body{
+body{
   background-color: #282c34;
 }
 .lista{
@@ -124,7 +124,7 @@ li{
   opacity: 0.30;
 } 
 
- ---- TODO END ---- */
+---- TODO END ---- */
 
 /* ------ COLUMN STORE START ------- 
 body{
@@ -154,9 +154,9 @@ li{
   display: flex;
   flex-direction: column;
 }
- ------ COLUMN STORE END ------- */
+------ COLUMN STORE END ------- */
 
- /*------ ruota della fortuna start ------- 
+/*------ ruota della fortuna start ------- 
 body {
   background-color: #282c34;
   color: #ececec;
@@ -184,9 +184,9 @@ li{
   font-size:4rem;
 }
 
- ------ ruota della fortuna end ------- */
+------ ruota della fortuna end ------- */
 
- /* ------- Forum start -------------- */
+/* ------- Forum start -------------- 
 body {
   background-color: #282c34;
   color: #ececec;
@@ -278,4 +278,19 @@ h2{
 .selected{
   background-color: #bcacfdf2;
 }
- /* ------- Forum end -------------- */
+------- Forum end -------------- */
+
+/* ------- ChatGPT start -------------- */
+body{
+  background-color: #282c34;
+  color:aliceblue;
+  text-align: center;
+}
+
+.flex{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* ------- ChatGPT end -------------- */

@@ -10,6 +10,7 @@ import AbstractFetch from './components/AbstractFetch'
 import ColumnStore from './components/ColumnStore'
 import RuotaDellaFortuna from './components/RuotaDellaFortuna' 
 import Forum from './components/Forum' 
+import ChatGPT from './components/ChatGPT' 
 
 function App() {
   return (
@@ -37,7 +38,8 @@ function App() {
       {/* <AbstractFetch/> */}
       {/* <ColumnStore/> */}
       {/* <RuotaDellaFortuna/> */}
-      <Forum/>
+      {/* <Forum/> */}
+      <ChatGPT/>
     </div>
   );
 }
