@@ -75,6 +75,11 @@ export const getAll = async (req, res) => {
   }
 
   //tentativo chiamata al gruppo 1
+
+  function findKey(url){
+
+  }
+
   function incrementaValoreNumerico(valore) {
     let valoreIncrementato = parseInt(valore);
     valoreIncrementato += 1;
