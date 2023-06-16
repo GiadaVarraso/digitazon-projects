@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "nome": "vacanze 1",
+    "fotografie": [
+      1
+    ],
+    "hashtags": [
+      "#mare ",
+      "#studioghibli ",
+      "#lisp "
+    ],
+    "dataCreazione": "03/04/23",
+    "dataModifica": "16/06/23"
+  }
+]
