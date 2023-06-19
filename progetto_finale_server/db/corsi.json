@@ -1,0 +1,19 @@
+{
+    "id": 1,
+    "nome": "Yoga",
+    "istruttore": "Maria Rossi",
+    "descrizione": "Lezioni di yoga per migliorare flessibilità e benessere mentale.",
+    "livello": "Intermedio",
+    "orari": [
+      {
+        "giorno": "Martedì",
+        "orario": "18:00"
+      },
+      {
+        "giorno": "Giovedì",
+        "orario": "18:00"
+      }
+    ],
+    "durata": "1 ora",
+    "postiDisponibili": 15
+  }

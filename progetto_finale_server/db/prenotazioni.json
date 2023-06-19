@@ -1,0 +1,17 @@
+[
+    {
+      "idPrenotazione": 1,
+      "idCorso": 1,
+      "nomeCliente": "Mario Rossi",
+      "dataCreazione": {
+        "data": "2023-06-19",
+        "orario": "14:30"
+      },
+      "dataPrenotazione": {
+        "data": "2023-06-20",
+        "orario": "18:30",
+        "giornoSettimana": "Martedì"
+      }
+    }
+]
+  
