@@ -1,19 +1,59 @@
-{
-    "id": 1,
-    "nome": "Yoga",
-    "istruttore": "Maria Rossi",
-    "descrizione": "Lezioni di yoga per migliorare flessibilità e benessere mentale.",
-    "livello": "Intermedio",
-    "orari": [
-      {
-        "giorno": "Martedì",
-        "orario": "18:00"
-      },
-      {
-        "giorno": "Giovedì",
-        "orario": "18:00"
-      }
-    ],
-    "durata": "1 ora",
-    "postiDisponibili": 15
-  }
+[
+ {
+  "id": 1,
+  "nome": "Yoga",
+  "istruttore": "Maria Rossi",
+  "descrizione": "Lezioni di yoga per migliorare flessibilità e benessere mentale.",
+  "livello": "Intermedio",
+  "orari": [
+   {
+    "giorno": "Martedì",
+    "orario": "18:00"
+   },
+   {
+    "giorno": "Giovedì",
+    "orario": "18:00"
+   }
+  ],
+  "durata": "1 ora",
+  "postiDisponibili": 18
+ },
+ {
+  "id": 2,
+  "nome": "Spinning",
+  "istruttore": "Luigi Verdi",
+  "descrizione": "Lezioni di Spinning per migliorare resistenza.",
+  "livello": "Intermedio",
+  "orari": [
+   {
+    "giorno": "Lunedì",
+    "orario": "15:00"
+   },
+   {
+    "giorno": "Mercoledì",
+    "orario": "15:00"
+   }
+  ],
+  "durata": "1 ora",
+  "postiDisponibili": 15
+ },
+ {
+  "id": 3,
+  "nome": "Strong",
+  "istruttore": "Natalie",
+  "descrizione": "Lezioni Zumba per tonificare il corpo e divertirsi.",
+  "livello": "Principianti",
+  "orari": [
+   {
+    "giorno": "Martedì",
+    "orario": "10:00"
+   },
+   {
+    "giorno": "Giovedì",
+    "orario": "10:00"
+   }
+  ],
+  "durata": "1 ora",
+  "postiDisponibili": 20
+ }
+]
