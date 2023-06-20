@@ -8,6 +8,7 @@ import {
 import {
   newPrenotazione
   , getPrenotazioni
+  , getPrenotazioniByCorso
   , getPrenotazione
   , deletePrenotazione
   , modificaPrenotazione
@@ -34,26 +35,28 @@ app.get('/', (req, res) => {
 
     + "\nPRENOTAZIONI:"
 
-    + "\nPOST prenotazione    http://localhost:8000/corsi/:id/prenotazioni"
-    + "\nGET prenotazione     http://localhost:8000/corsi/:id/prenotazioni"
-    + "\nGET prenotazioni     http://localhost:8000/corsi/:idC/prenotazioni/:idP"
-    + "\nDELETE prenotazione  http://localhost:8000/corsi/:idC/prenotazioni/:idP"
-    + "\nPUT prenotazione     http://localhost:8000/corsi/:idC/prenotazioni/:idP"
+    + "\nPOST prenotazione          http://localhost:8000/corsi/:id/prenotazioni"
+    + "\nGET prenotazioni corso     http://localhost:8000/corsi/:id/prenotazioni"
+    + "\nGET prenotazioni all       http://localhost:8000/prenotazioni"
+    + "\nGET prenotazione           http://localhost:8000/corsi/:idC/prenotazioni/:idP"
+    + "\nDELETE prenotazione        http://localhost:8000/corsi/:idC/prenotazioni/:idP"
+    + "\nPUT prenotazione           http://localhost:8000/corsi/:idC/prenotazioni/:idP"
     //TODO aggiungere crud eventi per galleria 'bacheca eventi' e galleria 'immagini servizi'
   );
 });
 // crud corsi
-app.post('/corsi', newCorso) 
+app.post('/corsi', newCorso) //DONE
 app.get('/corsi', getCorsi)  //DONE
 app.get('/corsi/:id', getCorso) //DONE
-app.delete('/corsi/:id', deleteCorso)
-app.put('/corsi/:id', modificaCorso)
+app.delete('/corsi/:id', deleteCorso) //DONE
+app.put('/corsi/:id', modificaCorso) //DONE
 //crud prenotazioni
-app.post('/corsi/:id/prenotazioni', newPrenotazione)
-app.get('/corsi/:id/prenotazioni', getPrenotazioni)
-app.get('/corsi/:idC/prenotazioni/:idP', getPrenotazione)
-app.delete('/corsi/:idC/prenotazioni/:idP', deletePrenotazione)
-app.put('/corsi/:idC/prenotazioni/:idP', modificaPrenotazione)
+app.post('/corsi/:id/prenotazioni', newPrenotazione) //DONE
+app.get('/prenotazioni', getPrenotazioni) //DONE
+app.get('/corsi/:id/prenotazioni', getPrenotazioniByCorso); //DONE
+app.get('/corsi/:idC/prenotazioni/:idP', getPrenotazione) //DONE
+app.delete('/corsi/:idC/prenotazioni/:idP', deletePrenotazione) //DONE
+app.put('/corsi/:idC/prenotazioni/:idP', modificaPrenotazione) //DONE
 
 app.listen(port, () => {
   console.log(`Il server è in ascolto sulla porta ${port}`);

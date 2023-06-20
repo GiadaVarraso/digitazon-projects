@@ -7,12 +7,12 @@
   "livello": "Intermedio",
   "orari": [
    {
-    "giorno": "Martedì",
-    "orario": "18:00"
+    "giorno": "Mercoledì",
+    "orario": "16:00"
    },
    {
-    "giorno": "Giovedì",
-    "orario": "18:00"
+    "giorno": "Martedì",
+    "orario": "16:00"
    }
   ],
   "durata": "1 ora",
@@ -26,12 +26,12 @@
   "livello": "Intermedio",
   "orari": [
    {
-    "giorno": "Lunedì",
-    "orario": "15:00"
+    "giorno": "Giovedì",
+    "orario": "16:00"
    },
    {
-    "giorno": "Mercoledì",
-    "orario": "15:00"
+    "giorno": "Martedì",
+    "orario": "16:00"
    }
   ],
   "durata": "1 ora",
