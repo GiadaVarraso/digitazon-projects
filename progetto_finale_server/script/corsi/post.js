@@ -5,7 +5,7 @@ async function postCorso() {
   const newCorso = {
     nome: 'Nuovo corso',
     istruttore: 'Nuovo istruttore',
-    descrizione: 'Descrizione del nuovo corso',
+    descrizione: 'Descrizione',
     livello: 'Intermedio',
     orari: [
       { giorno: 'Lunedì', orario: '10:00' },

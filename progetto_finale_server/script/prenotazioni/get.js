@@ -38,6 +38,6 @@ async function getPrenotazione(idC, idP) {
   }
 }
 
-// getPrenotazioni();
-// getPrenotazioniByCorso(1);
-getPrenotazione(1, 2);
+getPrenotazioni();
+// getPrenotazioniByCorso(process.argv[2]);
+// getPrenotazione(process.argv[2], process.argv[3]);

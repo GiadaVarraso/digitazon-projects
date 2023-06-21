@@ -6,8 +6,8 @@ async function deletePrenotazione(idC, idP) {
     const url = `${baseURL}/corsi/${idC}/prenotazioni/${idP}`;
 
     try {
-        const response = await axios.delete(url);
-        console.log(response.data);
+        await axios.delete(url);
+        console.log('cancellata');
     } catch (error) {
         console.log(error);
         console.log('\nERRORE NELL\'ELIMINAZIONE DELLA PRENOTAZIONE\n');
@@ -15,4 +15,4 @@ async function deletePrenotazione(idC, idP) {
 }
 
 
-deletePrenotazione(1, 2);
+deletePrenotazione(process.argv[2], process.argv[3]);

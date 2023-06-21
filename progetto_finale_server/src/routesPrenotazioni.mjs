@@ -9,6 +9,28 @@ async function nextPrenotazioneId() {
   const nextId = currentId + 1;
   return nextId;
 }
+function dataCreazione() {
+  const now = new Date()
+  const giorno = now.getDate()
+  const mese = now.getMonth() + 1
+  const anno = now.getFullYear() % 100
+
+  const ora = now.getHours();
+  const minuti = now.getMinutes();
+
+  // Formatta la data in gg/MM/YY
+  const nowFormatDate = `${giorno.toString().padStart(2, '0')}/${mese.toString().padStart(2, '0')}/${anno.toString()}`
+  
+  // Formatta l'orario in hh:mm
+  const nowFormatTime = `${ora.toString().padStart(2, '0')}:${minuti.toString().padStart(2, '0')}`;
+
+  const dateCreazione={dataCreazione: {
+    "data": `${nowFormatDate}`,
+    "orario": `${nowFormatTime}`
+   }
+  }
+  return dateCreazione
+}
 
 const newPrenotazione = async (req, res) => {
   try {
@@ -29,7 +51,7 @@ const newPrenotazione = async (req, res) => {
     }
 
     const prenotazioni = contentPrenotazioni.filter(p => p.idCorso == idCorso);
-    if(prenotazioni.length > contentCorsi[index].postiDisponibili){
+    if(prenotazioni.length >= contentCorsi[index].postiDisponibili){
       res.send({
         data: {},
         error: true,
@@ -38,7 +60,7 @@ const newPrenotazione = async (req, res) => {
       return
     }
 
-    const prenotazione = { idPrenotazione, idCorso, ...req.body }
+    const prenotazione = { idPrenotazione, idCorso, ...dataCreazione() , ...req.body }
     contentPrenotazioni.push(prenotazione);
     await fs.writeFile(DB_PATH_PRENOTAZIONI, JSON.stringify(contentPrenotazioni, null, " "));
 
@@ -70,7 +92,14 @@ const getPrenotazioniByCorso = async (req, res) => {
     const content = JSON.parse(await fs.readFile(DB_PATH_PRENOTAZIONI));
     const idCorso = parseInt(req.params.id);
     const prenotazioni = content.filter(p => p.idCorso === idCorso);
-
+    if (prenotazioni.length==0){
+        res.send({
+          data: {},
+          error: true,
+          message: `Prenotazioni per il corso ${idCorso} non trovate`
+        });
+        return;      
+    }
     res.send({ data: prenotazioni });
   } catch (error) {
     console.log(error);

@@ -1,15 +1,10 @@
 import axios from 'axios';
 
-async function postPrenotazione() {
-  const url = 'http://localhost:8000/corsi/1/prenotazioni';
+async function postPrenotazione(idC) {
+  const url = `http://localhost:8000/corsi/${idC}/prenotazioni`;
   const prenotazioneData = {
-    nomeCliente: 'Giuseppina Ferreri',
-    dataCreazione: {
-      data: '2023-06-19',
-      orario: '14:30'
-    },
-    dataPrenotazione: {
-      data: '2023-06-20',
+    nomeCliente: 'Mario Rossi',
+    Prenotazione: {
       orario: '18:30',
       giornoSettimana: 'Martedì'
     }
@@ -24,4 +19,4 @@ async function postPrenotazione() {
   }
 }
 
-postPrenotazione();
+postPrenotazione(process.argv[2]);

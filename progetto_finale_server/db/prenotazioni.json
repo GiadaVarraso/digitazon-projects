@@ -1,112 +1,195 @@
 [
  {
-  "idPrenotazione": 1,
-  "idCorso": 1,
-  "nomeCliente": "Mario Rossi",
-  "dataCreazione": {
-   "data": "2023-06-19",
-   "orario": "14:30"
-  },
-  "dataPrenotazione": {
-   "data": "2023-06-20",
-   "orario": "18:30",
-   "giornoSettimana": "Martedì"
-  }
- },
- {
-  "idPrenotazione": 2,
-  "idCorso": 1,
-  "nomeCliente": "Giuseppina Ferreri",
-  "dataCreazione": {
-   "data": "2023-06-19",
-   "orario": "14:30"
-  },
-  "dataPrenotazione": {
-   "data": "2023-06-20",
-   "orario": "18:30",
-   "giornoSettimana": "Martedì"
-  }
- },
- {
-  "idPrenotazione": 3,
-  "idCorso": 1,
-  "nomeCliente": "Giuseppina Ferreri",
-  "dataCreazione": {
-   "data": "2023-06-19",
-   "orario": "14:30"
-  },
-  "dataPrenotazione": {
-   "data": "2023-06-20",
-   "orario": "18:30",
-   "giornoSettimana": "Martedì"
-  }
- },
- {
-  "idPrenotazione": 4,
-  "idCorso": 9,
-  "nomeCliente": "Giuseppina Ferreri",
-  "dataCreazione": {
-   "data": "2023-06-19",
-   "orario": "14:30"
-  },
-  "dataPrenotazione": {
-   "data": "2023-06-20",
-   "orario": "18:30",
-   "giornoSettimana": "Martedì"
-  }
- },
- {
-  "idPrenotazione": 5,
-  "idCorso": 3,
-  "nomeCliente": "Giuseppina Ferreri",
-  "dataCreazione": {
-   "data": "2023-06-19",
-   "orario": "14:30"
-  },
-  "dataPrenotazione": {
-   "data": "2023-06-20",
-   "orario": "18:30",
-   "giornoSettimana": "Martedì"
-  }
- },
- {
   "idPrenotazione": 6,
-  "idCorso": 1,
-  "nomeCliente": "Giuseppina Ferreri",
+  "idCorso": 2,
   "dataCreazione": {
-   "data": "2023-06-19",
-   "orario": "14:30"
+   "data": "21/06/23",
+   "orario": "12:19"
   },
-  "dataPrenotazione": {
-   "data": "2023-06-20",
+  "nomeCliente": "Mario Rossi",
+  "Prenotazione": {
    "orario": "18:30",
    "giornoSettimana": "Martedì"
   }
  },
  {
   "idPrenotazione": 7,
-  "idCorso": 1,
-  "nomeCliente": "Giuseppina Ferreri",
+  "idCorso": 2,
   "dataCreazione": {
-   "data": "2023-06-19",
-   "orario": "14:30"
+   "data": "21/06/23",
+   "orario": "12:21"
   },
-  "dataPrenotazione": {
-   "data": "2023-06-20",
+  "nomeCliente": "Mario Rossi",
+  "Prenotazione": {
    "orario": "18:30",
    "giornoSettimana": "Martedì"
   }
  },
  {
   "idPrenotazione": 8,
-  "idCorso": 1,
-  "nomeCliente": "Giuseppina Ferreri",
+  "idCorso": 2,
   "dataCreazione": {
-   "data": "2023-06-19",
-   "orario": "14:30"
+   "data": "21/06/23",
+   "orario": "12:21"
   },
-  "dataPrenotazione": {
-   "data": "2023-06-20",
+  "nomeCliente": "Mario Rossi",
+  "Prenotazione": {
+   "orario": "18:30",
+   "giornoSettimana": "Martedì"
+  }
+ },
+ {
+  "idPrenotazione": 9,
+  "idCorso": 2,
+  "dataCreazione": {
+   "data": "21/06/23",
+   "orario": "12:21"
+  },
+  "nomeCliente": "Mario Rossi",
+  "Prenotazione": {
+   "orario": "18:30",
+   "giornoSettimana": "Martedì"
+  }
+ },
+ {
+  "idPrenotazione": 10,
+  "idCorso": 2,
+  "dataCreazione": {
+   "data": "21/06/23",
+   "orario": "12:21"
+  },
+  "nomeCliente": "Mario Rossi",
+  "Prenotazione": {
+   "orario": "18:30",
+   "giornoSettimana": "Martedì"
+  }
+ },
+ {
+  "idPrenotazione": 11,
+  "idCorso": 2,
+  "dataCreazione": {
+   "data": "21/06/23",
+   "orario": "12:21"
+  },
+  "nomeCliente": "Mario Rossi",
+  "Prenotazione": {
+   "orario": "18:30",
+   "giornoSettimana": "Martedì"
+  }
+ },
+ {
+  "idPrenotazione": 12,
+  "idCorso": 2,
+  "dataCreazione": {
+   "data": "21/06/23",
+   "orario": "12:21"
+  },
+  "nomeCliente": "Mario Rossi",
+  "Prenotazione": {
+   "orario": "18:30",
+   "giornoSettimana": "Martedì"
+  }
+ },
+ {
+  "idPrenotazione": 13,
+  "idCorso": 2,
+  "dataCreazione": {
+   "data": "21/06/23",
+   "orario": "12:21"
+  },
+  "nomeCliente": "Mario Rossi",
+  "Prenotazione": {
+   "orario": "18:30",
+   "giornoSettimana": "Martedì"
+  }
+ },
+ {
+  "idPrenotazione": 14,
+  "idCorso": 2,
+  "dataCreazione": {
+   "data": "21/06/23",
+   "orario": "12:21"
+  },
+  "nomeCliente": "Mario Rossi",
+  "Prenotazione": {
+   "orario": "18:30",
+   "giornoSettimana": "Martedì"
+  }
+ },
+ {
+  "idPrenotazione": 15,
+  "idCorso": 2,
+  "dataCreazione": {
+   "data": "21/06/23",
+   "orario": "12:21"
+  },
+  "nomeCliente": "Pablo",
+  "Prenotazione": {
+   "orario": "18:30",
+   "giornoSettimana": "Martedì"
+  }
+ },
+ {
+  "idPrenotazione": 16,
+  "idCorso": 2,
+  "dataCreazione": {
+   "data": "21/06/23",
+   "orario": "12:21"
+  },
+  "nomeCliente": "Mario Rossi",
+  "Prenotazione": {
+   "orario": "18:30",
+   "giornoSettimana": "Martedì"
+  }
+ },
+ {
+  "idPrenotazione": 17,
+  "idCorso": 2,
+  "dataCreazione": {
+   "data": "21/06/23",
+   "orario": "12:21"
+  },
+  "nomeCliente": "Mario Rossi",
+  "Prenotazione": {
+   "orario": "18:30",
+   "giornoSettimana": "Martedì"
+  }
+ },
+ {
+  "idPrenotazione": 18,
+  "idCorso": 2,
+  "dataCreazione": {
+   "data": "21/06/23",
+   "orario": "12:23"
+  },
+  "nomeCliente": "Mario Rossi",
+  "Prenotazione": {
+   "orario": "18:30",
+   "giornoSettimana": "Martedì"
+  }
+ },
+ {
+  "idPrenotazione": 19,
+  "idCorso": 2,
+  "dataCreazione": {
+   "data": "21/06/23",
+   "orario": "12:23"
+  },
+  "nomeCliente": "Mario Rossi",
+  "Prenotazione": {
+   "orario": "18:30",
+   "giornoSettimana": "Martedì"
+  }
+ },
+ {
+  "idPrenotazione": 20,
+  "idCorso": 2,
+  "dataCreazione": {
+   "data": "21/06/23",
+   "orario": "12:26"
+  },
+  "nomeCliente": "Mario Rossi",
+  "Prenotazione": {
    "orario": "18:30",
    "giornoSettimana": "Martedì"
   }

@@ -1,59 +1,59 @@
 [
- {
-  "id": 1,
-  "nome": "Yoga",
-  "istruttore": "Maria Rossi",
-  "descrizione": "Lezioni di yoga per migliorare flessibilità e benessere mentale.",
-  "livello": "Intermedio",
-  "orari": [
-   {
-    "giorno": "Mercoledì",
-    "orario": "16:00"
-   },
-   {
-    "giorno": "Martedì",
-    "orario": "16:00"
-   }
-  ],
-  "durata": "1 ora",
-  "postiDisponibili": 18
- },
- {
-  "id": 2,
-  "nome": "Spinning",
-  "istruttore": "Luigi Verdi",
-  "descrizione": "Lezioni di Spinning per migliorare resistenza.",
-  "livello": "Intermedio",
-  "orari": [
-   {
-    "giorno": "Giovedì",
-    "orario": "16:00"
-   },
-   {
-    "giorno": "Martedì",
-    "orario": "16:00"
-   }
-  ],
-  "durata": "1 ora",
-  "postiDisponibili": 15
- },
- {
-  "id": 3,
-  "nome": "Strong",
-  "istruttore": "Natalie",
-  "descrizione": "Lezioni Zumba per tonificare il corpo e divertirsi.",
-  "livello": "Principianti",
-  "orari": [
-   {
-    "giorno": "Martedì",
-    "orario": "10:00"
-   },
-   {
-    "giorno": "Giovedì",
-    "orario": "10:00"
-   }
-  ],
-  "durata": "1 ora",
-  "postiDisponibili": 20
- }
+    {
+        "id": 1,
+        "nome": "Zumba",
+        "istruttore": "Pablo",
+        "descrizione": "Lezioni di Zumba per tonificare il corpo e divertirsi.",
+        "livello": "Principianti",
+        "orari": [
+            {
+                "giorno": "Giovedì",
+                "orario": "16:00"
+            },
+            {
+                "giorno": "Martedì",
+                "orario": "16:00"
+            }
+        ],
+        "durata": "1 ora",
+        "postiDisponibili": 15
+    },
+    {
+        "id": 2,
+        "nome": "Spinning",
+        "istruttore": "Luigi Verdi",
+        "descrizione": "Lezioni di Spinning per migliorare resistenza.",
+        "livello": "Intermedio",
+        "orari": [
+            {
+                "giorno": "Giovedì",
+                "orario": "16:00"
+            },
+            {
+                "giorno": "Martedì",
+                "orario": "16:00"
+            }
+        ],
+        "durata": "1 ora",
+        "postiDisponibili": 15
+    },
+    {
+        "id": 3,
+        "nome": "Strong",
+        "istruttore": "Natalie",
+        "descrizione": "Lezioni Strong per tonificare il corpo.",
+        "livello": "Avanzato",
+        "orari": [
+            {
+                "giorno": "Martedì",
+                "orario": "10:00"
+            },
+            {
+                "giorno": "Giovedì",
+                "orario": "10:00"
+            }
+        ],
+        "durata": "1 ora",
+        "postiDisponibili": 20
+    }
 ]

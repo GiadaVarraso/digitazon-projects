@@ -6,11 +6,11 @@ async function putCorso(id) {
     // nome: 'Corso aggiornato',
     // istruttore: 'Istruttore aggiornato',
     // descrizione: 'Descrizione aggiornata',
-    // livello: 'Avanzato',
-    orari: [
-      { giorno: 'Venerdì', orario: '16:00' },
-      { giorno: 'Martedì', orario: '16:00' }
-    ],
+    livello: 'Avanzato',
+    // orari: [
+    //   { giorno: 'Venerdì', orario: '16:00' },
+    //   { giorno: 'Martedì', orario: '16:00' }
+    // ],
     // durata: '1 ora e 30 minuti',
     // postiDisponibili: 15
   };
@@ -23,4 +23,4 @@ async function putCorso(id) {
   }
 }
 
-putCorso()
+putCorso(process.argv[2])

@@ -11,6 +11,7 @@ async function call(id){
     }
 }
 
-call(2) // get id specifico
+// call(process.argv[2]) // get id specifico
+// call(process.argv[2]) // get id specifico non presente
 call()  // get all
 

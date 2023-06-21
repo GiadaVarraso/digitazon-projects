@@ -12,4 +12,4 @@ async function deleteCorso(id) {
   }
 }
 
-deleteCorso(process.argv[3])
+deleteCorso(process.argv[2])

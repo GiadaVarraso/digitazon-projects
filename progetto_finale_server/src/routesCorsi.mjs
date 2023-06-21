@@ -1,4 +1,5 @@
 import fs from 'node:fs/promises'
+import axios from 'axios'
 
 const DB_PATH_CORSI = 'db/corsi.json'
 const DB_PATH_PRENOTAZIONI = 'db/prenotazioni.json'
@@ -9,6 +10,7 @@ async function nextId() {
     const nextId = currentId + 1
     return nextId
 }
+
 
 const newCorso = async (req, res) => {
     try {
@@ -65,7 +67,7 @@ const getCorso = async (req, res) => {
 const deleteCorso = async (req, res) => {
     try {
         const content = JSON.parse(await fs.readFile(DB_PATH_CORSI))
-        const index = content.findIndex(c => c.idCorso == req.params.id)
+        const index = content.findIndex(c => c.id == req.params.id)
         const idCorso = parseInt(req.params.id);
 
         if (index === -1) {
@@ -93,7 +95,7 @@ const deleteCorso = async (req, res) => {
                             .send({
                                 message:
                                     'CORSO NON CANCELLATO. Non è stato possibile cancellare la prenotazione ' +
-                                    p.idPrenotazione + 'relativa al corso ' + idCorso + '.'
+                                    p.idPrenotazione + ' relativa al corso ' + idCorso + '.'
                             })
                             .status(409)
                         return
