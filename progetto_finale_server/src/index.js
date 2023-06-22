@@ -13,12 +13,25 @@ import {
   , deletePrenotazione
   , modificaPrenotazione
 } from './routesPrenotazioni.mjs'
+import { getImgs } from './routesImgs.mjs'
 import express from 'express'
 import bodyParser from 'body-parser'
 import cors from 'cors'
 const app = express();
 app.use(bodyParser.json())
 app.use(cors())
+import multer from 'multer'
+
+const storage = multer.diskStorage({
+  destination: 'imgs/',
+  filename: function(req, file, cb) {
+    const extension = file.originalname.split('.').pop();
+    const uniqueFileName = Date.now() + '.' + extension;
+    cb(null, uniqueFileName);
+  }
+});
+
+const upload = multer({ storage: storage });
 
 const port = 8000;
 
@@ -34,14 +47,20 @@ app.get('/', (req, res) => {
     + "\nPUT corso     http://localhost:8000/corsi/:id"
 
     + "\nPRENOTAZIONI:"
-
+    
     + "\nPOST prenotazione          http://localhost:8000/corsi/:id/prenotazioni"
     + "\nGET prenotazioni corso     http://localhost:8000/corsi/:id/prenotazioni"
     + "\nGET prenotazioni all       http://localhost:8000/prenotazioni"
     + "\nGET prenotazione           http://localhost:8000/corsi/:idC/prenotazioni/:idP"
     + "\nDELETE prenotazione        http://localhost:8000/corsi/:idC/prenotazioni/:idP"
     + "\nPUT prenotazione           http://localhost:8000/corsi/:idC/prenotazioni/:idP"
-    //TODO aggiungere crud eventi per galleria 'bacheca eventi' e galleria 'immagini servizi'
+    //TODO aggiungere crud eventi per galleria 'bacheca eventi' 
+    
+    + "\nIMMAGINI:"
+
+    +'\nGET img http://localhost:8000/images/:fileName.ext'
+    +'\nGET imgs http://localhost:8000/images'
+    +'\nPOST img http://localhost:8000/upload (payload type=form-data, key=image , type=File, value=[.jpg, .jpeg, .png, .gif]'
   );
 });
 // crud corsi
@@ -58,8 +77,18 @@ app.get('/corsi/:idC/prenotazioni/:idP', getPrenotazione)
 app.delete('/corsi/:idC/prenotazioni/:idP', deletePrenotazione)
 app.put('/corsi/:idC/prenotazioni/:idP', modificaPrenotazione)
 
-//img
+//Immagini
 app.use('/images', express.static('imgs'));
+
+app.get('/images', getImgs);
+
+app.post('/upload', upload.single('image'), (req, res) => {
+  res.send('Immagine caricata con successo');
+});
+
+// Con questa configurazione, puoi inviare una richiesta POST 
+// a http://localhost:8000/upload includendo un campo 'image' nel corpo
+// della richiesta contenente il file immagine da caricare.
 
 app.listen(port, () => {
   console.log(`Il server è in ascolto sulla porta ${port}`);
