@@ -58,6 +58,9 @@ app.get('/corsi/:idC/prenotazioni/:idP', getPrenotazione)
 app.delete('/corsi/:idC/prenotazioni/:idP', deletePrenotazione)
 app.put('/corsi/:idC/prenotazioni/:idP', modificaPrenotazione)
 
+//img
+app.use('/images', express.static('imgs'));
+
 app.listen(port, () => {
   console.log(`Il server è in ascolto sulla porta ${port}`);
 });
