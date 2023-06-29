@@ -7,10 +7,8 @@ async function putCorso(id) {
     // istruttore: 'Istruttore aggiornato',
     // descrizione: 'Descrizione aggiornata',
     livello: 'Avanzato',
-    // orari: [
-    //   { giorno: 'Venerdì', orario: '16:00' },
-    //   { giorno: 'Martedì', orario: '16:00' }
-    // ],
+    // giorno: 'Venerdì', 
+    // orario: '16:00' ,
     // durata: '1 ora e 30 minuti',
     // postiDisponibili: 15
   };

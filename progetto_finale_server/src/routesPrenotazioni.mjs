@@ -60,6 +60,21 @@ const newPrenotazione = async (req, res) => {
       return
     }
 
+    // la prenotazione NON puo' essere effettuata il giorno stesso del corso (sono prenotazioni settimanali)
+    const now = new Date()
+    const numeroGiorno = now.getDay()
+    const giorniSettimana = ['Domenica', 'Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato'];
+    const giornoSettimana = giorniSettimana[numeroGiorno];
+
+    if(giornoSettimana == contentCorsi[index].giorno){
+      res.send({
+        data: {},
+        error: true,
+        message: `Impossibile aggiungere prenotazione.La prenotazione NON puo' essere effettuata il giorno stesso del corso`
+      }).status(400)
+      return
+    }
+
     const prenotazione = { idPrenotazione, idCorso, ...dataCreazione() , ...req.body }
     contentPrenotazioni.push(prenotazione);
     await fs.writeFile(DB_PATH_PRENOTAZIONI, JSON.stringify(contentPrenotazioni, null, " "));

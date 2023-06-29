@@ -3,14 +3,12 @@ import axios from 'axios';
 async function postCorso() {
   const url = 'http://localhost:8000/corsi';
   const newCorso = {
-    nome: 'Nuovo corso',
-    istruttore: 'Nuovo istruttore',
-    descrizione: 'Descrizione',
+    nome: 'Walking',
+    istruttore: 'Barbara Bertolosso',
+    descrizione: 'Walking Circuit',
     livello: 'Intermedio',
-    orari: [
-      { giorno: 'Lunedì', orario: '10:00' },
-      { giorno: 'Mercoledì', orario: '10:00' }
-    ],
+    giorno: 'Lunedì',
+    orario: '10:00' ,
     durata: '1 ora',
     postiDisponibili: 20
   };

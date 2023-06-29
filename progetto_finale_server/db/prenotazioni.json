@@ -6,11 +6,7 @@
    "data": "21/06/23",
    "orario": "12:19"
   },
-  "nomeCliente": "Mario Rossi",
-  "Prenotazione": {
-   "orario": "18:30",
-   "giornoSettimana": "Martedì"
-  }
+  "nomeCliente": "Mario Rossi"
  },
  {
   "idPrenotazione": 7,
@@ -19,11 +15,7 @@
    "data": "21/06/23",
    "orario": "12:21"
   },
-  "nomeCliente": "Mario Rossi",
-  "Prenotazione": {
-   "orario": "18:30",
-   "giornoSettimana": "Martedì"
-  }
+  "nomeCliente": "Mario Rossi"
  },
  {
   "idPrenotazione": 8,
@@ -32,11 +24,7 @@
    "data": "21/06/23",
    "orario": "12:21"
   },
-  "nomeCliente": "Mario Rossi",
-  "Prenotazione": {
-   "orario": "18:30",
-   "giornoSettimana": "Martedì"
-  }
+  "nomeCliente": "Mario Rossi"
  },
  {
   "idPrenotazione": 9,
@@ -45,11 +33,7 @@
    "data": "21/06/23",
    "orario": "12:21"
   },
-  "nomeCliente": "Mario Rossi",
-  "Prenotazione": {
-   "orario": "18:30",
-   "giornoSettimana": "Martedì"
-  }
+  "nomeCliente": "Mario Rossi"
  },
  {
   "idPrenotazione": 10,
@@ -58,11 +42,7 @@
    "data": "21/06/23",
    "orario": "12:21"
   },
-  "nomeCliente": "Mario Rossi",
-  "Prenotazione": {
-   "orario": "18:30",
-   "giornoSettimana": "Martedì"
-  }
+  "nomeCliente": "Mario Rossi"
  },
  {
   "idPrenotazione": 11,
@@ -71,11 +51,7 @@
    "data": "21/06/23",
    "orario": "12:21"
   },
-  "nomeCliente": "Mario Rossi",
-  "Prenotazione": {
-   "orario": "18:30",
-   "giornoSettimana": "Martedì"
-  }
+  "nomeCliente": "Mario Rossi"
  },
  {
   "idPrenotazione": 12,
@@ -84,11 +60,7 @@
    "data": "21/06/23",
    "orario": "12:21"
   },
-  "nomeCliente": "Mario Rossi",
-  "Prenotazione": {
-   "orario": "18:30",
-   "giornoSettimana": "Martedì"
-  }
+  "nomeCliente": "Mario Rossi"
  },
  {
   "idPrenotazione": 13,
@@ -97,11 +69,7 @@
    "data": "21/06/23",
    "orario": "12:21"
   },
-  "nomeCliente": "Mario Rossi",
-  "Prenotazione": {
-   "orario": "18:30",
-   "giornoSettimana": "Martedì"
-  }
+  "nomeCliente": "Mario Rossi"
  },
  {
   "idPrenotazione": 14,
@@ -110,11 +78,7 @@
    "data": "21/06/23",
    "orario": "12:21"
   },
-  "nomeCliente": "Mario Rossi",
-  "Prenotazione": {
-   "orario": "18:30",
-   "giornoSettimana": "Martedì"
-  }
+  "nomeCliente": "Mario Rossi"
  },
  {
   "idPrenotazione": 15,
@@ -123,11 +87,7 @@
    "data": "21/06/23",
    "orario": "12:21"
   },
-  "nomeCliente": "Pablo",
-  "Prenotazione": {
-   "orario": "18:30",
-   "giornoSettimana": "Martedì"
-  }
+  "nomeCliente": "Pablo"
  },
  {
   "idPrenotazione": 16,
@@ -136,11 +96,7 @@
    "data": "21/06/23",
    "orario": "12:21"
   },
-  "nomeCliente": "Mario Rossi",
-  "Prenotazione": {
-   "orario": "18:30",
-   "giornoSettimana": "Martedì"
-  }
+  "nomeCliente": "Mario Rossi"
  },
  {
   "idPrenotazione": 17,
@@ -149,11 +105,7 @@
    "data": "21/06/23",
    "orario": "12:21"
   },
-  "nomeCliente": "Mario Rossi",
-  "Prenotazione": {
-   "orario": "18:30",
-   "giornoSettimana": "Martedì"
-  }
+  "nomeCliente": "Mario Rossi"
  },
  {
   "idPrenotazione": 18,
@@ -162,11 +114,7 @@
    "data": "21/06/23",
    "orario": "12:23"
   },
-  "nomeCliente": "Mario Rossi",
-  "Prenotazione": {
-   "orario": "18:30",
-   "giornoSettimana": "Martedì"
-  }
+  "nomeCliente": "Mario Rossi"
  },
  {
   "idPrenotazione": 19,
@@ -175,11 +123,7 @@
    "data": "21/06/23",
    "orario": "12:23"
   },
-  "nomeCliente": "Mario Rossi",
-  "Prenotazione": {
-   "orario": "18:30",
-   "giornoSettimana": "Martedì"
-  }
+  "nomeCliente": "Mario Rossi"
  },
  {
   "idPrenotazione": 20,
@@ -188,10 +132,6 @@
    "data": "21/06/23",
    "orario": "12:26"
   },
-  "nomeCliente": "Mario Rossi",
-  "Prenotazione": {
-   "orario": "18:30",
-   "giornoSettimana": "Martedì"
-  }
+  "nomeCliente": "Mario Rossi"
  }
 ]

@@ -233,3 +233,12 @@
 .hide {
   display: none;
 }
+
+.infoCorso li{
+  padding: 0.5rem;
+}
+.titoloCorso{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

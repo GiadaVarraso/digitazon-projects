@@ -16,5 +16,5 @@ async function modificaPrenotazione(idC, idP, prenotazioneData) {
 
 
 modificaPrenotazione(process.argv[2],process.argv[3], {
-    nomeCliente: 'Pablo'
+    nomeCliente: 'Maria Maddalena'
 });

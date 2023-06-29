@@ -91,11 +91,10 @@ app.get('/corsi/:idC/prenotazioni/:idP', getPrenotazione)
 app.delete('/corsi/:idC/prenotazioni/:idP', deletePrenotazione)
 app.put('/corsi/:idC/prenotazioni/:idP', modificaPrenotazione)
 // crud istruttori
-// TODO: collegare i corsi con l id degli istruttori
 app.post("/istruttori", postIstruttore)
 app.get("/istruttori/:id", getIstruttoreByid) 
 app.get("/istruttori", getIstruttori)
-app.delete("/istruttori/:id", deleteIstruttore) //TODO: SE UN ISTRUTTORE HA UN CORSO? cancellare prima i corsi relativi
+app.delete("/istruttori/:id", deleteIstruttore) 
 app.put("/istruttori/:id", modificaIstruttore)
 
 //Immagini

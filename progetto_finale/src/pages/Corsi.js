@@ -52,27 +52,28 @@ const Corsi = () => {
                     {corsi.map((c, i) => {
                         return (
                             <div key={i} className='corso' onClick={() => changeClass(i)}>
-                                <h2><i className={expandArrow[i]}></i> {c.nome} </h2>
+                                <div className='titoloCorso'>
+                                    <h2><i className={expandArrow[i]}></i> {c.nome} </h2>
+                                    <span><b>{c.giorno} alle {c.orario}</b></span>
+                                </div>
                                 <div className={toggleClass[i]}>
-                                    <p>
-                                        <b>Istruttore :</b> {c.istruttore}
-                                        <br />
-                                        <b>Descrizione :</b> {c.descrizione}
-                                        <br />
-                                        <b>Livello :</b> {c.livello}
-                                        <br />
-                                        <b>ORARI:</b>
-                                    </p>
-                                    <div>
-                                        <ul>
-                                            {c.orari.map((c, i) => <li key={i}> {c.giorno} alle {c.orario}</li>)}
-                                        </ul>
-                                    </div>
-                                    <p>
-                                        <b>Durata :</b> {c.durata}
-                                        <br />
-                                        <b>Posti totali :</b> {c.postiDisponibili}
-                                    </p>
+                                    <ul className='infoCorso'>
+                                        <li>
+                                            <b>Istruttore :</b> {c.istruttore}
+                                        </li>
+                                        <li>
+                                            <b>Descrizione :</b> {c.descrizione}
+                                        </li>
+                                        <li>
+                                            <b>Livello :</b> {c.livello}
+                                        </li>
+                                        <li>
+                                            <b>Durata :</b> {c.durata}
+                                        </li>
+                                        <li>
+                                            <b>Posti totali :</b> {c.postiDisponibili}
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>)
                     })}

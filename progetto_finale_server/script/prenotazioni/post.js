@@ -3,11 +3,7 @@ import axios from 'axios';
 async function postPrenotazione(idC) {
   const url = `http://localhost:8000/corsi/${idC}/prenotazioni`;
   const prenotazioneData = {
-    nomeCliente: 'Mario Rossi',
-    Prenotazione: {
-      orario: '18:30',
-      giornoSettimana: 'Martedì'
-    }
+    nomeCliente: 'Mario Rossi'
   };
 
   try {

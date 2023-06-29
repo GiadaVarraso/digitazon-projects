@@ -75,11 +75,27 @@ const deleteIstruttore = async (req, res) => {
             res.send({
                 data: {},
                 error: true,
-                message: `istruttore con id ${idIstruttore} non trovato`
+                message: `Istruttore con id ${idIstruttore} non trovato`
             }).status(404).end()
             return
         } else {
-            // TODO nel caso in cui l'istruttore ha dei corsi a suo carico, cancellare i corsi prima
+            // nel caso in cui l'istruttore ha dei corsi a suo carico, cancellare o modificare i corsi prima
+            try {
+                const corsi = JSON.parse(await fs.readFile(DB_PATH_CORSI))
+                const hasCorso = corsi.some(c => c.istruttore == content[index].nome);
+                if (hasCorso) {
+                    res.send({
+                        data: {},
+                        error: true,
+                        message: `Conflitto di risorse. L'istruttore con ID ${idIstruttore} ha dei corsi collegati e al momento non è possibile eliminarlo. Rimuovere o modificare i corsi relativi e riprovare.`
+                    }).status(409)
+                    return
+                }
+            } catch (error) {
+                console.log(error)
+                res.send({ message: 'Eliminazione dell istruttore non avvenuta. Errore durante la lettura del file dei corsi' }).status(500)
+                return
+            }
             
             content.splice(index, 1)
             await fs.writeFile(DB_PATH_ISTRUTTORI, JSON.stringify(content, null, ' '))

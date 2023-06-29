@@ -3,6 +3,7 @@ import axios from 'axios'
 
 const DB_PATH_CORSI = 'db/corsi.json'
 const DB_PATH_PRENOTAZIONI = 'db/prenotazioni.json'
+const DB_PATH_ISTRUTTORI = 'db/istruttori.json'
 
 async function nextId() {
     const content = JSON.parse(await fs.readFile(DB_PATH_CORSI))
@@ -31,7 +32,7 @@ const newCorso = async (req, res) => {
 const getCorsi = async (req, res) => {
     try {
         const content = JSON.parse(await fs.readFile(DB_PATH_CORSI))
-        res.send(content ).end()
+        res.send(content).end()
         return
     } catch (error) {
         console.log(error)
@@ -48,7 +49,7 @@ const getCorso = async (req, res) => {
         const content = JSON.parse(await fs.readFile(DB_PATH_CORSI))
         const index = content.findIndex(c => c.id == parseInt(req.params.id))
         if (content[index]) {
-            res.send(content[index] ).end()
+            res.send(content[index]).end()
             return
         }
 
