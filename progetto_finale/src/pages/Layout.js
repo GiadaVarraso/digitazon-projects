@@ -3,8 +3,8 @@ import { Outlet, Link } from "react-router-dom";
 const Layout = () => {
   return (
     <div className='flex'>
-      <nav className="sidebar card">
-        <ul className="menu">
+      <nav className="menu">
+        <ul className="menuList">
           <li>
             <i className="fa-solid fa-house white" />
             <Link to="/Home">Home</Link>

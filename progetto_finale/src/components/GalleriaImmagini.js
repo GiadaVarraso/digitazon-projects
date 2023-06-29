@@ -9,18 +9,15 @@ const GalleriaImmagini = ({ path }) => {
         async function getImgs() {
             const response = await axios.get(path)
             setImgs(response.data)
-            console.log(response.data);
         }
         getImgs()
-    }, [])
+    }, [path])
 
     function prev() {
-        console.log('click prev')
         const i = index === 0 ? imgs.length - 1 : index - 1
         setIndex(i)
     }
     function next() {
-        console.log('click next')
         const i = index === imgs.length - 1 ? 0 : index + 1
         setIndex(i)
     }

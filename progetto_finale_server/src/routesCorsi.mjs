@@ -31,7 +31,7 @@ const newCorso = async (req, res) => {
 const getCorsi = async (req, res) => {
     try {
         const content = JSON.parse(await fs.readFile(DB_PATH_CORSI))
-        res.send({ data: content }).end()
+        res.send(content ).end()
         return
     } catch (error) {
         console.log(error)
@@ -48,7 +48,7 @@ const getCorso = async (req, res) => {
         const content = JSON.parse(await fs.readFile(DB_PATH_CORSI))
         const index = content.findIndex(c => c.id == parseInt(req.params.id))
         if (content[index]) {
-            res.send({ data: content[index] }).end()
+            res.send(content[index] ).end()
             return
         }
 
@@ -102,7 +102,7 @@ const deleteCorso = async (req, res) => {
                     }
                 }
             } catch (error) {
-
+                console.log(error);
             }
             content.splice(index, 1)
             await fs.writeFile(DB_PATH_CORSI, JSON.stringify(content, null, ' '))

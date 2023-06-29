@@ -1,0 +1,62 @@
+[
+ {
+  "id": 1,
+  "nome": "Di Feo Gualtiero (Presidente ASD)",
+  "info": "Maestro 7° DAN Karate Shotokan, Personal Trainer qualificato, Massofisioterapista ed istruttore di corsi fitness."
+ },
+ {
+  "id": 2,
+  "nome": "Di Feo Federica (Vice Presidente ASD)",
+  "info": "Laureata in Scienze delle Attività Motorie e Sportive; Tecnico Istruttore di Formazione Equestre di Monta Americana e Barrel Racing."
+ },
+ {
+  "id": 3,
+  "nome": "Margaro Simone",
+  "info": "Personal Trainer laureato in Scienze Motorie e Sportive magistrale; Allenatore di calcio patentato UEFA; preparatore atletico e personal training."
+ },
+ {
+  "id": 4,
+  "nome": "Vincenzo Caglioti",
+  "info": "Preparatore atletico e Personal Trainer laureato in Scienze Motorie e Sportive magistrale; Allenatore di calcio patentato UEFA; preparatore atletico e personal trainer."
+ },
+ {
+  "id": 5,
+  "nome": "Nathali Alomia",
+  "info": "Istruttrice certificata di Zumba Fitness, Strong Nation e Fitness."
+ },
+ {
+  "id": 6,
+  "nome": "Decaroli Danut",
+  "info": "Istruttore certificato di Yoga Asana e Fitness."
+ },
+ {
+  "id": 7,
+  "nome": "Morena De Francisco",
+  "info": "Istruttrice certificata di Zumba Fitness."
+ },
+ {
+  "id": 8,
+  "nome": "Riccardo Poma",
+  "info": "Istruttore Fitness e Personal Trainer certificato."
+ },
+ {
+  "id": 9,
+  "nome": "Mauro Passafiume",
+  "info": "Istruttore di Karate, Personal Trainer certificato."
+ },
+ {
+  "id": 10,
+  "nome": "Barbara Bertolosso",
+  "info": "Istruttrice Fitness specializzata nel Walking Circuit."
+ },
+ {
+  "id": 11,
+  "nome": "Claudia Naretto",
+  "info": "Istruttrice Fitness specializzata nello Stretching."
+ },
+ {
+  "id": 12,
+  "nome": "Maneo Alessia",
+  "info": "Istruttrice Fitness nell'area GAG - tonificazione."
+ }
+]

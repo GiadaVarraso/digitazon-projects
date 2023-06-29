@@ -78,7 +78,7 @@ const getPrenotazioni = async (req, res) => {
     const content = JSON.parse(await fs.readFile(DB_PATH_PRENOTAZIONI));
     const prenotazioni = content;
 
-    res.send({ data: prenotazioni });
+    res.send( prenotazioni );
   } catch (error) {
     console.log(error);
     res.status(500).send({
@@ -100,7 +100,7 @@ const getPrenotazioniByCorso = async (req, res) => {
         });
         return;      
     }
-    res.send({ data: prenotazioni });
+    res.send( prenotazioni );
   } catch (error) {
     console.log(error);
     res.status(500).send({
@@ -117,7 +117,7 @@ const getPrenotazione = async (req, res) => {
 
     const prenotazione = content.find(p => p.idCorso === idCorso && p.idPrenotazione === idPrenotazione);
     if (prenotazione) {
-      res.send({ data: prenotazione });
+      res.send( prenotazione );
     } else {
       res.status(404).send({
         data: {},
