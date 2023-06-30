@@ -3,7 +3,6 @@ import fs from 'node:fs/promises'
 import axios from 'axios'
 
 const DB_PATH_CORSI = 'db/corsi.json'
-const DB_PATH_PRENOTAZIONI = 'db/prenotazioni.json'
 const DB_PATH_ISTRUTTORI = 'db/istruttori.json'
 
 async function nextId() {

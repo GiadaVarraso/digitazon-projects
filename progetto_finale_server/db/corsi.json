@@ -6,19 +6,8 @@
   "descrizione": "Lezioni di Zumba per tonificare il corpo e divertirsi.",
   "livello": "Principianti",
   "giorno": "Martedì",
-  "orario": "10:00",
-  "durata": "1 ora",
-  "postiDisponibili": 15
- },
- {
-  "id": 2,
-  "nome": "Spinning",
-  "istruttore": "Di Feo Gualtiero (Presidente ASD)",
-  "descrizione": "Lezioni di Spinning per migliorare resistenza.",
-  "livello": "Intermedio",
-  "giorno": "Martedì",
-  "orario": "10:00",
-  "durata": "1 ora",
+  "orario": "15:00",
+  "durata": "60",
   "postiDisponibili": 15
  },
  {
@@ -27,9 +16,9 @@
   "istruttore": "Maneo Alessia",
   "descrizione": "Lezioni GAG per tonificare il corpo.",
   "livello": "Avanzato",
-  "giorno": "Martedì",
-  "orario": "10:00",
-  "durata": "1 ora",
+  "giorno": "Mercoledì",
+  "orario": "11:00",
+  "durata": "60",
   "postiDisponibili": 15
  },
  {
@@ -39,8 +28,29 @@
   "descrizione": "Walking Circuit",
   "livello": "Intermedio",
   "giorno": "Giovedì",
-  "orario": "10:00",
-  "durata": "1 ora",
+  "orario": "17:00",
+  "durata": "60",
   "postiDisponibili": 20
+ },
+ {
+  "id": 5,
+  "nome": "prova",
+  "istruttore": "",
+  "descrizione": "",
+  "livello": "",
+  "giorno": "",
+  "orario": "",
+  "durata": "",
+  "postiDisponibili": 0
+ },
+ {
+  "id": 7,
+  "nome": "wow",
+  "istruttore": "waaa",
+  "descrizione": "wwwwwwwao bellissimo",
+  "livello": "Avanzato",
+  "giorno": "Venerdì",
+  "durata": "60",
+  "postiDisponibili": 15
  }
 ]

@@ -3,7 +3,6 @@ import axios from 'axios'
 
 const DB_PATH_CORSI = 'db/corsi.json'
 const DB_PATH_PRENOTAZIONI = 'db/prenotazioni.json'
-const DB_PATH_ISTRUTTORI = 'db/istruttori.json'
 
 async function nextId() {
     const content = JSON.parse(await fs.readFile(DB_PATH_CORSI))
@@ -11,7 +10,6 @@ async function nextId() {
     const nextId = currentId + 1
     return nextId
 }
-
 
 const newCorso = async (req, res) => {
     try {

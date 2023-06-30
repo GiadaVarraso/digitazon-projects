@@ -6,7 +6,8 @@
 
 
 :root {
-  --primary-orange: rgb(250, 140, 23);
+  /* --primary-orange: rgb(250, 140, 23); */
+  --primary-orange: rgb(25, 24, 25);
   --secondary-gray: rgb(62, 57, 57);
   --secondary-black: rgb(44, 39, 39);
   --detail-white: rgb(246, 244, 244);
@@ -241,4 +242,105 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+/* css form  */
+.form-container {
+  margin: auto ;
+  width: 70%;
+  background: linear-gradient(var(--secondary-black),var(--secondary-black)) padding-box,
+              linear-gradient(180deg, transparent 10%,var(--detail-orange), var(--detail-green)) border-box;
+  border: 2px solid transparent;
+  padding: 32px 24px;
+  color:var(--detail-white);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  border-radius: 16px;
+}
+
+.form-container .form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-container .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.form-container .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--detail-white);
+  font-weight: 600;
+  font-size: small;
+}
+
+.form-container .form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: var(--detail-white);
+  font-family: inherit;
+  background-color: transparent;
+  border: 3px solid var(--secondary-gray);
+}
+
+.form-container .form-group select{
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: var(--detail-white);
+  font-family: inherit;
+  background-color: transparent;
+  border: 3px solid var(--secondary-gray);
+}
+.form-container .form-group select option{
+  color: var(--secondary-black);
+  font-weight: 500;
+}
+
+.form-container .form-group input::placeholder {
+  opacity: 0.7;
+}
+
+.form-container .form-group input:focus ,.form-container .form-group select:focus  {
+  border-width: 1px;
+  outline: none;
+  border-color: var(--detail-azure);
+}
+
+.form-container .form-submit-btn {
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
+  color:var(--secondary-black);
+  font-weight: 600;
+  width: 40%;
+  background:var(--detail-white);
+  border: 1px solid var(--secondary-gray);
+  padding: 12px 16px;
+  font-size: inherit;
+  gap: 8px;
+  margin-top: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.form-container .form-submit-btn:hover {
+  background-color:var(--detail-azure);
+  border-color: var(--secondary-black);
+  color: black;
+}
+
+.delete-btn{
+  background-color:rgb(252, 110, 67);
+  padding: 5px;
+  font-size: medium;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
 }
