@@ -15,10 +15,10 @@
   "nome": "GAG",
   "istruttore": "Maneo Alessia",
   "descrizione": "Lezioni GAG per tonificare il corpo.",
-  "livello": "Avanzato",
+  "livello": "Intermedio",
   "giorno": "Mercoledì",
   "orario": "11:00",
-  "durata": "60",
+  "durata": "59",
   "postiDisponibili": 15
  },
  {
@@ -27,21 +27,21 @@
   "istruttore": "Barbara Bertolosso",
   "descrizione": "Walking Circuit",
   "livello": "Intermedio",
-  "giorno": "Giovedì",
-  "orario": "17:00",
+  "giorno": "Martedì",
+  "orario": "20:00",
   "durata": "60",
   "postiDisponibili": 20
  },
  {
   "id": 5,
-  "nome": "prova",
-  "istruttore": "",
-  "descrizione": "",
-  "livello": "",
-  "giorno": "",
-  "orario": "",
-  "durata": "",
-  "postiDisponibili": 0
+  "nome": "provaModifica",
+  "istruttore": "Decaroli Danut",
+  "descrizione": "prova mod",
+  "livello": "Avanzato",
+  "giorno": "Lunedì",
+  "orario": "16:01",
+  "durata": "61",
+  "postiDisponibili": "17"
  },
  {
   "id": 7,

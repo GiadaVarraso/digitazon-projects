@@ -72,7 +72,7 @@ export default function ListaCorsi({ corsiUrl, istruttoriUrl }) {
     }
 
     return (
-        <div className="contentCard2">
+        <div className="contentCard2 hoverGray">
             <div onClick={changeClass}>
                 <i className={icon}></i> Aggiungi Corso
             </div>

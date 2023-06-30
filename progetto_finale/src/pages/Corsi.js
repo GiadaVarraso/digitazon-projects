@@ -12,7 +12,7 @@ const Corsi = () => {
                 <AggiungiCorso corsiUrl={corsiUrl} istruttoriUrl={istruttoriUrl}></AggiungiCorso>
             </div>
             <div className="contentCard">
-                <ListaCorsi url={corsiUrl} ></ListaCorsi>
+                <ListaCorsi url={corsiUrl} istruttoriUrl={istruttoriUrl}></ListaCorsi>
             </div>
         </div>
     )

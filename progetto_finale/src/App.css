@@ -223,7 +223,7 @@
   text-align: justify;
 }
 
-.corso:hover {
+.hoverGray:hover {
   background-color: var(--secondary-gray);
 }
 
@@ -246,7 +246,7 @@
 
 /* css form  */
 .form-container {
-  margin: auto ;
+  margin: 1rem auto ;
   width: 70%;
   background: linear-gradient(var(--secondary-black),var(--secondary-black)) padding-box,
               linear-gradient(180deg, transparent 10%,var(--detail-orange), var(--detail-green)) border-box;
@@ -339,6 +339,19 @@
 
 .delete-btn{
   background-color:rgb(252, 110, 67);
+  padding: 5px;
+  font-size: medium;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+}
+
+.form-modify-btn{
+  display: flex;
+  justify-content: space-between;
+}
+
+.mod-btn{
+  background-color:rgb(252, 215, 67);
   padding: 5px;
   font-size: medium;
   border-radius: 10px;
