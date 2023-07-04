@@ -1,12 +1,12 @@
 [
  {
   "id": 1,
-  "nome": "Zumba",
+  "nome": "Zumba Fitness",
   "istruttore": "Nathali Alomia",
   "descrizione": "Lezioni di Zumba per tonificare il corpo e divertirsi.",
-  "livello": "Principianti",
+  "livello": "Facile",
   "giorno": "Martedì",
-  "orario": "15:00",
+  "orario": "18:15",
   "durata": "60",
   "postiDisponibili": 15
  },
@@ -15,7 +15,7 @@
   "nome": "GAG",
   "istruttore": "Maneo Alessia",
   "descrizione": "Lezioni GAG per tonificare il corpo.",
-  "livello": "Intermedio",
+  "livello": "Medio",
   "giorno": "Mercoledì",
   "orario": "11:00",
   "durata": "59",
@@ -23,34 +23,24 @@
  },
  {
   "id": 4,
-  "nome": "Walking",
+  "nome": "Walking Circuit",
   "istruttore": "Barbara Bertolosso",
-  "descrizione": "Walking Circuit",
-  "livello": "Intermedio",
+  "descrizione": "Allenamento HIIT con i tappeti indoor Walking",
+  "livello": "Difficile",
   "giorno": "Martedì",
   "orario": "20:00",
   "durata": "60",
-  "postiDisponibili": 20
+  "postiDisponibili": "18"
  },
  {
   "id": 5,
-  "nome": "provaModifica",
+  "nome": "Yoga Asana",
   "istruttore": "Decaroli Danut",
-  "descrizione": "prova mod",
-  "livello": "Avanzato",
-  "giorno": "Lunedì",
-  "orario": "16:01",
-  "durata": "61",
-  "postiDisponibili": "17"
- },
- {
-  "id": 7,
-  "nome": "wow",
-  "istruttore": "waaa",
-  "descrizione": "wwwwwwwao bellissimo",
-  "livello": "Avanzato",
-  "giorno": "Venerdì",
+  "descrizione": "Flessibilità, forza e resistenza...allena il corpo con la mente.",
+  "livello": "Medio",
+  "giorno": "Giovedì",
+  "orario": "19:00",
   "durata": "60",
-  "postiDisponibili": 15
+  "postiDisponibili": "20"
  }
 ]

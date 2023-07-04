@@ -47,32 +47,32 @@ app.get('/', (req, res) => {
     + "\nROTTE DISPONIBILI:"
     + "\nCORSI:"
 
-    + "\nPOST corso    http://localhost:8000/corsi"
+    + "\nPOST corso    http://localhost:8000/corsi"     //IN USO
     + "\nGET corso     http://localhost:8000/corsi/:id"
-    + "\nGET corsi     http://localhost:8000/corsi"
-    + "\nDELETE corso  http://localhost:8000/corsi/:id"
-    + "\nPUT corso     http://localhost:8000/corsi/:id"
+    + "\nGET corsi     http://localhost:8000/corsi"     //IN USO
+    + "\nDELETE corso  http://localhost:8000/corsi/:id" //IN USO
+    + "\nPUT corso     http://localhost:8000/corsi/:id" //IN USO
 
     + "\nPRENOTAZIONI:"
 
-    + "\nPOST prenotazione          http://localhost:8000/corsi/:id/prenotazioni"
+    + "\nPOST prenotazione          http://localhost:8000/corsi/:id/prenotazioni"        //TODO
     + "\nGET prenotazioni corso     http://localhost:8000/corsi/:id/prenotazioni"
-    + "\nGET prenotazioni all       http://localhost:8000/prenotazioni"
+    + "\nGET prenotazioni all       http://localhost:8000/prenotazioni"                  //IN USO
     + "\nGET prenotazione           http://localhost:8000/corsi/:idC/prenotazioni/:idP"
-    + "\nDELETE prenotazione        http://localhost:8000/corsi/:idC/prenotazioni/:idP"
-    + "\nPUT prenotazione           http://localhost:8000/corsi/:idC/prenotazioni/:idP"
+    + "\nDELETE prenotazione        http://localhost:8000/corsi/:idC/prenotazioni/:idP"  //IN USO
+    + "\nPUT prenotazione           http://localhost:8000/corsi/:idC/prenotazioni/:idP"  //TODO
 
     + "\nIMMAGINI:"
 
     + '\nGET img http://localhost:8000/images/:fileName.ext'
-    + '\nGET imgs http://localhost:8000/images'
+    + '\nGET imgs http://localhost:8000/images'              //IN USO
     + '\nPOST img http://localhost:8000/upload (payload type=form-data, key=image , type=File, value=[.jpg, .jpeg, .png, .gif]'
 
     + "\nISTRUTTORI:"
 
-    + "\nPOST istruttore          http://localhost:8000/istruttori"
-    + "\nGET istruttore           http://localhost:8000/istruttori/:id"
-    + "\nGET istruttori all       http://localhost:8000/istruttori"
+    + "\nPOST istruttore          http://localhost:8000/istruttori" 
+    + "\nGET istruttore           http://localhost:8000/istruttori/:id" 
+    + "\nGET istruttori all       http://localhost:8000/istruttori"     //IN USO
     + "\nDELETE istruttore        http://localhost:8000/istruttori/:id"
     + "\nPUT istruttori           http://localhost:8000/istruttori/:id"
   );

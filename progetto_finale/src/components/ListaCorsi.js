@@ -20,7 +20,7 @@ export default function ListaCorsi({ url, istruttoriUrl }) {
         'Sabato',
         'Domenica',
     ]
-    const livello = ['Principiante', 'Intermedio', 'Avanzato']
+    const livello = ['Facile', 'Medio', 'Difficile']
 
     useEffect(() => {
         async function getIstruttori() {

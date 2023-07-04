@@ -6,8 +6,8 @@
 
 
 :root {
-  /* --primary-orange: rgb(250, 140, 23); */
-  --primary-orange: rgb(25, 24, 25);
+  --primary-orange: rgb(250, 140, 23);
+  /* --primary-orange: rgb(25, 24, 25); */
   --secondary-gray: rgb(62, 57, 57);
   --secondary-black: rgb(44, 39, 39);
   --detail-white: rgb(246, 244, 244);
@@ -356,4 +356,35 @@
   font-size: medium;
   border-radius: 10px;
   color: rgb(0, 0, 0);
+}
+
+.aggiungiCorso h1{
+  color:var(--detail-yellow);
+  border:none;
+}
+
+.aggiungiCorso h1:hover{
+  color:var(--detail-azure)
+}
+
+.aggiungiCorso{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap:1rem;
+}
+.messageText{
+  color:var(--detail-green)
+}
+.infoPrenotazione{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+.infoCorso{
+  padding: 1rem 0.5rem;
+  display: flex; 
+  flex-direction: column;
+  gap: 0.5rem;
 }

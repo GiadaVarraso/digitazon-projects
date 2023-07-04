@@ -1,1 +1,38 @@
-[]
+[
+ {
+  "idPrenotazione": 3,
+  "idCorso": 4,
+  "dataCreazione": {
+   "data": "03/07/23",
+   "orario": "20:45"
+  },
+  "nomeCliente": "Mario Rossi"
+ },
+ {
+  "idPrenotazione": 6,
+  "idCorso": 4,
+  "dataCreazione": {
+   "data": "03/07/23",
+   "orario": "20:45"
+  },
+  "nomeCliente": "Mario Rossi"
+ },
+ {
+  "idPrenotazione": 9,
+  "idCorso": 4,
+  "dataCreazione": {
+   "data": "03/07/23",
+   "orario": "20:45"
+  },
+  "nomeCliente": "Mario Rossi"
+ },
+ {
+  "idPrenotazione": 10,
+  "idCorso": 3,
+  "dataCreazione": {
+   "data": "04/07/23",
+   "orario": "23:39"
+  },
+  "nomeCliente": "prova2"
+ }
+]

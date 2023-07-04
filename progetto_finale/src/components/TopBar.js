@@ -4,7 +4,9 @@ const TopBar = () => {
   return (
     <div className='top-bar flex'>
       <div>
-        <img className='logo' src={logo} alt='Logo Palestra AskiiSport'></img>
+        <a href='/Home'>
+          <img className='logo' src={logo} alt='Logo Palestra AskiiSport'></img>
+        </a>
       </div>
       <div>
         <h1>Team & Club Askii Sport Italia</h1>

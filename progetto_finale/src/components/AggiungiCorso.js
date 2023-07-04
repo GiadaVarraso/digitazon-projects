@@ -2,7 +2,7 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 
-export default function ListaCorsi({ corsiUrl, istruttoriUrl }) {
+export default function AggiungiCorso({ corsiUrl, istruttoriUrl }) {
     let [icon, setIcon] = useState('fa-solid fa-chevron-down')
     let [toggleClass, setToggleClass] = useState('hide')
     let [istruttori, setIstruttori] = useState([])
@@ -72,9 +72,12 @@ export default function ListaCorsi({ corsiUrl, istruttoriUrl }) {
     }
 
     return (
-        <div className="contentCard2 hoverGray">
-            <div onClick={changeClass}>
-                <i className={icon}></i> Aggiungi Corso
+        <div className="contentCard2 hoverGray ">
+            <div className=" hoverGray aggiungiCorso">
+                <i className={icon}></i>
+                <h1 onClick={changeClass}>
+                     Aggiungi Corso
+                </h1>
             </div>
             <div className={toggleClass}>
                 <div className="form-container">
