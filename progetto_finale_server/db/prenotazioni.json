@@ -6,7 +6,8 @@
    "data": "03/07/23",
    "orario": "20:45"
   },
-  "nomeCliente": "Mario Rossi"
+  "nomeCliente": "Mario Rossi",
+  "old": "06/07/23"
  },
  {
   "idPrenotazione": 6,
@@ -15,7 +16,8 @@
    "data": "03/07/23",
    "orario": "20:45"
   },
-  "nomeCliente": "Mario Rossi"
+  "nomeCliente": "Mario Rossi",
+  "old": "06/07/23"
  },
  {
   "idPrenotazione": 9,
@@ -24,15 +26,34 @@
    "data": "03/07/23",
    "orario": "20:45"
   },
-  "nomeCliente": "Mario Rossi"
+  "nomeCliente": "Mario Rossi",
+  "old": "06/07/23"
  },
  {
   "idPrenotazione": 10,
   "idCorso": 3,
   "dataCreazione": {
-   "data": "04/07/23",
-   "orario": "23:39"
+   "data": "06/07/23",
+   "orario": "19:12"
   },
-  "nomeCliente": "prova2"
+  "nomeCliente": "ASDASD"
+ },
+ {
+  "idPrenotazione": 11,
+  "idCorso": 1,
+  "dataCreazione": {
+   "data": "06/07/23",
+   "orario": "20:18"
+  },
+  "nomeCliente": "Federica Di Feo"
+ },
+ {
+  "idPrenotazione": 12,
+  "idCorso": 3,
+  "dataCreazione": {
+   "data": "06/07/23",
+   "orario": "20:30"
+  },
+  "nomeCliente": "asdfasdf"
  }
 ]

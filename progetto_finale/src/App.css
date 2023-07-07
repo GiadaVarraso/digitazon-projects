@@ -249,7 +249,7 @@
   margin: 1rem auto ;
   width: 70%;
   background: linear-gradient(var(--secondary-black),var(--secondary-black)) padding-box,
-              linear-gradient(180deg, transparent 10%,var(--detail-orange), var(--detail-green)) border-box;
+              linear-gradient(var(--detail-orange), var(--detail-green)) border-box;
   border: 2px solid transparent;
   padding: 32px 24px;
   color:var(--detail-white);
@@ -387,4 +387,19 @@
   display: flex; 
   flex-direction: column;
   gap: 0.5rem;
+}
+
+.pConclusa:hover{
+  background-color: rgba(255, 0, 0, 0.514);
+}
+.pConclusa{
+  background-color: rgba(67, 1, 1, 0.582);
+}
+.pAttiva:hover{
+  background-color:var(--detail-orange);
+  color:black;
+}
+.scroll{
+  overflow-y: scroll;
+  height: 300px;
 }

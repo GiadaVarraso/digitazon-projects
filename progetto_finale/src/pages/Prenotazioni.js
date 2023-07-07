@@ -6,14 +6,15 @@ import { useState } from 'react';
 const Prenotazioni = () => {
     const corsiUrl = 'http://localhost:8000/corsi'
     const prenotazioniUrl = 'http://localhost:8000/prenotazioni'
-    const [message,setMessage]= useState('')
+    const [message, setMessage] = useState('')
 
     return (
         <div className="flex column content">
-            <div className="contentCard">
+            <div className="contentCard" >
                 <AggiungiPrenotazione corsiUrl={corsiUrl} setMessage={setMessage} message={message}></AggiungiPrenotazione>
-            </div>
-            <div className="contentCard">
+            </div >
+
+            <div className="contentCard" >
                 <ListaPrenotazioni corsiUrl={corsiUrl} prenotazioniUrl={prenotazioniUrl} message={message}></ListaPrenotazioni>
             </div>
         </div>

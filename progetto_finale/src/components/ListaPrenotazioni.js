@@ -1,4 +1,3 @@
-
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 
@@ -31,7 +30,7 @@ export default function ListaPrenotazioni({ corsiUrl, prenotazioniUrl, message }
         async function getPrenotazioni() {
             try {
                 const response = await axios.get(prenotazioniUrl)
-                setPrenotazioni(response.data)
+                setPrenotazioni(response.data.reverse())
             } catch (error) {
                 setPrenotazioni('nessun corso disponibile')
                 console.log(error)
@@ -58,14 +57,15 @@ export default function ListaPrenotazioni({ corsiUrl, prenotazioniUrl, message }
         setExpandArrow(newArrayArrow)
     }
 
-    function InfoCorsi({ idCorso }) {
+    function InfoCorsi({ idCorso, old }) {
         const corso = corsi.filter((c) => c.id == idCorso)[0]
-        return (
+
+        return corso ? (
             <div className='infoCorso'>
                 <div> {corso.nome} con {corso.istruttore} </div>
-                <div> {corso.giorno} ore {corso.orario} </div>
+                <div> {corso.giorno} {old} alle ore {corso.orario} </div>
             </div>
-        )
+        ) : (<div> Corso non trovato </div>)
     }
 
     function cancellaPrenotazione(idC, idP) {
@@ -85,33 +85,33 @@ export default function ListaPrenotazioni({ corsiUrl, prenotazioniUrl, message }
         deletePrenotazione();
     }
 
-
     return (
-
         <div className="contentCard2">
             <h1>Prenotazioni</h1>
-            {prenotazioni.map((p, i) => {
-                return (
-                    <div key={i} className='corso hoverGray' >
-                        <div className='titoloCorso' onClick={() => changeClass(i)}>
-                            <h2><i className={expandArrow[i]}></i>prenotazione n.{p.idPrenotazione} </h2>
-                            <span><b>effettuata il {p.dataCreazione.data} alle {p.dataCreazione.orario}</b></span>
-                        </div>
-                        <div className={toggleClass[i]}>
-                            <div className='infoPrenotazione'>
-                                <div >
-                                    <b>Cliente :</b> {p.nomeCliente}
-                                </div>
-                                <div>
-                                    <b>Info Corso :</b>
-                                    <InfoCorsi idCorso={p.idCorso}></InfoCorsi>
-                                </div>
+            <div className='scroll'>
+                {
+                    prenotazioni.map((p, i) =>
+                        < div key={i} className={`corso hoverGray ${p.old ? 'pConclusa' : 'pAttiva'}`} >
+                            <div className='titoloCorso' onClick={() => changeClass(i)}>
+                                <h2><i className={expandArrow[i]}></i>{p.old ? 'CONCLUSA' : 'ATTIVA'} </h2>
+                                <span><b>Prenotazione effettuata il {p.dataCreazione.data} alle {p.dataCreazione.orario}</b></span>
                             </div>
-                            <button className='delete-btn' onClick={() => cancellaPrenotazione(p.idCorso, p.idPrenotazione)}>Elimina</button>
-                        </div>
-                    </div>)
-            })}
-
+                            <div className={toggleClass[i]}>
+                                <div className='infoPrenotazione'>
+                                    <div >
+                                        <b>Cliente :</b> {p.nomeCliente}
+                                    </div>
+                                    <div>
+                                        <b>Info Corso :</b>
+                                        <InfoCorsi idCorso={p.idCorso} old={p.old}></InfoCorsi>
+                                    </div>
+                                </div>
+                                <button className='delete-btn' onClick={() => cancellaPrenotazione(p.idCorso, p.idPrenotazione)}>Elimina</button>
+                            </div>
+                        </div >
+                    )
+                }
+            </div>
         </div>
     )
-};
+}; 

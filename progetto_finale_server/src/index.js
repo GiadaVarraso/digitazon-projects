@@ -27,6 +27,11 @@ import cors from 'cors'
 const app = express();
 app.use(bodyParser.json())
 app.use(cors())
+import storicizzaPrenotazioni from './storicizzazione.mjs'
+
+import cron from 'node-cron'
+cron.schedule('53 18 * * *', storicizzaPrenotazioni)
+
 import multer from 'multer'
 
 const storage = multer.diskStorage({
