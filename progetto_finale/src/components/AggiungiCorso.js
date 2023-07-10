@@ -72,8 +72,8 @@ export default function AggiungiCorso({ corsiUrl, istruttoriUrl }) {
     }
 
     return (
-        <div className="contentCard2 hoverGray ">
-            <div className=" hoverGray aggiungiCorso">
+        <div className="contentCard2">
+            <div className="aggiungiCorso">
                 <i className={icon}></i>
                 <h1 onClick={changeClass}>
                      Aggiungi Corso

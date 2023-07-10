@@ -34,10 +34,10 @@
  },
  {
   "id": 5,
-  "nome": "Yoga Asana",
+  "nome": "Ginnastica Shaolin",
   "istruttore": "Decaroli Danut",
-  "descrizione": "Flessibilità, forza e resistenza...allena il corpo con la mente.",
-  "livello": "Medio",
+  "descrizione": "Yoga buddhista, allena il corpo insieme a tecniche di meditazione",
+  "livello": "Avanzato",
   "giorno": "Giovedì",
   "orario": "19:00",
   "durata": "60",

@@ -20,6 +20,12 @@ import {
   , deleteIstruttore
   , modificaIstruttore
 } from './routesIstruttori.mjs'
+import {
+  newServizio,
+  getServizi,
+  deleteServizio,
+  modificaServizio
+} from './routesServizi.mjs'
 import { getImgs } from './routesImgs.mjs'
 import express from 'express'
 import bodyParser from 'body-parser'
@@ -60,12 +66,12 @@ app.get('/', (req, res) => {
 
     + "\nPRENOTAZIONI:"
 
-    + "\nPOST prenotazione          http://localhost:8000/corsi/:id/prenotazioni"        //TODO
+    + "\nPOST prenotazione          http://localhost:8000/corsi/:id/prenotazioni"        //IN USO
     + "\nGET prenotazioni corso     http://localhost:8000/corsi/:id/prenotazioni"
     + "\nGET prenotazioni all       http://localhost:8000/prenotazioni"                  //IN USO
     + "\nGET prenotazione           http://localhost:8000/corsi/:idC/prenotazioni/:idP"
     + "\nDELETE prenotazione        http://localhost:8000/corsi/:idC/prenotazioni/:idP"  //IN USO
-    + "\nPUT prenotazione           http://localhost:8000/corsi/:idC/prenotazioni/:idP"  //TODO
+    + "\nPUT prenotazione           http://localhost:8000/corsi/:idC/prenotazioni/:idP"
 
     + "\nIMMAGINI:"
 
@@ -75,11 +81,18 @@ app.get('/', (req, res) => {
 
     + "\nISTRUTTORI:"
 
-    + "\nPOST istruttore          http://localhost:8000/istruttori" 
-    + "\nGET istruttore           http://localhost:8000/istruttori/:id" 
+    + "\nPOST istruttore          http://localhost:8000/istruttori"
+    + "\nGET istruttore           http://localhost:8000/istruttori/:id"
     + "\nGET istruttori all       http://localhost:8000/istruttori"     //IN USO
     + "\nDELETE istruttore        http://localhost:8000/istruttori/:id"
     + "\nPUT istruttori           http://localhost:8000/istruttori/:id"
+
+    + "\nSERVIZI:"
+
+    + "\nPOST servizio         http://localhost:8000/servizi"
+    + "\nGET servizi all       http://localhost:8000/servizi"
+    + "\nDELETE servizio       http://localhost:8000/servizi/:id"
+    + "\nPUT servizio          http://localhost:8000/servizi/:id"
   );
 });
 // crud corsi
@@ -97,9 +110,9 @@ app.delete('/corsi/:idC/prenotazioni/:idP', deletePrenotazione)
 app.put('/corsi/:idC/prenotazioni/:idP', modificaPrenotazione)
 // crud istruttori
 app.post("/istruttori", postIstruttore)
-app.get("/istruttori/:id", getIstruttoreByid) 
+app.get("/istruttori/:id", getIstruttoreByid)
 app.get("/istruttori", getIstruttori)
-app.delete("/istruttori/:id", deleteIstruttore) 
+app.delete("/istruttori/:id", deleteIstruttore)
 app.put("/istruttori/:id", modificaIstruttore)
 
 //Immagini
@@ -114,6 +127,12 @@ app.post('/upload', upload.single('image'), (req, res) => {
 // Con questa configurazione, puoi inviare una richiesta POST 
 // a http://localhost:8000/upload includendo un campo 'image' nel corpo
 // della richiesta contenente il file immagine da caricare.
+
+// crud servizi
+app.post('/servizi', newServizio) //TODO
+app.get('/servizi', getServizi)   // IN USO 
+app.delete('/servizi/:id', deleteServizio) //TODO
+app.put('/servizi/:id', modificaServizio)  //TODO
 
 app.listen(port, () => {
   console.log(`Il server è in ascolto sulla porta ${port}`);

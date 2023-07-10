@@ -70,8 +70,8 @@ export default function AggiungiPrenotazione({ corsiUrl, setMessage ,message}) {
     }
 
     return (
-        <div className="contentCard2 hoverGray ">
-            <div className=" hoverGray aggiungiCorso">
+        <div className="contentCard2">
+            <div className="aggiungiCorso">
                 <i className={icon}></i>
                 <h1 onClick={changeClass}>
                     Aggiungi Prenotazione

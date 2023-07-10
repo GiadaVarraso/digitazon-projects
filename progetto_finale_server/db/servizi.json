@@ -1,0 +1,32 @@
+[
+  {
+    "id": 2,
+    "servizio": "sala pesi",
+    "url": "https://www.egoclub.it/wp-content/uploads/2017/03/sala-fitness-2.jpg",
+    "descrizione": "La nostra sala pesi è dotata di attrezzature moderne e varie per aiutarti a raggiungere i tuoi obiettivi di fitness e sviluppare la forza muscolare. Con una vasta gamma di pesi liberi, macchine per il sollevamento pesi e attrezzature per il fitness, potrai personalizzare il tuo allenamento e ottenere risultati efficaci. I nostri istruttori esperti sono disponibili per fornire assistenza e consigli personalizzati durante la tua sessione di allenamento."
+  },
+  {
+    "id": 3,
+    "servizio": "piscina",
+    "url": "https://www.ibluepiscine.it/blog/wp-content/uploads/2016/03/IMG_7854.jpg",
+    "descrizione": "La nostra piscina è il luogo perfetto per rinfrescarti e divertirti in acqua. Con dimensioni spaziose e acqua pulita, puoi nuotare, fare il bagno o semplicemente rilassarti a bordo piscina. Sia che tu stia cercando un'attività fisica a basso impatto o semplicemente un modo per rilassarti, la nostra piscina è adatta a tutti. I nostri istruttori qualificati sono disponibili per lezioni di nuoto e attività acquatiche divertenti."
+  },
+  {
+    "id": 4,
+    "servizio": "campo da beachvolley",
+    "url": "https://showclub.fra1.cdn.digitaloceanspaces.com/web/uploads/2017/05/beach-volley.jpg",
+    "descrizione": "Il nostro campo da beachvolley è il posto ideale per divertirsi con gli amici, allenarsi o partecipare a tornei. Con la sabbia morbida e un'area spaziosa, puoi goderti partite di beachvolley emozionanti e coinvolgenti. Che tu sia un principiante o un giocatore esperto, il campo da beachvolley offre un'opportunità per sviluppare le tue abilità, migliorare la resistenza e divertirti all'aria aperta."
+  },
+  {
+    "id": 5,
+    "servizio": "equitazione",
+    "url": "https://i0.wp.com/ridersadvisor.com/wp-content/uploads/2020/09/horse-3450740_1280.jpg?fit=1024%2C682&ssl=1",
+    "descrizione": "L'equitazione è una delle attività più affascinanti che offriamo. Con i nostri cavalli ben addestrati e l'assistenza dei nostri istruttori esperti, potrai sperimentare la bellezza e l'eleganza di cavalcare. Sia che tu sia un principiante o un cavaliere esperto, offriamo lezioni personalizzate per migliorare le tue abilità e la tua connessione con i cavalli. Esplora sentieri panoramici o partecipa a lezioni di equitazione per un'esperienza indimenticabile a contatto con la natura."
+  },
+  {
+    "id": 1,
+    "servizio": "sauna",
+    "url": "https://www.webdellidromassaggio.com/Blog/wp-content/uploads/2023/02/sauna-umida-hammam-.png",
+    "descrizione": "La nostra sauna offre un'esperienza rilassante e rigenerante. Con temperature controllate, potrai godere dei benefici del calore e del vapore, eliminando lo stress e le tossine accumulate. Rilassa i muscoli, migliora la circolazione sanguigna e promuovi il benessere generale. Vieni a sperimentare la tranquillità e la rigenerazione nella nostra sauna."
+  }
+]

@@ -21,6 +21,23 @@ const GalleriaImmagini = ({ path }) => {
         const i = index === imgs.length - 1 ? 0 : index + 1
         setIndex(i)
     }
+
+    if (typeof imgs[0] == 'object'){
+        return (
+            <>
+            <h2>{imgs[index].servizio}</h2> 
+            <div className="flex gallery">
+                <button className="galleryArrow" onClick={prev}><i className="fa-solid fa-chevron-left"></i></button>
+                <img className='galleryImgs' src={imgs[index].url} alt="volantino evento" />
+                <button className="galleryArrow" onClick={next}><i className="fa-solid fa-chevron-right"></i></button>
+            </div>
+            <div>
+            <p>{imgs[index].descrizione}</p>
+            </div>
+            </>
+        )
+    }
+
     return (
         <div className="flex gallery">
             <button className="galleryArrow" onClick={prev}><i className="fa-solid fa-chevron-left"></i></button>

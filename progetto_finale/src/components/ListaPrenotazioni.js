@@ -24,7 +24,7 @@ export default function ListaPrenotazioni({ corsiUrl, prenotazioniUrl, message }
             }
         }
         getCorsi()
-    }, [])
+    },[])
 
     useEffect(() => {
         async function getPrenotazioni() {
@@ -98,7 +98,7 @@ export default function ListaPrenotazioni({ corsiUrl, prenotazioniUrl, message }
                             </div>
                             <div className={toggleClass[i]}>
                                 <div className='infoPrenotazione'>
-                                    <div >
+                                    <div className='prenotazioneCliente'>
                                         <b>Cliente :</b> {p.nomeCliente}
                                     </div>
                                     <div>

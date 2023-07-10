@@ -6,16 +6,13 @@
 
 
 :root {
-  --primary-orange: rgb(250, 140, 23);
-  /* --primary-orange: rgb(25, 24, 25); */
-  --secondary-gray: rgb(62, 57, 57);
-  --secondary-black: rgb(44, 39, 39);
+  --custom-gray: rgb(83, 78, 78);
+  --custom-black: rgb(44, 39, 39);
   --detail-white: rgb(246, 244, 244);
-  --detail-orange: rgb(255, 164, 27);
-  --detail-yellow: rgb(240, 255, 27);
-  --detail-azure: rgb(27, 255, 244);
+  --detail-orange: #fbd61b;
+  --detail-rose: #ff56cc;
+  --detail-yellow: #fbca7e;
   --detail-green: rgba(116, 250, 98, 0.913);
-
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,600;0,700;0,800;0,900;1,600;1,700;1,800;1,900&display=swap');
@@ -42,12 +39,12 @@
 .top-bar {
   position: fixed;
   width: 100%;
-  background-color: var(--secondary-black);
+  background-color: var(--custom-black);
   color: var(--detail-white);
   align-items: center;
   padding: 0 2rem;
   text-align: center;
-  border-bottom: 3px var(--detail-azure) solid;
+  border-bottom: 3px var(--detail-yellow) solid;
   z-index: 1;
 }
 
@@ -57,23 +54,25 @@
 
 .top-bar h1 {
   font-size: 3em;
-  text-shadow: 3px 2px var(--detail-orange);
 }
 
 .App {
-  background-color: var(--primary-orange);
+  /* background-image: url('https://images2.alphacoders.com/202/202042.jpg'); */
+  background-image: url('https://images5.alphacoders.com/102/1020357.jpg');
+  background-size: cover;
+  background-attachment: fixed;
   min-height: 100vh;
 }
 
 .menu {
   position: fixed;
   top: 130px;
-  background-color: var(--secondary-black);
+  background-color: var(--custom-black);
   color: var(--detail-white);
   padding: 1rem;
   margin: 1rem;
   border-radius: 5px;
-  border: var(--detail-azure) 4px solid;
+  border: var(--detail-yellow) 4px solid;
   min-width: fit-content;
 }
 
@@ -95,15 +94,15 @@
 }
 
 .menuList a {
-  color: var(--detail-yellow);
+  color: var(--detail-rose);
   display: block;
   padding: 10px;
   text-decoration: none;
 }
 
 .menuList a:hover {
-  color: var(--detail-azure);
-  background-color: var(--secondary-black);
+  color: var(--detail-yellow);
+  background-color: var(--custom-black);
   border-radius: 3px;
 }
 
@@ -145,7 +144,7 @@
 }
 
 .mappa {
-  border: 1px solid var(--secondary-black);
+  border: 1px solid var(--custom-black);
   border-radius: 15px;
 }
 
@@ -158,7 +157,7 @@
 
 .contentCard {
   margin-top: 2rem;
-  background-image: linear-gradient(163deg, var(--detail-azure), var(--detail-yellow) 100%);
+  background-image: linear-gradient(163deg, var(--detail-yellow), var(--detail-rose) 100%);
   border-radius: 20px;
   transition: all .3s;
 }
@@ -172,12 +171,12 @@
 }
 
 .contentCard:hover {
-  box-shadow: 0px 0px 30px 1px var(--detail-yellow);
+  box-shadow: 0px 0px 30px 1px var(--detail-rose);
 }
 
 .contentCard2 {
   padding: 1rem;
-  background-color: var(--secondary-black);
+  background-color: var(--custom-black);
   border-radius: 10px;
   transition: all .2s;
 }
@@ -199,7 +198,7 @@
 }
 
 .filosofia b {
-  color: var(--detail-yellow)
+  color: var(--detail-rose)
 }
 
 .teamSection b {
@@ -218,41 +217,42 @@
 }
 
 .corso {
-  border: 1px solid var(--detail-azure);
+  border: 1px solid var(--detail-yellow);
   padding: 1rem;
   text-align: justify;
 }
 
 .hoverGray:hover {
-  background-color: var(--secondary-gray);
+  background-color: var(--custom-gray);
 }
 
-.corso h2{
+.corso h2 {
   display: flex;
   gap: 1rem;
 }
+
 .hide {
   display: none;
 }
 
-.infoCorso li{
+.infoCorso li {
   padding: 0.5rem;
 }
-.titoloCorso{
+
+.titoloCorso {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* css form  */
 .form-container {
-  margin: 1rem auto ;
+  margin: 1rem auto;
   width: 70%;
-  background: linear-gradient(var(--secondary-black),var(--secondary-black)) padding-box,
-              linear-gradient(var(--detail-orange), var(--detail-green)) border-box;
+  background: linear-gradient(var(--custom-black), var(--custom-black)) padding-box,
+    linear-gradient(var(--detail-orange), var(--detail-green)) border-box;
   border: 2px solid transparent;
   padding: 32px 24px;
-  color:var(--detail-white);
+  color: var(--detail-white);
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -287,20 +287,21 @@
   color: var(--detail-white);
   font-family: inherit;
   background-color: transparent;
-  border: 3px solid var(--secondary-gray);
+  border: 3px solid var(--custom-gray);
 }
 
-.form-container .form-group select{
+.form-container .form-group select {
   width: 100%;
   padding: 12px 16px;
   border-radius: 8px;
   color: var(--detail-white);
   font-family: inherit;
   background-color: transparent;
-  border: 3px solid var(--secondary-gray);
+  border: 3px solid var(--custom-gray);
 }
-.form-container .form-group select option{
-  color: var(--secondary-black);
+
+.form-container .form-group select option {
+  color: var(--custom-black);
   font-weight: 500;
 }
 
@@ -308,21 +309,22 @@
   opacity: 0.7;
 }
 
-.form-container .form-group input:focus ,.form-container .form-group select:focus  {
+.form-container .form-group input:focus,
+.form-container .form-group select:focus {
   border-width: 1px;
   outline: none;
-  border-color: var(--detail-azure);
+  border-color: var(--detail-yellow);
 }
 
 .form-container .form-submit-btn {
   display: flex;
   justify-content: center;
   align-self: flex-start;
-  color:var(--secondary-black);
+  color: var(--custom-black);
   font-weight: 600;
   width: 40%;
-  background:var(--detail-white);
-  border: 1px solid var(--secondary-gray);
+  background: var(--detail-white);
+  border: 1px solid var(--custom-gray);
   padding: 12px 16px;
   font-size: inherit;
   gap: 8px;
@@ -332,74 +334,96 @@
 }
 
 .form-container .form-submit-btn:hover {
-  background-color:var(--detail-azure);
-  border-color: var(--secondary-black);
+  background-color: var(--detail-yellow);
+  border-color: var(--custom-black);
   color: black;
 }
 
-.delete-btn{
-  background-color:rgb(252, 110, 67);
+.delete-btn {
+  background-color: rgb(252, 110, 67);
   padding: 5px;
   font-size: medium;
   border-radius: 10px;
   color: rgb(0, 0, 0);
 }
 
-.form-modify-btn{
+.form-modify-btn {
   display: flex;
   justify-content: space-between;
 }
 
-.mod-btn{
-  background-color:rgb(252, 215, 67);
+.mod-btn {
+  background-color: rgb(252, 215, 67);
   padding: 5px;
   font-size: medium;
   border-radius: 10px;
   color: rgb(0, 0, 0);
 }
 
-.aggiungiCorso h1{
-  color:var(--detail-yellow);
-  border:none;
+.aggiungiCorso h1 {
+  color: var(--detail-rose);
+  border: none;
 }
 
-.aggiungiCorso h1:hover{
-  color:var(--detail-azure)
+.aggiungiCorso h1:hover {
+  color: var(--detail-yellow)
 }
 
-.aggiungiCorso{
-  display:flex;
+.aggiungiCorso {
+  display: flex;
   justify-content: center;
   align-items: center;
-  gap:1rem;
-}
-.messageText{
-  color:var(--detail-green)
-}
-.infoPrenotazione{
-  display: flex;
-  flex-direction: column;
   gap: 1rem;
-  padding-bottom: 1rem;
 }
-.infoCorso{
+
+.messageText {
+  color: var(--detail-green)
+}
+
+.infoPrenotazione {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.prenotazioneCliente {
+  align-self: flex-end;
+}
+
+.infoCorso {
   padding: 1rem 0.5rem;
-  display: flex; 
+  display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.pConclusa:hover{
-  background-color: rgba(255, 0, 0, 0.514);
+.pConclusa:hover {
+  background-color: rgba(255, 0, 0, 0.381);
 }
-.pConclusa{
+
+.pConclusa {
   background-color: rgba(67, 1, 1, 0.582);
 }
-.pAttiva:hover{
-  background-color:var(--detail-orange);
-  color:black;
-}
-.scroll{
+
+.scroll {
   overflow-y: scroll;
   height: 300px;
+}
+
+/* Personalizzazione generale della scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Personalizzazione dello stile del thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #4d3d4e;
+  border: 3px solid rgb(252, 248, 248);
+  border-radius: 5px;
+}
+
+/* Personalizzazione dello stile dello sfondo */
+::-webkit-scrollbar-track {
+  background-color: #ffffff;
+  border-radius: 5px;
 }

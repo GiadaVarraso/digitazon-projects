@@ -20,14 +20,15 @@ function dataCreazione() {
 
   // Formatta la data in gg/MM/YY
   const nowFormatDate = `${giorno.toString().padStart(2, '0')}/${mese.toString().padStart(2, '0')}/${anno.toString()}`
-  
+
   // Formatta l'orario in hh:mm
   const nowFormatTime = `${ora.toString().padStart(2, '0')}:${minuti.toString().padStart(2, '0')}`;
 
-  const dateCreazione={dataCreazione: {
-    "data": `${nowFormatDate}`,
-    "orario": `${nowFormatTime}`
-   }
+  const dateCreazione = {
+    dataCreazione: {
+      "data": `${nowFormatDate}`,
+      "orario": `${nowFormatTime}`
+    }
   }
   return dateCreazione
 }
@@ -51,7 +52,7 @@ const newPrenotazione = async (req, res) => {
     }
 
     const prenotazioni = contentPrenotazioni.filter(p => p.idCorso == idCorso);
-    if(prenotazioni.length >= contentCorsi[index].postiDisponibili){
+    if (prenotazioni.length >= contentCorsi[index].postiDisponibili) {
       res.send({
         data: {},
         error: true,
@@ -66,7 +67,7 @@ const newPrenotazione = async (req, res) => {
     const giorniSettimana = ['Domenica', 'Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato'];
     const giornoSettimana = giorniSettimana[numeroGiorno];
 
-    if(giornoSettimana == contentCorsi[index].giorno){
+    if (giornoSettimana == contentCorsi[index].giorno) {
       res.send({
         data: {},
         error: true,
@@ -75,7 +76,7 @@ const newPrenotazione = async (req, res) => {
       return
     }
 
-    const prenotazione = { idPrenotazione, idCorso, ...dataCreazione() , ...req.body }
+    const prenotazione = { idPrenotazione, idCorso, ...dataCreazione(), ...req.body }
     contentPrenotazioni.push(prenotazione);
     await fs.writeFile(DB_PATH_PRENOTAZIONI, JSON.stringify(contentPrenotazioni, null, " "));
 
@@ -90,10 +91,9 @@ const newPrenotazione = async (req, res) => {
 
 const getPrenotazioni = async (req, res) => {
   try {
-    const content = JSON.parse(await fs.readFile(DB_PATH_PRENOTAZIONI));
-    const prenotazioni = content;
+    const prenotazioni=JSON.parse(await fs.readFile(DB_PATH_PRENOTAZIONI));
 
-    res.send( prenotazioni );
+    res.send(prenotazioni);
   } catch (error) {
     console.log(error);
     res.status(500).send({
@@ -107,15 +107,15 @@ const getPrenotazioniByCorso = async (req, res) => {
     const content = JSON.parse(await fs.readFile(DB_PATH_PRENOTAZIONI));
     const idCorso = parseInt(req.params.id);
     const prenotazioni = content.filter(p => p.idCorso === idCorso);
-    if (prenotazioni.length==0){
-        res.send({
-          data: {},
-          error: true,
-          message: `Prenotazioni per il corso ${idCorso} non trovate`
-        });
-        return;      
+    if (prenotazioni.length == 0) {
+      res.send({
+        data: {},
+        error: true,
+        message: `Prenotazioni per il corso ${idCorso} non trovate`
+      });
+      return;
     }
-    res.send( prenotazioni );
+    res.send(prenotazioni);
   } catch (error) {
     console.log(error);
     res.status(500).send({
@@ -132,7 +132,7 @@ const getPrenotazione = async (req, res) => {
 
     const prenotazione = content.find(p => p.idCorso === idCorso && p.idPrenotazione === idPrenotazione);
     if (prenotazione) {
-      res.send( prenotazione );
+      res.send(prenotazione);
     } else {
       res.status(404).send({
         data: {},
@@ -167,7 +167,7 @@ const deletePrenotazione = async (req, res) => {
     content.splice(index, 1);
     await fs.writeFile(DB_PATH_PRENOTAZIONI, JSON.stringify(content, null, ' '));
     res.status(204).send({ message: 'Prenotazione cancellata' });
-    
+
   } catch (error) {
     console.log(error);
     res.status(500).send({
