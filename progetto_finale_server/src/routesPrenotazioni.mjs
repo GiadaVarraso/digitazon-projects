@@ -13,13 +13,13 @@ function dataCreazione() {
   const now = new Date()
   const giorno = now.getDate()
   const mese = now.getMonth() + 1
-  const anno = now.getFullYear() % 100
+  const anno = now.getFullYear()
 
   const ora = now.getHours();
   const minuti = now.getMinutes();
 
-  // Formatta la data in gg/MM/YY
-  const nowFormatDate = `${giorno.toString().padStart(2, '0')}/${mese.toString().padStart(2, '0')}/${anno.toString()}`
+  // Formatta la data in yyyy/mm/dd
+  const nowFormatDate = `${anno.toString()}-${mese.toString().padStart(2, '0')}-${giorno.toString().padStart(2, '0')}`
 
   // Formatta l'orario in hh:mm
   const nowFormatTime = `${ora.toString().padStart(2, '0')}:${minuti.toString().padStart(2, '0')}`;

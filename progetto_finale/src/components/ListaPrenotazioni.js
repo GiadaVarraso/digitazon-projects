@@ -19,7 +19,6 @@ export default function ListaPrenotazioni({ corsiUrl, prenotazioniUrl, message }
                 const response = await axios.get(corsiUrl)
                 setCorsi(response.data)
             } catch (error) {
-                setCorsi('nessun corso disponibile')
                 console.log(error)
             }
         }

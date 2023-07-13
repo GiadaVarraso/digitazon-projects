@@ -15,7 +15,7 @@ const Layout = () => {
           </li>
           <li>
             <i className="fa-solid fa-dumbbell" />
-            <Link to="/Gym">Gym</Link>
+            <Link to="/Gym">Servizi</Link>
           </li>
           <li>
             <i className="fa-solid fa-calendar-days" />

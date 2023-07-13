@@ -75,9 +75,10 @@ app.get('/', (req, res) => {
 
     + "\nIMMAGINI:"
 
-    + '\nGET img http://localhost:8000/images/:fileName.ext'
+    + '\nGET img http://localhost:8000/images/:fileName.ext' //IN USO
     + '\nGET imgs http://localhost:8000/images'              //IN USO
-    + '\nPOST img http://localhost:8000/upload (payload type=form-data, key=image , type=File, value=[.jpg, .jpeg, .png, .gif]'
+    + '\nPOST img http://localhost:8000/upload'              //IN USO
+    + ' (payload type=form-data, key=image , type=File, value=[.jpg, .jpeg, .png, .gif]'
 
     + "\nISTRUTTORI:"
 
@@ -90,7 +91,7 @@ app.get('/', (req, res) => {
     + "\nSERVIZI:"
 
     + "\nPOST servizio         http://localhost:8000/servizi"
-    + "\nGET servizi all       http://localhost:8000/servizi"
+    + "\nGET servizi all       http://localhost:8000/servizi"     //IN USO
     + "\nDELETE servizio       http://localhost:8000/servizi/:id"
     + "\nPUT servizio          http://localhost:8000/servizi/:id"
   );
@@ -120,19 +121,15 @@ app.use('/images', express.static('imgs'));
 
 app.get('/images', getImgs);
 
-app.post('/upload', upload.single('image'), (req, res) => {
-  res.send('Immagine caricata con successo');
+app.post('/upload', upload.single('file'), (req, res) => {
+  res.send('Immagine caricata con successo')
 });
 
-// Con questa configurazione, puoi inviare una richiesta POST 
-// a http://localhost:8000/upload includendo un campo 'image' nel corpo
-// della richiesta contenente il file immagine da caricare.
-
 // crud servizi
-app.post('/servizi', newServizio) //TODO
+app.post('/servizi', newServizio) 
 app.get('/servizi', getServizi)   // IN USO 
-app.delete('/servizi/:id', deleteServizio) //TODO
-app.put('/servizi/:id', modificaServizio)  //TODO
+app.delete('/servizi/:id', deleteServizio) 
+app.put('/servizi/:id', modificaServizio)  
 
 app.listen(port, () => {
   console.log(`Il server è in ascolto sulla porta ${port}`);

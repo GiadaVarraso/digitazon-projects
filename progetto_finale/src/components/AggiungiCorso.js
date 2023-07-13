@@ -50,9 +50,9 @@ export default function AggiungiCorso({ corsiUrl, istruttoriUrl }) {
     }
 
     async function postCorso() {
-        let verify=Object.values(corsoData).every(value => value !== '');
+        let verify = Object.values(corsoData).every(value => value !== '');
 
-        if(verify){
+        if (verify) {
             try {
                 const response = await axios.post(corsiUrl, corsoData);
                 console.log(response.data);
@@ -73,10 +73,10 @@ export default function AggiungiCorso({ corsiUrl, istruttoriUrl }) {
 
     return (
         <div className="contentCard2">
-            <div className="aggiungiCorso">
+            <div onClick={changeClass} className="aggiungiCorso">
                 <i className={icon}></i>
-                <h1 onClick={changeClass}>
-                     Aggiungi Corso
+                <h1 >
+                    Aggiungi Corso
                 </h1>
             </div>
             <div className={toggleClass}>

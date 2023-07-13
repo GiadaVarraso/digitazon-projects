@@ -1,6 +1,7 @@
-import GalleriaImmagini from "../components/GalleriaImmagini";
+import GalleriaImmagini from "../components/GalleriaImmagini.js";
 import Map from '../components/Map.js'
-import Orari from "../components/Orari";
+import Orari from "../components/Orari.js";
+import AggiungiVolantino from '../components/AggiungiVolantino.js'
 
 const Home = () => {
     const path = 'http://localhost:8000/images'
@@ -10,7 +11,8 @@ const Home = () => {
             <div className="contentCard" >
                 <div className="contentCard2">
                     <h1>Bacheca Avvisi ed Eventi</h1>
-                    <GalleriaImmagini path={path}></GalleriaImmagini>
+                    <GalleriaImmagini path={path} ></GalleriaImmagini>
+                    <AggiungiVolantino ></AggiungiVolantino>
                 </div>
             </div>
             <Map></Map>

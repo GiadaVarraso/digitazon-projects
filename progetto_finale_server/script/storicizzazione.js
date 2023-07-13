@@ -1,9 +1,7 @@
-// storicizza prenotazioni 
-/* ogni notte alle 23.59 deve controllare il file delle prenotazioni 
-  prendere gli oggetti dell array che non hanno proprietà 'old'
-  controllare che il corso al quale si riferisce abbia proprietà 'giorno' == a oggi getDay()
-  vuol dire che il corso si è tenuto oggi stesso e la prenotazione va storicizzata
-  quindi si aggiunge una proprietà 'old' all oggetto prenotazione
+/* 
+nel caso in cui il server era ofline nell'orario previsto per la storicizzazione automatica giornaliera
+usare questo script per avviare la storicizzazione delle prenotazioni manuale.
+Usare lo script con parametro data (il giorno in cui non è stata effettuata) es.: 2023-07-02
 */
 
 import fs from 'node:fs/promises';
@@ -11,29 +9,33 @@ import fs from 'node:fs/promises';
 const DB_PATH_CORSI = '../db/corsi.json'
 const DB_PATH_PRENOTAZIONI = '../db/prenotazioni.json'
 
-async function storicizzaPrenotazioni() {
+async function storicizzaPrenotazioni(data) {
     try {
-        const now = new Date();
-        console.log(`\nStoricizzazione iniziata alle ${now.getHours()}.${now.getMinutes()}\n`)
+        const now = new Date(data);
+        console.log(`\nStoricizzazione iniziata\n`)
         const giorniSettimana = ['Domenica', 'Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato'];
-        const giornoConvertito = giorniSettimana[now.getDay()];
-        
+        const giornoSettimana = giorniSettimana[now.getDay()];
+
         const corsi = JSON.parse(await fs.readFile(DB_PATH_CORSI));
         const prenotazioni = JSON.parse(await fs.readFile(DB_PATH_PRENOTAZIONI));
-        const toCheck = prenotazioni.filter((p) => !p.hasOwnProperty('old'))
-        toCheck.forEach((p,i) => {
+        let toCheck;
+        toCheck = prenotazioni.filter((p) => !p.hasOwnProperty('old') && p.dataCreazione.data < data)
+
+        toCheck.forEach((p, i) => {
             const corso = corsi.filter((c) => c.id == p.idCorso)
-            if (corso[0].giorno == giornoConvertito) {
-                const prenotazione = { ...p, old:true }
-                prenotazioni[i]=prenotazione;
+
+            if (corso[0].giorno == giornoSettimana) {
+                console.log('effettuo storicizzazione del giorno ' + giornoSettimana)
+                const prenotazione = { ...p, old: true }
+                prenotazioni[i] = prenotazione;
             }
         });
         await fs.writeFile(DB_PATH_PRENOTAZIONI, JSON.stringify(prenotazioni, null, " "));
-        console.log(`Storicizzazione terminata alle ${now.getHours()}.${now.getMinutes()}`)
+        console.log(`Storicizzazione terminata`)
     } catch (error) {
         console.log(error);
         console.log('errore durante la storicizzazione delle prenotazioni');
     }
 };
 
-storicizzaPrenotazioni()
+storicizzaPrenotazioni(process.argv[2])  //2023-07-05

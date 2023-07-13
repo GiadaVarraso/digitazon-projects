@@ -2,7 +2,7 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 
-export default function AggiungiPrenotazione({ corsiUrl, setMessage ,message}) {
+export default function AggiungiPrenotazione({ corsiUrl, setMessage, message }) {
     const [icon, setIcon] = useState('fa-solid fa-chevron-down')
     const [toggleClass, setToggleClass] = useState('hide')
     const [corsi, setCorsi] = useState([]);
@@ -64,16 +64,16 @@ export default function AggiungiPrenotazione({ corsiUrl, setMessage ,message}) {
         setCorsoSelezionato(event.target.value);
     }
 
-    function handleSubmit(event){
-        event.preventDefault(); 
+    function handleSubmit(event) {
+        event.preventDefault();
         event.target.reset();
     }
 
     return (
         <div className="contentCard2">
-            <div className="aggiungiCorso">
+            <div onClick={changeClass} className="aggiungiCorso">
                 <i className={icon}></i>
-                <h1 onClick={changeClass}>
+                <h1>
                     Aggiungi Prenotazione
                 </h1>
             </div>
