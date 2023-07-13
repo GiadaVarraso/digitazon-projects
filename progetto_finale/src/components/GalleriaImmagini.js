@@ -6,15 +6,17 @@ const GalleriaImmagini = ({ path, update }) => {
     const [imgs, setImgs] = useState(['https://www.sisport.life/Style%20Library/Sisport/img/news/news_altre_categorie/interna/int_servizio_non_disponibile.jpg'])
 
     useEffect(() => {
-        try {
-            async function getImgs() {
+
+        async function getImgs() {
+            try {
                 const response = await axios.get(path)
                 setImgs(response.data)
+            } catch (error) {
+                console.log(error);
             }
-            getImgs()
-        } catch (error) {
-            console.log(error);
         }
+        getImgs()
+
     }, [path, update])
 
     function prev() {

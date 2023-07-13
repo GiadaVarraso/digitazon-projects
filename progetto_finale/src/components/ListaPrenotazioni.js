@@ -23,7 +23,7 @@ export default function ListaPrenotazioni({ corsiUrl, prenotazioniUrl, message }
             }
         }
         getCorsi()
-    },[])
+    }, [])
 
     useEffect(() => {
         async function getPrenotazioni() {
@@ -88,7 +88,9 @@ export default function ListaPrenotazioni({ corsiUrl, prenotazioniUrl, message }
         <div className="contentCard2">
             <h1>Prenotazioni</h1>
             <div className='scroll'>
-                {
+                {typeof prenotazioni !='object'?
+                    <span>Stiamo riscontrando problemi. Impossibile caricare le informazioni di questa sezione. Ci scusiamo per il disagio.</span>
+                    :
                     prenotazioni.map((p, i) =>
                         < div key={i} className={`corso hoverGray ${p.old ? 'pConclusa' : 'pAttiva'}`} >
                             <div className='titoloCorso' onClick={() => changeClass(i)}>

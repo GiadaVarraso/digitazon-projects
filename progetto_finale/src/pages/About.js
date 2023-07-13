@@ -28,7 +28,7 @@ export const Filosofia = () => {
         Il nostro centro è affiliato UISP.
       </p>
     </div>
-    )
+  )
 }
 
 const About = () => {
@@ -62,11 +62,14 @@ const About = () => {
 
           <h1>Il nostro Team </h1>
           <ul>
-            {istruttori.map((i) => {
-              return (
-                <li key={i.id}><b>{i.nome} : </b>{i.info}</li>
-              )
-            })}
+            {typeof istruttori !='object'?
+              <span>Stiamo riscontrando problemi. Impossibile caricare le informazioni di questa sezione. Ci scusiamo per il disagio.</span>
+              :
+              istruttori.map((i) => {
+                return (
+                  <li key={i.id}><b>{i.nome} : </b>{i.info}</li>
+                )
+              })}
           </ul>
 
           COLLABORIAMO ANCHE CON LA SCUOLA DI DANZA <a href="https://www.nuovoteatrostudiodanza.it/caluso/">NTSD</a>
