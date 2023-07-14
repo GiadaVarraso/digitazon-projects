@@ -17,6 +17,7 @@ async function putCorso(id) {
     const response = await axios.put(url, updatedCorso);
     console.log(response.data);
   } catch (error) {
+    console.error('non modificato');
     console.error(error);
   }
 }

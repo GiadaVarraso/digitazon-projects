@@ -34,7 +34,7 @@ export default function AggiungiCorso({ corsiUrl, istruttoriUrl }) {
                 const response = await axios.get(istruttoriUrl)
                 setIstruttori(response.data)
             } catch (error) {
-                console.log('\nRISORSA NON TROVATA\n')
+                console.log('\nNon è stato possibile ricavare gli istruttori dal server.\n')
                 console.log(error)
             }
         }
@@ -57,8 +57,8 @@ export default function AggiungiCorso({ corsiUrl, istruttoriUrl }) {
                 const response = await axios.post(corsiUrl, corsoData);
                 console.log(response.data);
             } catch (error) {
+                console.log('\nNon è stato possibile mandare il corso al server.\n')
                 console.log(error);
-                console.log('\nCORSO NON AGGIUNTO\n');
             }
         }
     }

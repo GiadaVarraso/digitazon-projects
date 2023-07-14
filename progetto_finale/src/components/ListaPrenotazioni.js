@@ -6,7 +6,6 @@ export default function ListaPrenotazioni({ corsiUrl, prenotazioniUrl, message }
     const [corsi, setCorsi] = useState([])
     const [prenotazioni, setPrenotazioni] = useState([])
     const hideClass = 'hide'
-    const cancellaClass = ''
     const frecciaGiu = "fa-solid fa-chevron-down"
     const frecciaSu = 'fa-solid fa-chevron-up'
 
@@ -20,6 +19,7 @@ export default function ListaPrenotazioni({ corsiUrl, prenotazioniUrl, message }
                 setCorsi(response.data)
             } catch (error) {
                 console.log(error)
+                console.log('Impossibile ricavare corsi. Errore di comunicazione con il server.');
             }
         }
         getCorsi()
@@ -32,6 +32,7 @@ export default function ListaPrenotazioni({ corsiUrl, prenotazioniUrl, message }
                 setPrenotazioni(response.data.reverse())
             } catch (error) {
                 console.log(error)
+                console.log('Impossibile ricavare prenotazioni. Errore di comunicazione con il server.');
             }
         }
         getPrenotazioni()
@@ -44,7 +45,7 @@ export default function ListaPrenotazioni({ corsiUrl, prenotazioniUrl, message }
     }, [corsi, prenotazioni])
 
     function changeClass(i) {
-        const newClass = toggleClass[i] === hideClass ? cancellaClass : hideClass
+        const newClass = toggleClass[i] === hideClass ? '' : hideClass
         const newArrayClass = [...toggleClass]
         newArrayClass[i] = newClass
         setToggleClass(newArrayClass)
@@ -70,14 +71,13 @@ export default function ListaPrenotazioni({ corsiUrl, prenotazioniUrl, message }
         const url = `${corsiUrl}/${idC}/prenotazioni/${idP}`;
 
         async function deletePrenotazione() {
-
             try {
                 await axios.delete(url);
                 const updatedPrenotazioni = prenotazioni.filter((p) => p.idPrenotazione !== idP);
                 setPrenotazioni(updatedPrenotazioni);
             } catch (error) {
                 console.log(error);
-                console.log('\nERRORE NELL\'ELIMINAZIONE DELLA PRENOTAZIONE\n');
+                console.log('Impossibile cancellare prenotazioni. Errore di comunicazione con il server.');
             }
         }
         deletePrenotazione();
@@ -87,14 +87,28 @@ export default function ListaPrenotazioni({ corsiUrl, prenotazioniUrl, message }
         <div className="contentCard2">
             <h1>Prenotazioni</h1>
             <div className='scroll'>
-                { prenotazioni.length ==0?
-                    <span>Stiamo riscontrando problemi. Impossibile caricare le informazioni di questa sezione. Ci scusiamo per il disagio.</span>
+                {prenotazioni.length == 0 ?
+                    <span>Stiamo riscontrando problemi.
+                        Impossibile caricare le informazioni di questa sezione.
+                        Ci scusiamo per il disagio.
+                    </span>
                     :
                     prenotazioni.map((p, i) =>
-                        < div key={i} className={`corso hoverGray ${p.old ? 'pConclusa' : 'pAttiva'}`} >
+                        <div
+                            key={i}
+                            className={`corso hoverGray ${p.old ? 'pConclusa' : 'pAttiva'}`} >
                             <div className='titoloCorso' onClick={() => changeClass(i)}>
-                                <h2><i className={expandArrow[i]}></i>{p.old ? 'CONCLUSA' : 'ATTIVA'} </h2>
-                                <span><b>Prenotazione effettuata il {p.dataCreazione.data} alle {p.dataCreazione.orario}</b></span>
+                                <h2>
+                                    <i className={expandArrow[i]}></i>
+                                    {p.old ? 'CONCLUSA' : 'ATTIVA'}
+                                </h2>
+                                <span>
+                                    <b>
+                                        Prenotazione effettuata il
+                                        {p.dataCreazione.data}
+                                        alle {p.dataCreazione.orario}
+                                    </b>
+                                </span>
                             </div>
                             <div className={toggleClass[i]}>
                                 <div className='infoPrenotazione'>
@@ -106,7 +120,11 @@ export default function ListaPrenotazioni({ corsiUrl, prenotazioniUrl, message }
                                         <InfoCorsi idCorso={p.idCorso} old={p.old}></InfoCorsi>
                                     </div>
                                 </div>
-                                <button className='delete-btn' onClick={() => cancellaPrenotazione(p.idCorso, p.idPrenotazione)}>Elimina</button>
+                                <button
+                                    className='delete-btn'
+                                    onClick={() => cancellaPrenotazione(p.idCorso, p.idPrenotazione)}>
+                                    Elimina
+                                </button>
                             </div>
                         </div >
                     )

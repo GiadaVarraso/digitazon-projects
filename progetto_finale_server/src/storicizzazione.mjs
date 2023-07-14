@@ -20,7 +20,7 @@ export default async function storicizzaPrenotazioni() {
         toCheck.forEach((p, i) => {
             const corso = corsi.filter((c) => c.id == p.idCorso)
             if (corso[0].giorno == giornoConvertito) {
-                const prenotazione = { ...p, old:formatDate }
+                const prenotazione = { ...p, old: formatDate }
                 prenotazioni[i] = prenotazione;
             }
         });

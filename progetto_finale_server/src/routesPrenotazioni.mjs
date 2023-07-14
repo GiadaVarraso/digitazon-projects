@@ -61,7 +61,8 @@ const newPrenotazione = async (req, res) => {
       return
     }
 
-    // la prenotazione NON puo' essere effettuata il giorno stesso del corso (sono prenotazioni settimanali)
+    // la prenotazione NON puo' essere effettuata il giorno stesso del corso 
+    // (sono prenotazioni settimanali, vanno storicizzate prima le precedenti )
     const now = new Date()
     const numeroGiorno = now.getDay()
     const giorniSettimana = ['Domenica', 'Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato'];
@@ -91,7 +92,7 @@ const newPrenotazione = async (req, res) => {
 
 const getPrenotazioni = async (req, res) => {
   try {
-    const prenotazioni=JSON.parse(await fs.readFile(DB_PATH_PRENOTAZIONI));
+    const prenotazioni = JSON.parse(await fs.readFile(DB_PATH_PRENOTAZIONI));
 
     res.send(prenotazioni);
   } catch (error) {

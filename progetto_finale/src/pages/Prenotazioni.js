@@ -1,4 +1,3 @@
-
 import ListaPrenotazioni from '../components/ListaPrenotazioni';
 import AggiungiPrenotazione from '../components/AggiungiPrenotazione';
 import { useState } from 'react';
@@ -11,11 +10,16 @@ const Prenotazioni = () => {
     return (
         <div className="flex column content">
             <div className="contentCard" >
-                <AggiungiPrenotazione corsiUrl={corsiUrl} setMessage={setMessage} message={message}></AggiungiPrenotazione>
-            </div >
+                <AggiungiPrenotazione
+                    corsiUrl={corsiUrl}
+                    setMessage={setMessage}
+                    message={message} />
+            </div>
 
             <div className="contentCard" >
-                <ListaPrenotazioni corsiUrl={corsiUrl} prenotazioniUrl={prenotazioniUrl} message={message}></ListaPrenotazioni>
+                <ListaPrenotazioni corsiUrl={corsiUrl}
+                    prenotazioniUrl={prenotazioniUrl}
+                    message={message} />
             </div>
         </div>
     )

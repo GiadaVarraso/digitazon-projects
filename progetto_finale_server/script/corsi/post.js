@@ -8,7 +8,7 @@ async function postCorso() {
     descrizione: 'Walking Circuit',
     livello: 'Intermedio',
     giorno: 'Lunedì',
-    orario: '10:00' ,
+    orario: '10:00',
     durata: '1 ora',
     postiDisponibili: 20
   };

@@ -7,7 +7,8 @@ const DB_PATH_ISTRUTTORI = 'db/istruttori.json'
 
 async function nextId() {
     const content = JSON.parse(await fs.readFile(DB_PATH_ISTRUTTORI))
-    const currentId = content.reduce((cumulator, i) => cumulator > parseInt(i.id) ? cumulator : parseInt(i.id), 1)
+    const currentId = content.reduce((cumulator, i) =>
+        cumulator > parseInt(i.id) ? cumulator : parseInt(i.id), 1)
     const nextId = currentId + 1
     return nextId
 }
@@ -48,7 +49,7 @@ const getIstruttoreByid = async (req, res) => {
         const content = JSON.parse(await fs.readFile(DB_PATH_ISTRUTTORI))
         const index = content.findIndex(i => i.id == parseInt(req.params.id))
         if (content[index]) {
-            res.send(content[index] ).end()
+            res.send(content[index]).end()
             return
         }
 
@@ -78,7 +79,8 @@ const deleteIstruttore = async (req, res) => {
             }).status(404).end()
             return
         } else {
-            // nel caso in cui l'istruttore ha dei corsi a suo carico, cancellare o modificare i corsi prima
+            // nel caso in cui l'istruttore ha dei corsi a suo carico,
+            // è necessario cancellare o modificare i corsi prima
             try {
                 const corsi = JSON.parse(await fs.readFile(DB_PATH_CORSI))
                 const hasCorso = corsi.some(c => c.istruttore == content[index].nome);
@@ -95,7 +97,7 @@ const deleteIstruttore = async (req, res) => {
                 res.send({ message: 'Eliminazione dell istruttore non avvenuta. Errore durante la lettura del file dei corsi' }).status(500)
                 return
             }
-            
+
             content.splice(index, 1)
             await fs.writeFile(DB_PATH_ISTRUTTORI, JSON.stringify(content, null, ' '))
             res.send({ message: 'risorsa cancellata' }).status(204)

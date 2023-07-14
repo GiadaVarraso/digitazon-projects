@@ -1,5 +1,5 @@
 /* 
-nel caso in cui il server era ofline nell'orario previsto per la storicizzazione automatica giornaliera
+nel caso in cui il server era offline nell'orario previsto per la storicizzazione automatica giornaliera
 usare questo script per avviare la storicizzazione delle prenotazioni manuale.
 Usare lo script con parametro data (il giorno in cui non è stata effettuata) es.: 2023-07-02
 */
@@ -26,7 +26,7 @@ async function storicizzaPrenotazioni(data) {
 
             if (corso[0].giorno == giornoSettimana) {
                 console.log('effettuo storicizzazione del giorno ' + giornoSettimana)
-                const prenotazione = { ...p, old: true }
+                const prenotazione = { ...p, old: data }
                 prenotazioni[i] = prenotazione;
             }
         });
@@ -38,4 +38,4 @@ async function storicizzaPrenotazioni(data) {
     }
 };
 
-storicizzaPrenotazioni(process.argv[2])  //2023-07-05
+storicizzaPrenotazioni(process.argv[2])  // es.: 2023-07-05

@@ -11,7 +11,7 @@ export default function Map() {
                         <p>Ampio parcheggio gratuito davanti alla sede</p>
                     </div>
                     <div>
-                        <iframe title="mappa"                        
+                        <iframe title="mappa"
                             src="https://www.openstreetmap.org/export/embed.html?bbox=7.881660461425782%2C45.37709602745592%2C7.89545774459839%2C45.38222050518643&amp;layer=mapnik&amp;marker=45.379658339888216%2C7.888559103012085"
                             className="mappa">
                         </iframe>

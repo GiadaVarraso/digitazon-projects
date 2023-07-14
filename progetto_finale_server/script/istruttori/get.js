@@ -1,9 +1,9 @@
 import axios from 'axios'
 
-async function call(id){
+async function call(id) {
     try {
-        const url=id?`http://localhost:8000/istruttori/${id}`:'http://localhost:8000/istruttori'
-        const response= await axios.get(url)
+        const url = id ? `http://localhost:8000/istruttori/${id}` : 'http://localhost:8000/istruttori'
+        const response = await axios.get(url)
         console.log(response.data)
     } catch (error) {
         console.log('\nRISORSA NON TROVATA\n')
@@ -12,5 +12,4 @@ async function call(id){
 }
 
 call(process.argv[2]) // get id specifico
-// call(process.argv[2]) // get id specifico non presente
 // call()  // get all

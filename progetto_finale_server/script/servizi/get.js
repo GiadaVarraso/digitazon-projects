@@ -6,7 +6,7 @@ async function getServizi(){
         const response= await axios.get(url)
         console.log(response.data)
     } catch (error) {
-        console.log('RISORSA NON TROVATA')
+        console.log('SERVIZIO NON TROVATA')
         console.log(error)
     }
 }

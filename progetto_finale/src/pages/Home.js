@@ -11,8 +11,8 @@ const Home = () => {
             <div className="contentCard" >
                 <div className="contentCard2">
                     <h1>Bacheca Avvisi ed Eventi</h1>
-                    <GalleriaImmagini path={path} ></GalleriaImmagini>
-                    <AggiungiVolantino ></AggiungiVolantino>
+                    <GalleriaImmagini path={path} />
+                    <AggiungiVolantino />
                 </div>
             </div>
             <Map></Map>

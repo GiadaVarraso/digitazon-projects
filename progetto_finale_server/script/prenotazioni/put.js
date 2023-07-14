@@ -15,6 +15,6 @@ async function modificaPrenotazione(idC, idP, prenotazioneData) {
 }
 
 
-modificaPrenotazione(process.argv[2],process.argv[3], {
-    nomeCliente: 'Maria Maddalena'
+modificaPrenotazione(process.argv[2], process.argv[3], {
+    nomeCliente: 'Mario Red'
 });

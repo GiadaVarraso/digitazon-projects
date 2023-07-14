@@ -18,7 +18,7 @@ export default function AggiungiPrenotazione({ corsiUrl, setMessage, message }) 
                 const response = await axios.get(corsiUrl)
                 setCorsi(response.data)
             } catch (error) {
-                console.log('\nRISORSA NON TROVATA\n')
+                console.log('\nNon è stato possibile ricavare i corsi dal server.\n')
                 console.log(error)
             }
         }
@@ -40,14 +40,13 @@ export default function AggiungiPrenotazione({ corsiUrl, setMessage, message }) 
         if (verify) {
             try {
                 const response = await axios.post(url, prenotazioneData);
-
                 setMessage(response.data.message);
                 setPrenotazioneData({
                     nomeCliente: ''
                 })
             } catch (error) {
                 console.log(error);
-                console.log('\nPRENOTAZIONE NON AGGIUNTA\n');
+                console.log('\nNon è stato possibile mandare la prenotazione al server.\n')
             }
         }
     }
@@ -82,16 +81,24 @@ export default function AggiungiPrenotazione({ corsiUrl, setMessage, message }) 
                     <form onSubmit={handleSubmit} className="form">
                         <div className="form-group">
                             <label htmlFor="nomeCliente">Nome</label>
-                            <input type="text" id="nomeCliente" name="nomeCliente" value={prenotazioneData.nomeCliente} onChange={handleInputChange} placeholder='ex.: Mario Rossi' required></input>
+                            <input type="text" id="nomeCliente" name="nomeCliente"
+                                value={prenotazioneData.nomeCliente} onChange={handleInputChange}
+                                placeholder='ex.: Mario Rossi' required></input>
                         </div>
                         <div className="form-group">
                             <label htmlFor="corso">Corso</label>
                             <select id="corso" name="corso" onChange={selezionaCorso} required>
                                 <option value="" key="0">Seleziona Corso</option>
-                                {corsi.map((c, i) => <option key={c.id} value={c.id}>{c.nome} - {c.giorno} alle {c.orario}</option>)}
+                                {corsi.map((c, i) =>
+                                    <option key={c.id} value={c.id}>
+                                        {c.nome} - {c.giorno} alle {c.orario}
+                                    </option>)}
                             </select>
                         </div>
-                        <button className="form-submit-btn" onClick={() => postPrenotazione(corsoSelezionato)}>Submit</button>
+                        <button className="form-submit-btn"
+                            onClick={() => postPrenotazione(corsoSelezionato)}>
+                            Submit
+                        </button>
                     </form>
                 </div>
                 <b className='messageText'>

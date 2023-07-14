@@ -497,9 +497,8 @@
     width: initial;
   }
 
-  .scroll {
-    height: initial;
-    overflow: auto;
+  .indirizzo {
+    text-align: center;
   }
 }
 
@@ -530,15 +529,17 @@
     width: initial;
   }
 
-  .scroll {
-    height: initial;
-    overflow: auto;
+  .indirizzo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .indirizzo p {
+    text-align: center;
   }
 
   .mappa {
-    border: 1px solid var(--custom-black);
-    border-radius: 15px;
-    width: 300px;
+    width: 100%;
   }
 
   .checkboxMenu {
@@ -557,6 +558,11 @@
     width: 1px;
     height: 1px;
     overflow: hidden;
+  }
+
+  .aggiungiCorso {
+    align-items: baseline;
+    height: 5rem;
   }
 
 }

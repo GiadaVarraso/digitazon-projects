@@ -7,18 +7,18 @@ const Layout = () => {
 
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
-    setCssClass((prev)=>prev=='hideMenu'?'show':'hideMenu');
+    setCssClass((prev) => prev == 'hideMenu' ? 'show' : 'hideMenu');
   };
-  
+
   return (
     <div className='flex'>
       <nav className="menu">
-      <div className="checkboxMenu">
-        <input type="checkbox" id="hamburger-checkbox"
-        checked={isChecked}
-        onChange={handleCheckboxChange}></input>
-        <label for="hamburger-checkbox" id="hamburger-button">&#9776;</label>
-      </div>
+        <div className="checkboxMenu">
+          <input type="checkbox" id="hamburger-checkbox"
+            checked={isChecked}
+            onChange={handleCheckboxChange}></input>
+          <label htmlFor="hamburger-checkbox" id="hamburger-button">&#9776;</label>
+        </div>
         <ul className={`menuList ${cssClass}`}>
           <li>
             <i className="fa-solid fa-house white" />

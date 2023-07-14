@@ -6,7 +6,7 @@
    "data": "2023-07-02",
    "orario": "18:00"
   },
-  "nomeCliente": "askkmm",
+  "nomeCliente": "Ciro",
   "old": true
  },
  {
@@ -16,7 +16,7 @@
    "data": "2023-07-13",
    "orario": "18:41"
   },
-  "nomeCliente": "mlkml"
+  "nomeCliente": "Marie"
  },
  {
   "idPrenotazione": 17,
@@ -25,7 +25,7 @@
    "data": "2023-07-13",
    "orario": "18:43"
   },
-  "nomeCliente": "mario mario"
+  "nomeCliente": "Pippo"
  },
  {
   "idPrenotazione": 18,
@@ -34,6 +34,6 @@
    "data": "2023-07-13",
    "orario": "18:44"
   },
-  "nomeCliente": "Provo Provolone"
+  "nomeCliente": "Pluto"
  }
 ]

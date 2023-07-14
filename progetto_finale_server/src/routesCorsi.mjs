@@ -6,7 +6,8 @@ const DB_PATH_PRENOTAZIONI = 'db/prenotazioni.json'
 
 async function nextId() {
     const content = JSON.parse(await fs.readFile(DB_PATH_CORSI))
-    const currentId = content.reduce((cumulator, c) => cumulator > parseInt(c.id) ? cumulator : parseInt(c.id), 1)
+    const currentId = content.reduce((cumulator, c) =>
+        cumulator > parseInt(c.id) ? cumulator : parseInt(c.id), 1)
     const nextId = currentId + 1
     return nextId
 }
@@ -77,7 +78,8 @@ const deleteCorso = async (req, res) => {
             }).status(404).end()
             return
         } else {
-            //nel caso in cui il corso ha delle prenotazioni a suo carico, cancellare le prenotazioni prima 
+            //nel caso in cui il corso ha delle prenotazioni a suo carico,
+            //  vengono cancellate le prenotazioni prima 
             try {
                 const content = JSON.parse(await fs.readFile(DB_PATH_PRENOTAZIONI));
                 const prenotazioni = content.filter(p => p.idCorso == idCorso);
@@ -129,7 +131,8 @@ const modificaCorso = async (req, res) => {
             return
         }
 
-        // se un corso ha delle prenotazioni connesse non deve essere possibile modificarlo prima di aver cancellato le prenotazioni relative
+        // se un corso ha delle prenotazioni connesse non deve essere possibile 
+        // modificarlo prima di aver cancellato le prenotazioni relative
         try {
             const prenotazioni = JSON.parse(await fs.readFile(DB_PATH_PRENOTAZIONI))
             const hasPrenotazioni = prenotazioni.some(p => p.idCorso == corsoId);

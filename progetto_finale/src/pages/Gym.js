@@ -7,7 +7,7 @@ const Gym = () => {
             <div className="contentCard">
                 <div className="contentCard2">
                     <h1>I nostri servizi </h1>
-                    <GalleriaImmagini path={path}></GalleriaImmagini>
+                    <GalleriaImmagini path={path}/>
                 </div>
             </div>
         </div>

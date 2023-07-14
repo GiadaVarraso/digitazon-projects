@@ -42,6 +42,7 @@ const About = () => {
         const response = await axios.get(url)
         setIstruttori(response.data)
       } catch (error) {
+        console.log('Impossibile caricare lista istruttori. Errore di comunicazione con il server.');
         console.log(error)
       }
     }
@@ -62,20 +63,26 @@ const About = () => {
 
           <h1>Il nostro Team </h1>
           <ul>
-            { istruttori.length ==0?
+            {istruttori.length == 0 ?
               <span>Stiamo riscontrando problemi. Impossibile caricare le informazioni di questa sezione. Ci scusiamo per il disagio.</span>
               :
               istruttori.map((i) => {
                 return (
-                  <li key={i.id}><b>{i.nome} : </b>{i.info}</li>
+                  <li key={i.id}>
+                    <b>{i.nome} : </b>
+                    {i.info}
+                  </li>
                 )
               })}
           </ul>
 
-          COLLABORIAMO ANCHE CON LA SCUOLA DI DANZA <a href="https://www.nuovoteatrostudiodanza.it/caluso/">NTSD</a>
+          COLLABORIAMO ANCHE CON LA SCUOLA DI DANZA
+          <a href="https://www.nuovoteatrostudiodanza.it/caluso/">
+            NTSD
+          </a>
           <br />
           <b>Vieni a conoscerci in sede!! Ti aspettiamo!</b>
-        </div >
+        </div>
       </div>
     </div>
   )

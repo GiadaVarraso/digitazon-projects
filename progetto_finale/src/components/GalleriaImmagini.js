@@ -13,6 +13,7 @@ const GalleriaImmagini = ({ path, update }) => {
                 setImgs(response.data)
             } catch (error) {
                 console.log(error);
+                console.log('Impossibile ricavare le immagini.Errore di comunicazione con il server.');
             }
         }
         getImgs()
@@ -33,9 +34,16 @@ const GalleriaImmagini = ({ path, update }) => {
             <>
                 <h2>{imgs[index].servizio.toUpperCase()}</h2>
                 <div className="flex gallery">
-                    <button className="galleryArrow" onClick={prev}><i className="fa-solid fa-chevron-left"></i></button>
-                    <div><img className='galleryImgs' src={imgs[index].url} alt="volantino evento" /></div>
-                    <button className="galleryArrow" onClick={next}><i className="fa-solid fa-chevron-right"></i></button>
+                    <button className="galleryArrow" onClick={prev}>
+                        <i className="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <div>
+                        <img className='galleryImgs' src={imgs[index].url}
+                            alt={`immagine ${imgs[index].servizio}`} />
+                    </div>
+                    <button className="galleryArrow" onClick={next}>
+                        <i className="fa-solid fa-chevron-right"></i>
+                    </button>
                 </div>
                 <div>
                     <p>{imgs[index].descrizione}</p>
@@ -46,11 +54,15 @@ const GalleriaImmagini = ({ path, update }) => {
 
     return (
         <div className="flex gallery">
-            <button className="galleryArrow" onClick={prev}><i className="fa-solid fa-chevron-left"></i></button>
+            <button className="galleryArrow" onClick={prev}>
+                <i className="fa-solid fa-chevron-left"></i>
+            </button>
             <div className='imgsContainer'>
                 <img className='galleryImgs' src={imgs[index]} alt="volantino evento" />
             </div>
-            <button className="galleryArrow" onClick={next}><i className="fa-solid fa-chevron-right"></i></button>
+            <button className="galleryArrow" onClick={next}>
+                <i className="fa-solid fa-chevron-right"></i>
+            </button>
         </div>
     )
 }

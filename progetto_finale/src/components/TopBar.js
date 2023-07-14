@@ -5,7 +5,11 @@ const TopBar = () => {
     <div className='top-bar flex'>
       <div>
         <a href='/Home'>
-          <img className='logo' src={logo} alt='Logo Palestra AskiiSport'></img>
+          <img
+            className='logo'
+            src={logo}
+            alt='Logo Palestra AskiiSport'>
+          </img>
         </a>
       </div>
       <div>

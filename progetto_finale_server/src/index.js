@@ -58,40 +58,40 @@ app.get('/', (req, res) => {
     + "\nROTTE DISPONIBILI:"
     + "\nCORSI:"
 
-    + "\nPOST corso    http://localhost:8000/corsi"     //IN USO
+    + "\nPOST corso    http://localhost:8000/corsi"     //Usato dal client
     + "\nGET corso     http://localhost:8000/corsi/:id"
-    + "\nGET corsi     http://localhost:8000/corsi"     //IN USO
-    + "\nDELETE corso  http://localhost:8000/corsi/:id" //IN USO
-    + "\nPUT corso     http://localhost:8000/corsi/:id" //IN USO
+    + "\nGET corsi     http://localhost:8000/corsi"     //Usato dal client
+    + "\nDELETE corso  http://localhost:8000/corsi/:id" //Usato dal client
+    + "\nPUT corso     http://localhost:8000/corsi/:id" //Usato dal client
 
     + "\nPRENOTAZIONI:"
 
-    + "\nPOST prenotazione          http://localhost:8000/corsi/:id/prenotazioni"        //IN USO
+    + "\nPOST prenotazione          http://localhost:8000/corsi/:id/prenotazioni"        //Usato dal client
     + "\nGET prenotazioni corso     http://localhost:8000/corsi/:id/prenotazioni"
-    + "\nGET prenotazioni all       http://localhost:8000/prenotazioni"                  //IN USO
+    + "\nGET prenotazioni all       http://localhost:8000/prenotazioni"                  //Usato dal client
     + "\nGET prenotazione           http://localhost:8000/corsi/:idC/prenotazioni/:idP"
-    + "\nDELETE prenotazione        http://localhost:8000/corsi/:idC/prenotazioni/:idP"  //IN USO
+    + "\nDELETE prenotazione        http://localhost:8000/corsi/:idC/prenotazioni/:idP"  //Usato dal client
     + "\nPUT prenotazione           http://localhost:8000/corsi/:idC/prenotazioni/:idP"
 
     + "\nIMMAGINI:"
 
-    + '\nGET img http://localhost:8000/images/:fileName.ext' //IN USO
-    + '\nGET imgs http://localhost:8000/images'              //IN USO
-    + '\nPOST img http://localhost:8000/upload'              //IN USO
-    + ' (payload type=form-data, key=image , type=File, value=[.jpg, .jpeg, .png, .gif]'
+    + '\nGET img http://localhost:8000/images/:fileName.ext' //Usato dal client
+    + '\nGET imgs http://localhost:8000/images'              //Usato dal client
+    + '\nPOST img http://localhost:8000/upload'              //Usato dal client
+    + ' (payload type=form-data, key=file , type=File, value=[.jpg, .jpeg, .png, .gif]'
 
     + "\nISTRUTTORI:"
 
     + "\nPOST istruttore          http://localhost:8000/istruttori"
     + "\nGET istruttore           http://localhost:8000/istruttori/:id"
-    + "\nGET istruttori all       http://localhost:8000/istruttori"     //IN USO
+    + "\nGET istruttori all       http://localhost:8000/istruttori"     //Usato dal client
     + "\nDELETE istruttore        http://localhost:8000/istruttori/:id"
     + "\nPUT istruttori           http://localhost:8000/istruttori/:id"
 
     + "\nSERVIZI:"
 
     + "\nPOST servizio         http://localhost:8000/servizi"
-    + "\nGET servizi all       http://localhost:8000/servizi"     //IN USO
+    + "\nGET servizi all       http://localhost:8000/servizi"     //Usato dal client
     + "\nDELETE servizio       http://localhost:8000/servizi/:id"
     + "\nPUT servizio          http://localhost:8000/servizi/:id"
   );
@@ -115,6 +115,11 @@ app.get("/istruttori/:id", getIstruttoreByid)
 app.get("/istruttori", getIstruttori)
 app.delete("/istruttori/:id", deleteIstruttore)
 app.put("/istruttori/:id", modificaIstruttore)
+// crud servizi
+app.post('/servizi', newServizio)
+app.get('/servizi', getServizi)    
+app.delete('/servizi/:id', deleteServizio)
+app.put('/servizi/:id', modificaServizio)
 
 //Immagini
 app.use('/images', express.static('imgs'));
@@ -124,12 +129,6 @@ app.get('/images', getImgs);
 app.post('/upload', upload.single('file'), (req, res) => {
   res.send('Immagine caricata con successo')
 });
-
-// crud servizi
-app.post('/servizi', newServizio) 
-app.get('/servizi', getServizi)   // IN USO 
-app.delete('/servizi/:id', deleteServizio) 
-app.put('/servizi/:id', modificaServizio)  
 
 app.listen(port, () => {
   console.log(`Il server è in ascolto sulla porta ${port}`);
