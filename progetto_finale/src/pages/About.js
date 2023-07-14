@@ -62,7 +62,7 @@ const About = () => {
 
           <h1>Il nostro Team </h1>
           <ul>
-            {typeof istruttori !='object'?
+            { istruttori.length ==0?
               <span>Stiamo riscontrando problemi. Impossibile caricare le informazioni di questa sezione. Ci scusiamo per il disagio.</span>
               :
               istruttori.map((i) => {

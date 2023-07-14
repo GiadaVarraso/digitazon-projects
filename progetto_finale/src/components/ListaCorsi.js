@@ -42,7 +42,6 @@ export default function ListaCorsi({ url, istruttoriUrl }) {
                 const response = await axios.get(url)
                 setCorsi(response.data)
             } catch (error) {
-                setCorsi('nessun corso disponibile')
                 console.log(error)
             }
         }
@@ -135,7 +134,7 @@ export default function ListaCorsi({ url, istruttoriUrl }) {
         <div className="contentCard2">
             <h1>Corsi</h1>
             <div className='scroll'>
-                {typeof corsi !='object'?
+                { corsi.length == 0 ?
                     <span>Stiamo riscontrando problemi. Impossibile caricare le informazioni di questa sezione. Ci scusiamo per il disagio.</span>
                     :
                     corsi.map((c, i) => {

@@ -42,5 +42,16 @@
   "orario": "19:00",
   "durata": "60",
   "postiDisponibili": "20"
+ },
+ {
+  "id": 6,
+  "nome": "Fit Boxe",
+  "istruttore": "Mauro Passafiume",
+  "descrizione": "impara le basi della difesa divertendoti e tonificando il corpo con stile",
+  "livello": "Principiante",
+  "giorno": "Mercoledì",
+  "orario": "15:00",
+  "durata": "60",
+  "postiDisponibili": 15
  }
 ]

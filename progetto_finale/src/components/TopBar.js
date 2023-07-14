@@ -9,7 +9,7 @@ const TopBar = () => {
         </a>
       </div>
       <div>
-        <h1>Team & Club Askii Sport Italia</h1>
+        <h1>Askii Sport</h1>
       </div>
     </div>
   );

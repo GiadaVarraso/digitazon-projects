@@ -31,7 +31,6 @@ export default function ListaPrenotazioni({ corsiUrl, prenotazioniUrl, message }
                 const response = await axios.get(prenotazioniUrl)
                 setPrenotazioni(response.data.reverse())
             } catch (error) {
-                setPrenotazioni('nessun corso disponibile')
                 console.log(error)
             }
         }
@@ -88,7 +87,7 @@ export default function ListaPrenotazioni({ corsiUrl, prenotazioniUrl, message }
         <div className="contentCard2">
             <h1>Prenotazioni</h1>
             <div className='scroll'>
-                {typeof prenotazioni !='object'?
+                { prenotazioni.length ==0?
                     <span>Stiamo riscontrando problemi. Impossibile caricare le informazioni di questa sezione. Ci scusiamo per il disagio.</span>
                     :
                     prenotazioni.map((p, i) =>

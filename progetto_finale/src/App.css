@@ -1,10 +1,3 @@
-/* 
-  TODO:  
-  @media 
-  @keyframes  
-*/
-
-
 :root {
   --custom-gray: rgb(83, 78, 78);
   --custom-black: rgb(44, 39, 39);
@@ -153,6 +146,9 @@
 .mappa {
   border: 1px solid var(--custom-black);
   border-radius: 15px;
+  width: 425px;
+  height: 350px;
+  padding: 10px;
 }
 
 .content {
@@ -162,8 +158,8 @@
   color: var(--detail-white)
 }
 
-.dz-message{
-  color:#4267b2
+.dz-message {
+  color: #4267b2
 }
 
 .contentCard {
@@ -254,6 +250,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px
 }
 
 .form-container {
@@ -439,7 +436,7 @@
   border-radius: 5px;
 }
 
-.btn{
+.btn {
   color: var(--custom-black);
   font-weight: 600;
   width: 40%;
@@ -452,6 +449,114 @@
   font-size: large;
 }
 
-.btn:hover{
+.btn:hover {
   background-color: var(--detail-yellow);
+}
+
+.checkboxMenu {
+  display: none;
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+
+  /* Regole di stile per dispositivi con larghezza tra 700px e 1024px */
+  .menu {
+    display: flex;
+    flex-direction: row;
+    top: 9rem;
+    left: 0;
+    padding: 10px;
+    width: 100%;
+    margin: 0;
+    z-index: 2;
+    justify-content: center;
+  }
+
+  .menu i {
+    margin-left: 1rem;
+  }
+
+  .menu a {
+    padding: 0;
+  }
+
+  .menuList {
+    gap: 20px;
+    display: flex;
+  }
+
+  .App {
+    padding: 2rem;
+  }
+
+  .content {
+    margin: 8rem 0 0;
+  }
+
+  .gallery {
+    width: initial;
+  }
+
+  .scroll {
+    height: initial;
+    overflow: auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+
+  /* Regole di stile per dispositivi con larghezza fino a 700px */
+  .menu {
+    display: block;
+    top: 11rem;
+    left: 0;
+    margin: 10px;
+    z-index: 2;
+  }
+
+  h1 {
+    height: 90px;
+  }
+
+  .App {
+    padding: 2rem;
+  }
+
+  .content {
+    margin: 5rem 0 0;
+  }
+
+  .gallery {
+    width: initial;
+  }
+
+  .scroll {
+    height: initial;
+    overflow: auto;
+  }
+
+  .mappa {
+    border: 1px solid var(--custom-black);
+    border-radius: 15px;
+    width: 300px;
+  }
+
+  .checkboxMenu {
+    display: block;
+  }
+
+  .show {
+    display: block;
+  }
+
+  .hideMenu {
+    display: none;
+  }
+
+  #hamburger-checkbox {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
 }
